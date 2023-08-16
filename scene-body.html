@@ -1,0 +1,269 @@
+<a-scene light="defaultLightsEnabled: false" fog="type: linear; far: 20; near: 5; color: #0a1724;">
+    <a-assets>
+        <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="forest" src="https://ucarecdn.com/dc2359e1-3db7-46c0-b07a-f5cce01f3e44/forest.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="ground" src="https://ucarecdn.com/97cfb37f-18f2-44ba-bafc-7440775cfa0f/ground.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="underwater" src="https://ucarecdn.com/3807b2ff-0e0a-4548-a383-12a53a2446ff/underwater.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="fishbowl" src="https://ucarecdn.com/f43c0afd-2dd2-4489-bce6-4036debfb567/fishbowl.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="bowl" src="https://ucarecdn.com/eb5d89b4-1d12-424f-9813-6ad4c8b0e4d9/bowl.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="arrow" src="https://ucarecdn.com/6ebf1cee-21b5-4724-986c-d6c6d94689f5/arrow.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="footprint-1" src="https://ucarecdn.com/ae3609eb-2171-4776-a74d-841a170d4b08/footprint1.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="footprint-2" src="https://ucarecdn.com/2968288c-7383-4e22-9eeb-ec7be012fe1b/footprint2.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="footprint-3" src="https://ucarecdn.com/8f15d772-5f9c-42ce-981b-3e71b6abd941/footprint3.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="footprint-4" src="https://ucarecdn.com/6fe3913d-1074-4ffb-80b2-4c390518b362/footprint4.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="footprint-5" src="https://ucarecdn.com/576a9ef8-c7de-4b06-9d89-ff58bd082164/footprint5.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="footprint-6" src="https://ucarecdn.com/7bc3e8b5-ba29-402f-897f-ad5287ca33c0/footprint6.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="footprint-7" src="https://ucarecdn.com/3668c3b8-9d39-4e41-b63b-4be8df179b43/footprint7.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="footprint-8" src="https://ucarecdn.com/41f319ad-d708-49b4-b6cd-6a6da93366b3/footprint8.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="footprint-9" src="https://ucarecdn.com/bb98a8ab-b544-41fb-a2b5-4ee56edd1d87/footprint9.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="footprint-10" src="https://ucarecdn.com/e707fe0a-15ca-4164-ad2e-33dc8e3231b8/footprint10.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="footprint-11" src="https://ucarecdn.com/a2ff6f4b-4130-4455-9eff-9a3a645e43f6/footprint11.gltf"></a-asset-item>
+        
+        <audio id="Ch3-audio" src="media/Ch3-audio.mp3" preload="auto"></audio>
+    </a-assets>
+
+    <a-entity id="quiet-text" position="-2.1 -8.5 -36" scale=".5 .5 .5"
+        text-geometry=
+            "font: #optimerBoldFont;
+            height: 0.1; 
+            bevelEnabled: true; 
+            bevelSize: 0.02;
+            bevelThickness: 0.02; 
+            value: It's quiet down here" 
+        material=
+            "color: white; opacity: 0.0;"
+        updater=""
+        animation="property: material.opacity; from: 0.0; to: 1.0 dur: 500; startEvents: animate"
+        animation__fadeOut="property: material.opacity; from: 1.0; to: 0.0 dur: 500; startEvents: animate_fadeOut">
+    </a-entity>
+
+    <a-entity id="stay-text" position="-2.1 -9.2 -36" scale=".5 .5 .5"
+        text-geometry=
+            "font: #optimerBoldFont;
+            height: 0.1; 
+            bevelEnabled: true; 
+            bevelSize: 0.02;
+            bevelThickness: 0.02; 
+            value: I think I'll stay a bit"
+        material=
+            "color: white; opacity: 0.0;"
+        updater=""
+        animation="property: material.opacity; from: 0.0; to: 1.0 dur: 500; startEvents: animate"
+        animation__fadeOut="property: material.opacity; from: 1.0; to: 0.0 dur: 500; startEvents: animate_fadeOut">
+    </a-entity>
+
+    <!-- Camera -->
+    <!-- "-2 -7 -31" -->
+    <a-entity id="rig" position="0 1.6 24" rotation="0 0 0">
+        <a-entity id="camera" camera look-controls>
+            <a-entity id="end-text" position="-.6 0 -1.5" scale=".5 .5 .5"
+            text-geometry=
+                "font: #optimerBoldFont;
+                height: 0.1; 
+                bevelEnabled: true; 
+                bevelSize: 0.02;
+                bevelThickness: 0.02; 
+                value: The End"
+            material=
+                "color: white; opacity: 0.0;"
+            updater=""
+            animation="property: material.opacity; from: 0.0; to: 1.0 dur: 500; startEvents: animate">
+        </a-entity>
+            <!-- Cursor -->
+            <a-entity cursor="fuse: true; fuseTimeout: 1000"
+                    id="cursor"
+                    position="0 0 -3"
+                    geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;"
+                    material="color: cyan; shader: flat"
+                    raycaster="objects: .clickable"
+                    animation__fusing="startEvents: fusing;
+                                property: scale;
+                                from: 1 1 1;
+                                to: 0 0 0;
+                                dur: 1000"
+                    animation__reset="startEvents: mouseleave;
+                                property: scale;
+                                from: 0 0 0;
+                                to: 1 1 1;
+                                dur: 500">
+                <a-entity sound="src: #Ch3-audio; volume: 3" restart-chapter></a-entity>
+            </a-entity>
+        </a-entity>
+        <!-- Ending Fade Sphere -->
+        <a-sphere id="end-fader" position="0 2 0" radius="4" 
+            material="shader:flat; color: black; opacity: 0.0; side: back" 
+            animation="property: material.opacity; from: 0.0; to: 1.0 dur: 1400; startEvents: animate">
+        </a-sphere>
+        <!-- FISHBOWL -->
+        <!-- "0 -.6 -.3" -->
+        <a-gltf-model visible="true" id="fishbowlID" src="#fishbowl" rotation="0 180 0" position="0 .8 -.5" scale="1 1 1"></a-gltf-model>    
+    </a-entity>
+
+    <!-- EMPTY BOWL -->
+    <a-gltf-model id="bowlID" src="#bowl" rotation="0 2.541067821405201 0" position="-4.62182 -16.35052 -36.71127" scale="" gltf-model="https://ucarecdn.com/eb5d89b4-1d12-424f-9813-6ad4c8b0e4d9/bowl.gltf"></a-gltf-model>  
+
+    <a-sky id="skyID" material="shader: gradientshader;
+        topColor:  #000;
+        bottomColor:  #112d4b">
+    </a-sky> 
+
+    <!-- Forest -->
+    <a-entity id="forest" gltf-model="#forest" shadow="cast: true"></a-entity>
+
+    <!-- Ground -->
+    <a-entity id="groundID" gltf-model="#ground"></a-entity>
+    <!-- Underwater -->
+    <a-gltf-model id="underwaterID" gltf-model="#underwater"></a-gltf-model>
+
+    <!-- Light -->
+    <a-entity id="pathLight" light="type: directional; 
+            intensity: 3;
+            castShadow:  true; 
+            shadowCameraRight: 100;
+            shadowCameraLeft: -100;
+            color: #c16ffb;"
+        position="0 1.986 -30">
+    </a-entity>
+
+    <a-entity light="type: directional; color: #FFF; intensity: .7" position="0 3 24"></a-entity>
+    <!-- <a-entity clone-along-curve="curve: #track1; spacing: 0.2; scale: 1 1 1; rotation: 0 0 0;" geometry="primitive:box; height:0.1; width:0.2; depth:0.1"></a-entity> -->
+
+    <!-- Countdown -->
+    <a-entity countdown-animation-manager visible="false" id="countdown" position="-1.5 4.5 15" scale="7 7 7"
+        animation__first="property: scale; from: 7 7 7; to: 7.2 7.2 7.2; dur: 1000; 
+        dir: alternate; easing: linear; startEvents: countdown-begin" 
+        animation__second="property: scale; from: 7 7 7; to: 7.2 7.2 7.2; dur: 1000; 
+        dir: alternate; easing: linear; startEvents: second"
+        animation__third="property: scale; from: 7 7 7; to: 7.2 7.2 7.2; dur: 1000; 
+        dir: alternate; easing: linear; startEvents: third"
+        text-geometry=
+            "font: #optimerBoldFont;
+            height: 0.1; 
+            bevelEnabled: true; 
+            bevelSize: 0.02; 
+            bevelThickness: 0.02; 
+            value: 3"
+        material=
+            "color: #8aecff;"
+        updater="">
+    </a-entity>
+
+    <!-- Start dot -->
+    <a-sphere class="clickable" event-listener id="dot" color="#8aecff" position="0 6.1 14.5" radius="3" scale=".37 .37 .07" >
+    </a-sphere>
+
+    <!-- Arrow -->
+    <a-gltf-model id="arrowID" src="#arrow" position="0 3.8 16" scale="4.2 4.2 4.2"></a-gltf-model>
+
+    <!-- Instruction Text -->
+    <a-entity id="instruction" position="-3.6 2.6 16.5" scale="1 1 1"
+        text-geometry=
+            "font: #optimerBoldFont;
+            height: 0.1; 
+            bevelEnabled: true; 
+            bevelSize: 0.02; 
+            bevelThickness: 0.02; 
+            value: Look at the dot to begin" 
+        material=
+            "color: white;"
+        updater="">
+    </a-entity>
+
+    <a-entity id="instruction2" position="-5.5 1.8 16.5" scale="1 1 1"
+        text-geometry=
+            "font: #optimerBoldFont;
+            height: 0.1; 
+            bevelEnabled: true; 
+            bevelSize: 0.02;
+            bevelThickness: 0.02; 
+            value: "
+        material=
+            "color: white;"
+        updater="">
+    </a-entity>
+
+    <a-curve id="start">
+        <a-curve-point position="0 1.6 24"></a-curve-point>
+        <a-curve-point position="0 1.6 24"></a-curve-point>
+    </a-curve>
+
+    <!-- Track -->
+    <a-curve id="run">
+        <a-curve-point position="0 1.6 24"></a-curve-point>
+        <a-curve-point position="0 1.65 23"></a-curve-point>
+        <a-curve-point position="0 1.6 22"></a-curve-point>
+        <a-curve-point position="0 1.65 21"></a-curve-point>
+        <a-curve-point position="0 1.6 20"></a-curve-point>
+        <a-curve-point position="0 1.65 19"></a-curve-point>
+        <a-curve-point position="0 1.6 18"></a-curve-point>
+        <a-curve-point position="0 1.65 17"></a-curve-point>
+        <a-curve-point position="0 1.6 16"></a-curve-point>
+        <a-curve-point position="0 1.65 15"></a-curve-point>
+        <a-curve-point position="0 1.6 14"></a-curve-point>
+        <a-curve-point position="0 1.65 13"></a-curve-point>
+        <a-curve-point position="0 1.6 12"></a-curve-point>
+        <a-curve-point position="0 1.65 11"></a-curve-point>
+        <a-curve-point position="0 1.6 10"></a-curve-point>
+        <a-curve-point position="0 1.65 9"></a-curve-point>
+        <a-curve-point position="0 1.6 8"></a-curve-point>
+        <a-curve-point position="0 1.65 7"></a-curve-point>
+        <a-curve-point position="0 1.6 6"></a-curve-point>
+        <a-curve-point position="0 1.65 5"></a-curve-point>
+        <a-curve-point position="0 1.6 4"></a-curve-point>
+        <a-curve-point position="0 1.65 3"></a-curve-point>
+        <a-curve-point position="0 1.6 2"></a-curve-point>
+        <a-curve-point position="0 1.65 1"></a-curve-point>
+        <a-curve-point position="0 1.6 0"></a-curve-point>
+        <a-curve-point position="0 1.65 -1"></a-curve-point>
+        <a-curve-point position="0 1.6 -2"></a-curve-point>
+        <a-curve-point position="0 1.65 -3"></a-curve-point>
+        <a-curve-point position="0 1.6 -4"></a-curve-point>
+        <a-curve-point position="0 1.65 -5"></a-curve-point>
+        <a-curve-point position="0 1.6 -6"></a-curve-point>
+        <a-curve-point position="0 1.65 -7"></a-curve-point>
+        <a-curve-point position="0 1.6 -8"></a-curve-point>
+        <a-curve-point position="0 1.65 -9"></a-curve-point>
+        <!-- start counting steps -->
+        <a-curve-point position="0 1.6 -10"></a-curve-point>
+        <a-curve-point position="0 1.65 -11"></a-curve-point>
+        <a-curve-point position="0 1.6 -12"></a-curve-point>
+        <a-curve-point position="0 1.65 -13"></a-curve-point>
+        <a-curve-point position="0 1.6 -14"></a-curve-point>
+        <a-curve-point position="0 1.65 -15"></a-curve-point>
+        <a-curve-point position="0 1.6 -16"></a-curve-point>
+        <a-curve-point position="0 1.65 -17"></a-curve-point>
+        <a-curve-point position="0 1.6 -18"></a-curve-point>
+        <a-curve-point position="0 1.65 -19"></a-curve-point>
+        <a-curve-point position="0 1.6 -20"></a-curve-point>
+        <a-curve-point position="0 1.65 -21"></a-curve-point>
+        <a-curve-point position="0 1.6 -22"></a-curve-point>
+        <a-curve-point position="0 1.65 -23"></a-curve-point>
+        <a-curve-point position="0 1.6 -24"></a-curve-point>
+        <a-curve-point position="0 1.65 -25"></a-curve-point>
+        <a-curve-point position="0 1.6 -26"></a-curve-point>
+        <a-curve-point position="0 1.65 -27"></a-curve-point>
+        <a-curve-point position="0 1.6 -28"></a-curve-point>
+    </a-curve>
+
+    <a-curve id="fall">
+        <a-curve-point position="0 1.6 -28"></a-curve-point>
+        <a-curve-point position="0 1.7 -29"></a-curve-point>
+        <a-curve-point position="0 1.6 -30"></a-curve-point>
+        <a-curve-point id="switch-light" position="0 -3 -31"></a-curve-point>
+        <a-curve-point id="last" position="0 -10 -31"></a-curve-point>
+    </a-curve>
+
+    <!-- STEP COUNT FOOTPRINT -->
+    <a-gltf-model src="#footprint-1" position=".6 3 -10"></a-gltf-model>
+    <a-gltf-model src="#footprint-2" position="-.6 3 -12"></a-gltf-model>
+    <a-gltf-model src="#footprint-3" position=".6 3 -14"></a-gltf-model>
+    <a-gltf-model src="#footprint-4" position="-.6 3 -16"></a-gltf-model>
+    <a-gltf-model src="#footprint-5" position=".6 3 -18"></a-gltf-model>
+    <a-gltf-model src="#footprint-6" position="-.6 3 -20"></a-gltf-model>
+    <a-gltf-model src="#footprint-7" position=".6 3 -22"></a-gltf-model>
+    <a-gltf-model src="#footprint-8" position="-.6 3 -24"></a-gltf-model>
+    <a-gltf-model src="#footprint-9" position=".6 3 -26"></a-gltf-model>
+    <a-gltf-model src="#footprint-10" position="-.6 3 -28"></a-gltf-model>
+    <a-gltf-model src="#footprint-11" position=".6 3 -31"></a-gltf-model>
+
+</a-scene>
