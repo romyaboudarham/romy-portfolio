@@ -129,12 +129,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     });
 
-    rig.addEventListener("movingended", function(e) {
-    if (!restartChapter) {
-        AFRAME.utils.entity.setComponentProperty(this, "alongpath.curve", "#fall");
-        AFRAME.utils.entity.setComponentProperty(this, "alongpath.dur", "4000");
+    if (rig !== null) {
+        rig.addEventListener("movingended", function(e) {
+            if (!restartChapter) {
+                AFRAME.utils.entity.setComponentProperty(this, "alongpath.curve", "#fall");
+                AFRAME.utils.entity.setComponentProperty(this, "alongpath.dur", "4000");
+            }
+        });
     }
-    });
 
     var curvepoints = document.querySelectorAll("#fall > a-curve-point");
 
