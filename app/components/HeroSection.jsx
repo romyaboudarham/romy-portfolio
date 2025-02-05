@@ -24,7 +24,7 @@ const HeroSection = () => {
         <div className="col-span-5 place-self-center mt-4 lg:mt-0">
           <div className="w-[215px] h-[215px] lg:w-[300px] lg:h-[300px] overflow-hidden rounded-full relative">
             <Image
-              src="/images/romy.png"
+              src="/media/romy.png"
               alt="Romy Headshot"
               width={300}
               height={300}
