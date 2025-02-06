@@ -3,6 +3,14 @@
 import React from "react";
 import { ChevronDown, ChevronLeft } from 'lucide-react';
 import { useState } from "react";
+import WSStoryboardCarousel from "@/app/components/WS-StoryboardCarousel";
+
+const slides = [
+  "/media/projects/VR-GriefsShadow/storyboard1.png",
+  "/media/projects/VR-GriefsShadow/storyboard2.png",
+  "/media/projects/VR-GriefsShadow/storyboard3.png",
+];
+
 
 export default function GriefsShadow() {
     // Declare state and functions
@@ -37,76 +45,80 @@ export default function GriefsShadow() {
   return (
     <div className="bg-[#f9f9f9] text-black min-h-screen font-sans">
       {/* Hero Section */}
-      <section className="bg-black relative flex items-center justify-center h-screen text-center px-6 md:px-12">
-        {isPlaying ? (
-          <>
-            {/* Back Arrow in Top Left */}
-            <div
-              onClick={handleBackClick}
-              className="absolute top-4 left-4 z-20 text-white cursor-pointer"
-            >
-              <ChevronLeft className="w-8 h-8" />
-            </div>
-            <video
-              src="/media/projects/VR-GriefsShadow/griefs-shadow-demo.mp4"
-              autoPlay
-              controls
-              onEnded={handleVideoEnd}
-              className={`absolute w-full h-full object-cover border-4 border-[#ff6562] transition-opacity duration-500 ${fadeClass}`}
+      <section className="bg-black relative flex items-center justify-center min-h-screen text-center px-4 lg:px-12 overflow-hidden">
+      {isPlaying ? (
+        <>
+          {/* Back Arrow in Top Left */}
+          <div
+            onClick={handleBackClick}
+            className="absolute top-4 left-4 z-20 text-white cursor-pointer"
+          >
+            <ChevronLeft className="w-8 h-8" />
+          </div>
+          <video
+            src="/media/projects/VR-GriefsShadow/griefs-shadow-demo.mp4"
+            autoPlay
+            controls
+            onEnded={handleVideoEnd}
+            className={`absolute w-full h-full object-cover border-4 border-[#cd5cc4] transition-opacity duration-500 ${fadeClass}`}
+          />
+        </>
+      ) : (
+        <>
+          {/* Default Hero Section */}
+          <video autoPlay loop muted className="absolute w-full h-full object-cover opacity-70">
+            <source
+              src="/media/projects/VR-GriefsShadow/skybox.mov"
+              type="video/mp4"
             />
-          </>
-        ) : (
-          <>
-            {/* Default Hero Section */}
-            <video autoPlay loop muted className="absolute w-full h-full object-cover opacity-40">
-              <source
-                src="/media/projects/VR-GriefsShadow/griefs-shadow-demo.mp4"
-                type="video/mp4"
-              />
-            </video>
-            <div className="relative z-10 w-full max-w-full sm:max-w-lg md:max-w-3xl lg:max-w-5xl mx-auto">
-              {/* Title & Description Box */}
-              <div className="p-6 md:p-12 bg-white/70 backdrop-blur-lg shadow-xl text-center">
-                <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight">
-                  With Shadows
-                </h1>
-                <p className="mt-4 text-base sm:text-lg md:text-2xl max-w-full opacity-80">
-                  We all enter this world with the capacity to carry grief. To love is to lose. Through grieving and processing a personal loss, I created this immersive VR experience for everyone—whether you have yet to face a significant loss or are seeking a mindful space for healing. <br /><br />
-                  By immersing users in an experience that balances the relentless demands of daily life with the inescapable presence of grief, the project encourages users to drop into their body and explore their emotions. <br />
-                  Ultimately, this experience serves as a therapeutic tool for self-empathy and compassion, inviting all to better understand and process grief.
-                </p>
+          </video>
+          <div className="relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
+            {/* Title & Description Box */}
+            <div className="p-3 lg:p-5 text-white bg-[white]/20 backdrop-blur-lg shadow-xl text-center rounded-md">
+              <div className="mt-3 lg:mt-5 text-4xl lg:text-6xl font-bold opacity-90">
+                With Shadows
               </div>
-
-              {/* Button Below */}
-              <div className="mt-6 flex justify-center">
-                <button
-                  onClick={handleWatchDemo}
-                  className="px-8 py-4 text-lg bg-[#ff6562] hover:bg-[#db5654] text-white shadow-lg rounded-xl"
-                >
-                  Watch Demo
-                </button>
-              </div>
+              <p className="mt-3 lg:mt-5 text-lg lg:text-2xl">
+                An Immersive Virtual Reality Experience about Grieving the Loss of a Loved One
+              </p>
+              <p className="mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-80">
+                We all enter this world with the capacity to carry grief. To love is to lose. Through grieving and processing a personal loss, I created this immersive VR experience for everyone—whether you have yet to face a significant loss or are seeking a mindful space for healing.
+                <br /><br />
+                By immersing users in an experience that balances the relentless demands of daily life with the inescapable presence of grief, the project encourages users to drop into their body, serving as a therapeutic tool for understanding the grief process.
+              </p>
             </div>
-          </>
-        )}
-      </section>
+            
+            {/* Button Below */}
+            <div className="mt-3 lg:mt-10 flex justify-center">
+              <button
+                onClick={handleWatchDemo}
+                className="px-6 py-3 rounded-md bg-transparent text-white hover:bg-[#cd5cc4]
+                 hover:text-white border border-[#cd5cc4] mt-3"
+              >
+                Watch Demo
+              </button>
+            </div>
+          </div>
+        </>
+      )}
 
       {/* Down Arrow Icon */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ChevronDown className="w-8 h-8 text-[#ff6562]" />
+      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
+        <ChevronDown className="w-14 h-8 text-[#cd5cc4]" />
       </div>
+    </section>
 
       {/* Project Overview */}
-      <section className="py-16 px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <section className="my-3 lg:my-5 py-3 lg:py-5 px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
-          <h2 className="text-4xl font-bold text-[#ff6562]">Project Overview</h2>
+          <h2 className="text-4xl lg:text-5xl font-semibold">Project Overview</h2>
 
           {/* Emphasized Assignment */}
           <div className="mt-6 text-2xl font-semibold opacity-90">
             Assignment  
           </div>
           <p className="mt-2 text-lg opacity-80">
-            Design and prototype a VR experience using Unity that fosters empathy through the perspective of the individuals for whom you're building empathy.
+            Design and prototype a VR experience using Unity that fosters empathy through the perspective of the individual for whom you're building empathy.
           </p>
 
           {/* Additional Details */}
@@ -129,32 +141,69 @@ export default function GriefsShadow() {
         </div>
       </section>
 
+      {/* Dividing Line */}
+      <div className="my-6 mx-auto max-w-6xl">
+        <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
+      </div>
 
+      {/* Ideation & Storyboard */}
+      <section className="my-3 lg:my-5 py-3 lg:py-5 px-6 lg:px-20">
+          <h2 className="text-4xl lg:text-5xl font-semibold text-center">Ideation & Storyboarding</h2>
+          <div className="mb-3 lg:mb-5 px-6 lg:px-20 max-w-6xl mx-auto">
+            <WSStoryboardCarousel  >
+                  {slides.map((s, i) => (
+                <img key={i} src={s} />
+              ))}
+            </WSStoryboardCarousel>
+          </div>
+      </section>
 
-      {/* Process & Development */}
-      <section className="py-16 px-6 md:px-20">
-        <h2 className="text-4xl font-bold text-center text-[#ff6562]">Process & Development</h2>
-        <div className="mt-12 grid md:grid-cols-3 gap-10">
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-300 transition-transform duration-300 hover:scale-105">
-            <h3 className="text-2xl font-semibold">Concept & Ideation</h3>
-            <p className="mt-3 opacity-80">Sketches, storyboards, and research on grief & immersive storytelling.</p>
+      {/* Dividing Line */}
+      <div className="my-6 mx-auto max-w-6xl">
+        <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
+      </div>
+
+      {/* Key VR Interacitons */}
+      <section className="my-3 lg:my-5 py-3 lg:py-5 px-6 lg:px-20">
+      <h2 className="text-4xl lg:text-5xl font-semibold text-center">Key VR Interactions</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2 lg:px-32 py-6">
+          <div className="flex flex-col items-center">
+            <img 
+              src="/media/projects/VR-GriefsShadow/interaction1.gif" 
+              alt="Interaction 1" 
+              className="w-full max-w-sm mx-auto rounded-xl"
+            />
+            <p className="text-center text-lg mt-2">Grabbing and Inspecting Objects</p>
           </div>
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-300 transition-transform duration-300 hover:scale-105">
-            <h3 className="text-2xl font-semibold">Technical Breakdown</h3>
-            <p className="mt-3 opacity-80">Unity code snippets, interaction mechanics, and performance optimizations.</p>
+          <div className="flex flex-col items-center">
+            <img 
+              src="/media/projects/VR-GriefsShadow/interaction2.gif" 
+              alt="Interaction 2" 
+              className="w-full max-w-sm mx-auto rounded-xl"
+            />
+            <p className="text-center text-lg mt-2">Teleportation Movement</p>
           </div>
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-300 transition-transform duration-300 hover:scale-105">
-            <h3 className="text-2xl font-semibold">Challenges & Iterations</h3>
-            <p className="mt-3 opacity-80">Insights into user feedback and refining the VR experience.</p>
+          <div className="flex flex-col items-center">
+            <img 
+              src="/media/projects/VR-GriefsShadow/interaction3.gif" 
+              alt="Interaction 3" 
+              className="w-full max-w-sm mx-auto rounded-xl"
+            />
+            <p className="text-center text-lg mt-2">Button Press to Trigger Events</p>
           </div>
         </div>
       </section>
 
+      {/* Dividing Line */}
+      <div className="my-6 mx-auto max-w-6xl">
+        <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
+      </div>
+
       {/* Final Experience */}
-      <section className="py-16 px-6 md:px-20 text-center">
-        <h2 className="text-4xl font-bold text-[#ff6562]">Final Experience</h2>
-        <video className="mt-12 w-full max-w-3xl mx-auto rounded-2xl shadow-lg border border-gray-300" controls>
-          <source src="/videos/final-demo.mp4" type="video/mp4" />
+      <section className="my-3 lg:my-5 py-3 lg:py-5 px-6 lg:px-20">
+      <h2 className="text-4xl lg:text-5xl font-semibold text-center">Final Experience</h2>
+        <video className="mt-12 w-full max-w-xl mx-auto rounded-xl shadow-lg border border-gray-300" controls>
+          <source src="/media/projects/VR-GriefsShadow/FinalExperience.mp4" type="video/mp4" />
         </video>
       </section>
 
