@@ -10,8 +10,7 @@ const projectsData = [
         title: "Grief's Shadow",
         slug: "griefs-shadow",
         description: "Using VR to build empathy for people processing the loss of someone close to them, experiencing someone's moment-to-moment relationship with grief and how it manifests over time.",
-        image: "/media/projects/VR-GriefsShadow/VR-GriefsShadow2.jpg",
-        video: "/media/projects/VR-GriefsShadow/GriefsShadow-Room.mp4",
+        image: "/media/projects/VR-GriefsShadow/ProjectSection-WithShadow.gif",
         tag: ["All", "VR"],
     },
     {
@@ -88,13 +87,13 @@ const ProjectsSection = () => {
             <h2 className="text-center text-4xl font-bold mt-4 mb-4 md:mb-6">
                 My Projects
             </h2>
-            <div className="flex flex-row justify-center items-center gap-2 py-6">
+            <div className="flex flex-wrap justify-center items-center gap-2 py-6">
                 {["All", "VR", "AR", "Arduino", "Exhibitions", "Other"].map((category) => (
                     <ProjectTag 
-                        key={category}
-                        onClick={handleTagChange} 
-                        name={category} 
-                        isSelected={tag === category} 
+                    key={category}
+                    onClick={handleTagChange} 
+                    name={category} 
+                    isSelected={tag === category} 
                     />
                 ))}
             </div>

@@ -3,13 +3,19 @@
 import React from "react";
 import { ChevronDown, ChevronLeft } from 'lucide-react';
 import { useState } from "react";
-import WSStoryboardCarousel from "@/app/components/WS-StoryboardCarousel";
+import Carousel from "@/app/components/Carousel";
 
 const slides = [
-  "/media/projects/VR-GriefsShadow/storyboard1.png",
-  "/media/projects/VR-GriefsShadow/storyboard2.png",
-  "/media/projects/VR-GriefsShadow/storyboard3.png",
+  { image: "/media/projects/VR-GriefsShadow/storyboard1.png", caption: "This is the first slide" },
+  { image: "/media/projects/VR-GriefsShadow/storyboard2.png", caption: "This is the second slide" },
+  { image: "/media/projects/VR-GriefsShadow/storyboard3.png", caption: "This is the third slide" },
 ];
+
+// const slides = [
+//   "/media/projects/VR-GriefsShadow/storyboard1.png",
+//   "/media/projects/VR-GriefsShadow/storyboard2.png",
+//   "/media/projects/VR-GriefsShadow/storyboard3.png",
+// ];
 
 
 export default function GriefsShadow() {
@@ -66,12 +72,11 @@ export default function GriefsShadow() {
       ) : (
         <>
           {/* Default Hero Section */}
-          <video autoPlay loop muted className="absolute w-full h-full object-cover opacity-70">
-            <source
-              src="/media/projects/VR-GriefsShadow/skybox.mov"
-              type="video/mp4"
+          <img 
+              src="/media/projects/VR-GriefsShadow/WithShadow-SkyboxBG.gif" 
+              alt="Skybox" 
+              className="absolute w-full h-full object-cover opacity-70"
             />
-          </video>
           <div className="relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
             {/* Title & Description Box */}
             <div className="p-3 lg:p-5 text-white bg-[white]/20 backdrop-blur-lg shadow-xl text-center rounded-md">
@@ -103,7 +108,7 @@ export default function GriefsShadow() {
       )}
 
       {/* Down Arrow Icon */}
-      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
         <ChevronDown className="w-14 h-8 text-[#cd5cc4]" />
       </div>
     </section>
@@ -132,7 +137,7 @@ export default function GriefsShadow() {
         </div>
 
         {/* Logo Image */}
-        <div className="flex justify-center">
+        <div className="hidden lg:flex justify-center">
           <img 
             src="/media/projects/VR-GriefsShadow/griefs-shadow-logos.png" 
             alt="tools-logos" 
@@ -150,11 +155,8 @@ export default function GriefsShadow() {
       <section className="my-3 lg:my-5 py-3 lg:py-5 px-6 lg:px-20">
           <h2 className="text-4xl lg:text-5xl font-semibold text-center">Ideation & Storyboarding</h2>
           <div className="mb-3 lg:mb-5 px-6 lg:px-20 max-w-6xl mx-auto">
-            <WSStoryboardCarousel  >
-                  {slides.map((s, i) => (
-                <img key={i} src={s} />
-              ))}
-            </WSStoryboardCarousel>
+          <Carousel slides={slides} />
+            
           </div>
       </section>
 
@@ -169,25 +171,25 @@ export default function GriefsShadow() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2 lg:px-32 py-6">
           <div className="flex flex-col items-center">
             <img 
-              src="/media/projects/VR-GriefsShadow/interaction1.gif" 
+              src="/media/projects/VR-GriefsShadow/Interaction-Voicemail-DataChange.gif" 
               alt="Interaction 1" 
-              className="w-full max-w-sm mx-auto rounded-xl"
+              className="w-full max-w-sm mx-auto rounded-md"
             />
             <p className="text-center text-lg mt-2">Grabbing and Inspecting Objects</p>
           </div>
           <div className="flex flex-col items-center">
             <img 
-              src="/media/projects/VR-GriefsShadow/interaction2.gif" 
+              src="/media/projects/VR-GriefsShadow/Room-Collision-Timeline.gif" 
               alt="Interaction 2" 
-              className="w-full max-w-sm mx-auto rounded-xl"
+              className="w-full max-w-sm mx-auto rounded-md"
             />
             <p className="text-center text-lg mt-2">Teleportation Movement</p>
           </div>
           <div className="flex flex-col items-center">
             <img 
-              src="/media/projects/VR-GriefsShadow/interaction3.gif" 
+              src="/media/projects/VR-GriefsShadow/Breathe-Collision-Timeline.gif" 
               alt="Interaction 3" 
-              className="w-full max-w-sm mx-auto rounded-xl"
+              className="w-full max-w-sm mx-auto rounded-md"
             />
             <p className="text-center text-lg mt-2">Button Press to Trigger Events</p>
           </div>
@@ -202,18 +204,25 @@ export default function GriefsShadow() {
       {/* Final Experience */}
       <section className="my-3 lg:my-5 py-3 lg:py-5 px-6 lg:px-20">
       <h2 className="text-4xl lg:text-5xl font-semibold text-center">Final Experience</h2>
-        <video className="mt-12 w-full max-w-xl mx-auto rounded-xl shadow-lg border border-gray-300" controls>
+        <video className="mt-12 w-full max-w-xl mx-auto rounded-md shadow-lg border border-gray-300" controls>
           <source src="/media/projects/VR-GriefsShadow/FinalExperience.mp4" type="video/mp4" />
         </video>
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-[#ffebe9] text-center px-6 md:px-20 rounded-t-2xl shadow-inner">
-        <h2 className="text-4xl font-bold text-[#ff6562]">Let’s Connect!</h2>
-        <p className="mt-6 text-lg opacity-80">Interested in my work? Let’s chat.</p>
-        <button className="mt-8 px-8 py-4 text-lg bg-[#ff6562] hover:bg-[#db5654] text-white font-semibold rounded-xl shadow-lg">
-          Contact Me
-        </button>
+      <section className="relative flex items-center justify-center py-3 text-center px-6 md:px-20 rounded-t-2xl shadow-inner">
+        <img 
+          src="/media/projects/VR-GriefsShadow/WithShadow-SkyboxBG.gif" 
+          alt="Skybox" 
+          className="absolute w-full h-full object-cover opacity-100"
+        />
+        <div className="my-3 relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
+          <h2 className="text-4xl font-bold text-white">Let’s Connect!</h2>
+          <p className="text-white mt-6 text-lg opacity-80">Interested in my work? Let’s chat.</p>
+          <button className="mt-8 px-6 py-3  text-lg transparent hover:text-white border border-[#cd5cc4] text-white font-semibold rounded-md shadow-lg">
+            Contact Me
+          </button>
+        </div>
       </section>
     </div>
   );

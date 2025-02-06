@@ -5,25 +5,13 @@ const ProjectCard = ({ imgUrl, videoUrl, title, description }) => {
         <div className="overflow-hidden relative group w-100">
             {/* Media Section (Video as Default) */}
             <div className="relative h-[400px] md:h-[500px]">
-                {videoUrl ? (
-                    /* Video Section */
-                    <video
-                        className="absolute inset-0 w-full h-full object-cover"
-                        src={videoUrl}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                    />
-                ) : (
-                    /* Image Section */
-                    <div
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{
-                            backgroundImage: `url(${imgUrl})`,
-                        }}
-                    ></div>
-                )}
+                    { /* Image Section */ }
+                <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{
+                        backgroundImage: `url(${imgUrl})`,
+                    }}
+                ></div>
             </div>
 
             {/* Combined Title and Description Banner */}
