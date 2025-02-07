@@ -3,14 +3,9 @@
 import React from "react";
 import { ChevronDown, ChevronLeft } from 'lucide-react';
 import { useState } from "react";
-import Carousel from "@/app/components/Carousel";
-
-const slides = [
-  { image: "/media/projects/VR-GriefsShadow/storyboard1.png", caption: "This is the first slide" },
-  { image: "/media/projects/VR-GriefsShadow/storyboard2.png", caption: "This is the second slide" },
-  { image: "/media/projects/VR-GriefsShadow/storyboard3.png", caption: "This is the third slide" },
-];
-
+import Concept from "@/app/components/WithShadows/Concept";
+import ReferenceGallery from "@/app/components/WithShadows/ReferenceGallery";
+import Storyboard from "@/app/components/WithShadows/Storyboard";
 
 export default function GriefsShadow() {
     // Declare state and functions
@@ -81,7 +76,7 @@ export default function GriefsShadow() {
                 An Immersive Virtual Reality Experience about Grieving the Loss of a Loved One
               </p>
               <p className="mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-80">
-                This project encourages users to drop into their body by experiencing the relentless demands of daily life with the inescapable presence of grief, serving as a therapeutic tool for understanding the grief process.
+                Using VR to build empathy for people processing the loss of someone close to them by experiencing someone's moment-to-moment relationship with grief over time. Serves as a therapeutic tool for processing.
               </p>
             </div>
             
@@ -106,25 +101,25 @@ export default function GriefsShadow() {
     </section>
 
       {/* Project Overview */}
-      <section className="my-3 lg:my-5 py-3 lg:py-5 px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <section className="my-3 lg:my-5 py-3 lg:py-5 px-6 lg:px-20 lg:mx-5 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
-          <h2 className="text-4xl lg:text-5xl font-semibold">Project Overview</h2>
+          <h2 className="text-4xl lg:text-5xl font-semibold opacity-90">Project Overview</h2>
 
           {/* Emphasized Assignment */}
           <div className="mt-6 text-2xl font-semibold opacity-90">
             Assignment  
           </div>
-          <p className="mt-2 text-lg opacity-80">
+          <p className="mt-2 text-lg text-gray-600">
             Design and prototype a VR experience using Unity that fosters empathy through the perspective of the individual for whom you're building empathy.
           </p>
 
           {/* Additional Details */}
-          <div className="mt-6 space-y-2 text-lg opacity-80">
-            <p><strong>Duration:</strong> 7 weeks, completed December 2024</p>
-            <p><strong>Role:</strong> Creative Technologist, Designer, Developer</p>
-            <p><strong>Tools:</strong> Unity, C#, Oculus VR, Storyboarding</p>
-            <p><strong>Focus:</strong> Empathy-Driven Storytelling, VR Design, and Technical Implementation in Unity</p>
-            <p><strong>Context:</strong> Audited CCA Grad class “XR: Immersive Experiences and Scripted Spaces”</p>
+          <div className="mt-6 space-y-2 text-lg text-gray-600">
+            <p><strong className="text-black opacity-90">Duration:</strong> 7 weeks, completed December 2024</p>
+            <p><strong className="text-black opacity-90">Role:</strong> Creative Technologist, Designer, Developer</p>
+            <p><strong className="text-black opacity-90">Tools:</strong> Unity, C#, Oculus VR, Storyboarding</p>
+            <p><strong className="text-black opacity-90">Focus:</strong> Empathy-Driven Storytelling, VR Design, and Technical Implementation in Unity</p>
+            <p><strong className="text-black opacity-90">Context:</strong> Audited CCA Grad class “XR: Immersive Experiences and Scripted Spaces”</p>
           </div>
         </div>
 
@@ -144,14 +139,12 @@ export default function GriefsShadow() {
       </div>
 
       {/* Ideation & Storyboard */}
-
       {/* We all enter this world with the capacity to carry grief. To love is to lose. Through grieving and processing a personal loss, I created this immersive VR experience for everyone—whether you have yet to face a significant loss or are seeking a mindful space for healing. */}
-      <section className="my-3 lg:my-5 py-3 lg:py-5 px-6 lg:px-20">
-          <h2 className="text-4xl lg:text-5xl font-semibold text-center">Ideation & Storyboarding</h2>
-          <div className="mb-3 lg:mb-5 lg:px-20 max-w-6xl mx-auto">
-          <Carousel slides={slides} />
-            
-          </div>
+      <section className="my-3 lg:my-5 lg:mx-5 py-3 lg:py-5 px-6 lg:px-20">
+          <h2 className="text-4xl lg:text-5xl font-semibold text-center opacity-90">Process</h2>
+          <Concept />
+          <ReferenceGallery />
+          <Storyboard />
       </section>
 
       {/* Dividing Line */}

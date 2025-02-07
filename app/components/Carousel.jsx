@@ -17,7 +17,7 @@ export default function Carousel({slides}) {
       >
         {slides.map((s, index) => (
           <div key={index} className="w-full flex flex-col items-center shrink-0">
-            <p className="mt-2 text-center text-gray-800">{s.caption}</p>
+            <p className="mb-2 text-lg text-center text-gray-800">{s.caption}</p>
             <img src={s.image} alt={`Slide ${index + 1}`} className="w-full h-auto" />
           </div>
         ))}
