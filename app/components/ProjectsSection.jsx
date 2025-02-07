@@ -7,8 +7,8 @@ import Link from "next/link";
 const projectsData = [
     {
         id: 1,
-        title: "Grief's Shadow",
-        slug: "griefs-shadow",
+        title: "With Shadows",
+        slug: "with-shadows",
         description: "Using VR to build empathy for people processing the loss of someone close to them, experiencing someone's moment-to-moment relationship with grief and how it manifests over time.",
         image: "/media/projects/VR-GriefsShadow/ProjectSection-WithShadow.gif",
         tag: ["All", "VR"],
@@ -100,7 +100,7 @@ const ProjectsSection = () => {
             <div className="grid md:grid-cols-2 gap-5">
                 {filteredProjects.map((project) => (
                     <Link key={project.id} href={`/projects/${project.slug}`} passHref>
-                        <div className="cursor-pointer">
+                        <div className="cursor-pointer mb-8 lg:mb-0">
                             <ProjectCard 
                                 title={project.title} 
                                 description={project.description} 

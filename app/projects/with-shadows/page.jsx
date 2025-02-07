@@ -203,11 +203,18 @@ export default function GriefsShadow() {
 
       {/* Final Experience */}
       <section className="my-3 lg:my-5 py-3 lg:py-5 px-6 lg:px-20">
-      <h2 className="text-4xl lg:text-5xl font-semibold text-center">Final Experience</h2>
-        <video className="mt-12 w-full max-w-xl mx-auto rounded-md shadow-lg border border-gray-300" controls>
-          <source src="/media/projects/VR-GriefsShadow/FinalExperience.mp4" type="video/mp4" />
-        </video>
+        <h2 className="text-4xl lg:text-5xl font-semibold text-center">Final Experience</h2>
+        <div className="mt-12 w-full max-w-xl mx-auto rounded-md shadow-lg border border-gray-300 overflow-hidden">
+          <iframe
+            className="w-full h-96 lg:h-[600px]"
+            src="https://www.youtube.com/embed/iVC51VEGku4"
+            title="YouTube Video"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </section>
+
 
       {/* Call to Action */}
       <section className="relative flex items-center justify-center py-3 text-center px-6 md:px-20 rounded-t-2xl shadow-inner">
