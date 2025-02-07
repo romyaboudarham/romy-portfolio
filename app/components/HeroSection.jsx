@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section>
-      <div className="min-h-screen grid grid-cols-1 lg:grid-cols-12 relative ">
+      <div className="h-[100dvh] grid grid-cols-1 lg:grid-cols-12 relative ">
         <div className="col-span-7 place-self-center text-center lg:text-left text-gray-900">
           <h1 className="mb-4 text-3xl lg:text-4xl font-extrabold text-black">
             Romy Aboudarham

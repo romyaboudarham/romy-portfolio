@@ -43,9 +43,9 @@ export default function GriefsShadow() {
     };
 
   return (
-    <div className="bg-[#f9f9f9] text-black min-h-screen font-sans">
+    <div className="bg-[#f9f9f9] text-black font-sans">
       {/* Hero Section */}
-      <section className="bg-black relative flex items-center justify-center min-h-screen text-center px-4 lg:px-12 overflow-hidden">
+      <section className="h-[100dvh] bg-black relative flex items-center justify-center text-center px-4 lg:px-12 overflow-hidden">
       {isPlaying ? (
         <>
           {/* Back Arrow in Top Left */}
