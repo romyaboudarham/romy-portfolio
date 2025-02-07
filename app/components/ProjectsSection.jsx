@@ -97,10 +97,10 @@ const ProjectsSection = () => {
                     />
                 ))}
             </div>
-            <div className="grid md:grid-cols-2 gap-5">
+            <div className="mx-auto grid md:grid-cols-2 gap-5">
                 {filteredProjects.map((project) => (
                     <Link key={project.id} href={`/projects/${project.slug}`} passHref>
-                        <div className="cursor-pointer mb-8 lg:mb-0">
+                        <div className="cursor-pointer mb-8 md:mb-0 lg:mb-0">
                             <ProjectCard 
                                 title={project.title} 
                                 description={project.description} 

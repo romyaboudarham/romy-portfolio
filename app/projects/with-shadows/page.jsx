@@ -11,12 +11,6 @@ const slides = [
   { image: "/media/projects/VR-GriefsShadow/storyboard3.png", caption: "This is the third slide" },
 ];
 
-// const slides = [
-//   "/media/projects/VR-GriefsShadow/storyboard1.png",
-//   "/media/projects/VR-GriefsShadow/storyboard2.png",
-//   "/media/projects/VR-GriefsShadow/storyboard3.png",
-// ];
-
 
 export default function GriefsShadow() {
     // Declare state and functions
@@ -87,9 +81,7 @@ export default function GriefsShadow() {
                 An Immersive Virtual Reality Experience about Grieving the Loss of a Loved One
               </p>
               <p className="mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-80">
-                We all enter this world with the capacity to carry grief. To love is to lose. Through grieving and processing a personal loss, I created this immersive VR experience for everyone—whether you have yet to face a significant loss or are seeking a mindful space for healing.
-                <br /><br />
-                By immersing users in an experience that balances the relentless demands of daily life with the inescapable presence of grief, the project encourages users to drop into their body, serving as a therapeutic tool for understanding the grief process.
+                This project encourages users to drop into their body by experiencing the relentless demands of daily life with the inescapable presence of grief, serving as a therapeutic tool for understanding the grief process.
               </p>
             </div>
             
@@ -152,9 +144,11 @@ export default function GriefsShadow() {
       </div>
 
       {/* Ideation & Storyboard */}
+
+      {/* We all enter this world with the capacity to carry grief. To love is to lose. Through grieving and processing a personal loss, I created this immersive VR experience for everyone—whether you have yet to face a significant loss or are seeking a mindful space for healing. */}
       <section className="my-3 lg:my-5 py-3 lg:py-5 px-6 lg:px-20">
           <h2 className="text-4xl lg:text-5xl font-semibold text-center">Ideation & Storyboarding</h2>
-          <div className="mb-3 lg:mb-5 px-6 lg:px-20 max-w-6xl mx-auto">
+          <div className="mb-3 lg:mb-5 lg:px-20 max-w-6xl mx-auto">
           <Carousel slides={slides} />
             
           </div>
@@ -168,28 +162,37 @@ export default function GriefsShadow() {
       {/* Key VR Interacitons */}
       <section className="my-3 lg:my-5 py-3 lg:py-5 px-6 lg:px-20">
       <h2 className="text-4xl lg:text-5xl font-semibold text-center">Key VR Interactions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2 lg:px-32 py-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
           <div className="flex flex-col items-center">
+            <div className="mt-6 text-2xl font-semibold opacity-90">
+              Dynamic Date Progression
+            </div>
             <img 
               src="/media/projects/VR-GriefsShadow/Interaction-Voicemail-DataChange.gif" 
               alt="Interaction 1" 
-              className="w-full max-w-sm mx-auto rounded-md"
+              className="mt-2 w-full max-w-md mx-auto rounded-md"
             />
-            <p className="text-center text-lg mt-2">Grabbing and Inspecting Objects</p>
+            <p className="text-center text-lg mt-2">A date counter continuously increases while the outpouring of support diminishes.</p>
           </div>
           <div className="flex flex-col items-center">
+            <div className="mt-6 text-2xl font-semibold opacity-90">
+              Upon wake up, Collision Memory Trigger
+            </div>
             <img 
               src="/media/projects/VR-GriefsShadow/Room-Collision-Timeline.gif" 
               alt="Interaction 2" 
-              className="w-full max-w-sm mx-auto rounded-md"
+              className="mt-2 w-full max-w-md mx-auto rounded-md"
             />
-            <p className="text-center text-lg mt-2">Teleportation Movement</p>
+            <p className="text-center text-lg mt-2"> Colliding with an alarm clock and clicking a photo activates a timeline sequence, allowing users to interact with key memory points.</p>
           </div>
           <div className="flex flex-col items-center">
+            <div className="mt-6 text-2xl font-semibold opacity-90">
+              Dissociated state via Tunnel Vision Effect
+            </div>
             <img 
               src="/media/projects/VR-GriefsShadow/Breathe-Collision-Timeline.gif" 
               alt="Interaction 3" 
-              className="w-full max-w-sm mx-auto rounded-md"
+              className="mt-2 w-full max-w-md mx-auto rounded-md"
             />
             <p className="text-center text-lg mt-2">Button Press to Trigger Events</p>
           </div>
