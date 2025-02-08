@@ -13,7 +13,7 @@ export default function Storyboard() {
   return (
     <section className="pt-5 mt-10">
         <h2 className="text-2xl font-semibold opacity-90">Storyboard</h2>  
-        <div className="mt-6 mb-3 lg:mb-5 w-full">
+        <div className="mt-6 mb-3 lg:mb-5 mx-auto w-full">
             <Carousel slides={slides} />
         </div>    
     </section>

@@ -5,13 +5,13 @@ import Image from "next/image";
 const references = [
   {
     title: "Bedside Table with Photo",
-    description: "A reference image of my real-life bedside table with a framed photo of my brother, recreated in VR to capture personal memory and emotion.",
+    description: "Referenced my real-life bedside table with a framed photo of my brother, recreated in VR to capture the presence of grief first thing when you wake up.",
     referenceImage: "/media/projects/VR-GriefsShadow/Process/bedside-reference.jpg", // Update with actual paths
     renderImage: "/media/projects/VR-GriefsShadow/Process/unity-bedside-unlit.png",
   },
   {
     title: "Messy Room",
-    description: "A real-life photo of my messy room, used as inspiration for the VR scene to reflect emotional chaos and personal space.",
+    description: "Referenced my real-life messy room, used as inspiration for the VR scene to reflect the struggle of daily tasks.",
     referenceImage: "/media/projects/VR-GriefsShadow/Process/room-reference.jpg",
     renderImage: "/media/projects/VR-GriefsShadow/Process/unity-room-unlit.png",
   },
@@ -21,10 +21,12 @@ export default function ReferenceGallery () {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section className="pt-5 mt-10">
+    <section className="mt-8 lg:mt-10">
       <h2 className="text-2xl font-semibold opacity-90">Inspiration & References</h2>
         {references.map((item, index) => (
-          <div key={index} className="mt-6 grid md:grid-cols-2 gap-5 items-center">
+          <div key={index} className="mt-2 grid md:grid-cols-2 gap-5 items-center">
+            {/* Description */}
+            <p className="md:col-span-2 lg:text-xl text-gray-800">{item.description}</p>
             {/* Reference Image - Forced Square */}
             <div className="flex flex-col items-center">
               <div className="relative cursor-pointer w-full aspect-square">
@@ -55,8 +57,7 @@ export default function ReferenceGallery () {
             </div>
     
 
-            {/* Description */}
-            <p className="md:col-span-2 text-lg text-center text-gray-800">{item.description}</p>
+            
           </div>
         ))}
 
