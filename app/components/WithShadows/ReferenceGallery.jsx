@@ -5,7 +5,7 @@ import Image from "next/image";
 const references = [
   {
     title: "Bedside Table with Photo",
-    description: "Referenced my real-life bedside table with a framed photo of my brother, recreated in VR to capture the presence of grief first thing when you wake up.",
+    description: "Referenced my real-life bedside table with a framed photo of my brother, recreated in VR to capture the presence of grief first thing when you wake up while.",
     referenceImage: "/media/projects/VR-GriefsShadow/Process/bedside-reference.jpg", // Update with actual paths
     renderImage: "/media/projects/VR-GriefsShadow/Process/unity-bedside-unlit.png",
   },
