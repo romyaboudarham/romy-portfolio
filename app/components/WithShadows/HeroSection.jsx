@@ -16,9 +16,11 @@ export default function HeroSection() {
     }
 
     const handleTouchEnd = () => {
-        const deltaX = touchStartX.current - touchEndX.current
-        if (deltaX > 50) handleBackClick() // Swipe left to go back
-    }
+        if (!isPlaying) return; // Ignore swipe if the video is not playing
+    
+        const deltaX = touchStartX.current - touchEndX.current;
+        if (deltaX > 100) handleBackClick();
+    };
 
     // Video Functions
     // Declare state and functions
