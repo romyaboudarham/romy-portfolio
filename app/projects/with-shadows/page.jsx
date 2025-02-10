@@ -1,8 +1,6 @@
 "use client"; // Ensure this is at the top of the file
 
 import React from "react";
-import { ChevronDown, ChevronLeft } from 'lucide-react';
-import { useState } from "react";
 import Concept from "@/app/components/WithShadows/Concept";
 import ReferenceGallery from "@/app/components/WithShadows/ReferenceGallery";
 import Storyboard from "@/app/components/WithShadows/Storyboard";
