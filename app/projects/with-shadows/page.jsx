@@ -2,10 +2,11 @@
 
 import React from "react";
 import Concept from "@/app/components/WithShadows/Concept";
-import ReferenceGallery from "@/app/components/WithShadows/ReferenceGallery";
+import EnvironmentDesign from "@/app/components/WithShadows/EnvironmentDesign";
 import Storyboard from "@/app/components/WithShadows/Storyboard";
 import Breathe from "@/app/components/WithShadows/Breathe"
 import HeroSection from "@/app/components/WithShadows/HeroSection"
+import InteractionDesign from "@/app/components/WithShadows/InteractionDesign"
 
 export default function GriefsShadow() {
     
@@ -54,13 +55,24 @@ export default function GriefsShadow() {
         <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
       </div>
 
-      {/* Ideation & Storyboard */}
+      {/* Conceptualization */}
       {/* We all enter this world with the capacity to carry grief. To love is to lose. Through grieving and processing a personal loss, I created this immersive VR experience for everyone—whether you have yet to face a significant loss or are seeking a mindful space for healing. */}
       <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
-          <h2 className="mb-7 lg:mb-16 text-4xl lg:text-5xl font-semibold text-center opacity-90">Process</h2>
+          <h2 className="mb-7 lg:mb-16 text-4xl lg:text-5xl font-semibold text-center opacity-90">Conceptualization</h2>
           <Concept />
-          <ReferenceGallery />
+      </section>
+
+      {/* Dividing Line */}
+      <div className="my-6 mx-3 lg:mx-[170px]">
+        <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
+      </div>
+
+      {/* Design & Developement */}
+      <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
+          <h2 className="mb-7 lg:mb-16 text-4xl lg:text-5xl font-semibold text-center opacity-90">Design & Development Process</h2>
           <Storyboard />
+          <EnvironmentDesign />
+          <InteractionDesign />
       </section>
 
       {/* Dividing Line */}
@@ -68,45 +80,9 @@ export default function GriefsShadow() {
         <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
       </div>
 
-      {/* Key VR Interacitons */}
+      {/* Challenges & Iterations */}
       <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
-        <h2 className="mb-7 lg:mb-16 text-4xl lg:text-5xl font-semibold text-center">Key VR Interactions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
-            <div className="flex flex-col items-center">
-              <img 
-                src="/media/projects/VR-GriefsShadow/Interaction-Voicemail-DataChange.gif" 
-                alt="Interaction 1" 
-                className="mt-2 w-full max-w-md mx-auto "
-              />
-              <p className="text-center text-md mt-2 text-gray-600">A date counter continuously increases while the outpouring of support diminishes.</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img 
-                src="/media/projects/VR-GriefsShadow/Room-Collision-Timeline.gif" 
-                alt="Interaction 2" 
-                className="mt-2 w-full max-w-md mx-auto "
-              />
-              <p className="text-center text-md mt-2 text-gray-600">The alarm sound queues the user to hit the clock, which then directs attention to the photo. Clicking the photo triggers a timeline sequence that introduces the user to the loss in the form of a pink companion.</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img 
-                src="/media/projects/VR-GriefsShadow/Breathe-Collision-Timeline.gif" 
-                alt="Interaction 3" 
-                className="mt-2 w-full max-w-md mx-auto "
-              />
-              <p className="text-center text-lg mt-2 text-gray-600">test</p>
-            </div>
-          </div>
-      </section>
-
-      {/* Dividing Line */}
-      <div className="my-6 mx-3 lg:mx-[170px]">
-        <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
-      </div>
-
-      <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
-          <h2 className="mb-7 lg:mb-16 text-4xl lg:text-5xl font-semibold text-center opacity-90">Impact</h2>
-          <Breathe />
+          <h2 className="mb-7 lg:mb-16 text-4xl lg:text-5xl font-semibold text-center opacity-90">Challenges & Iterations</h2>
       </section>
 
       {/* Dividing Line */}
@@ -128,8 +104,20 @@ export default function GriefsShadow() {
         </div>
       </section>
 
+      {/* Dividing Line */}
+      <div className="my-6 mx-3 lg:mx-[170px]">
+        <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
+      </div>
 
-      {/* Call to Action */}
+      {/* Impact */}
+      <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
+          <h2 className="mb-7 lg:mb-16 text-4xl lg:text-5xl font-semibold text-center opacity-90">Impact</h2>
+          <Breathe />
+      </section>
+      
+
+
+      {/* Footer - Let's Connect */}
       <section className="relative flex items-center justify-center py-3 text-center px-6 md:px-20 rounded-t-2xl shadow-inner">
         <img 
           src="/media/projects/VR-GriefsShadow/WithShadow-SkyboxBG.gif" 

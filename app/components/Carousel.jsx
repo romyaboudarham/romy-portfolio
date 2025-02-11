@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from "react-feather"
 
 export default function Carousel({ slides }) {
   const [curr, setCurr] = useState(0)
+  const [selectedImage, setSelectedImage] = useState(null) // State for modal
   const touchStartX = useRef(0)
   const touchEndX = useRef(0)
 
@@ -38,7 +39,12 @@ export default function Carousel({ slides }) {
         {slides.map((s, index) => (
           <div key={index} className="w-full flex flex-col items-center shrink-0">
             <p className="mb-2 text-center text-md text-gray-600">{s.caption}</p>
-            <img src={s.image} alt={`Slide ${index + 1}`} className="w-full h-auto" />
+            <img 
+              src={s.image} 
+              alt={`Slide ${index + 1}`} 
+              className="w-full h-auto cursor-pointer"
+              onClick={() => setSelectedImage(s.image)} 
+            />
           </div>
         ))}
       </div>
@@ -56,7 +62,7 @@ export default function Carousel({ slides }) {
       {/* Nav Dots */}
       <div className="relative lg:absolute lg:bottom-10 right-0 left-0">
         <div className="flex items-center justify-center gap-2">
-        {slides.map((slide, i) => (
+        {slides.map((_, i) => (
           <div
             key={i}
             className={`
@@ -67,6 +73,22 @@ export default function Carousel({ slides }) {
         ))}
         </div>
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+          onClick={() => setSelectedImage(null)}
+        >
+          <img src={selectedImage} alt="Enlarged" className="max-w-[90%] max-h-[90%]" />
+          <button 
+            className="absolute top-5 right-5 text-white text-3xl" 
+            onClick={() => setSelectedImage(null)}
+          >
+            ×
+          </button>
+        </div>
+      )}
     </div>
   )
 }
