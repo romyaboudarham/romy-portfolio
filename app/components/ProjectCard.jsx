@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectCard = ({ imgUrl, videoUrl, title, description }) => {
+const ProjectCard = ({ imgUrl, videoUrl, title, description, techStack }) => {
     return (
         <div className="overflow-hidden relative group w-full">
             {/* Media Section (Image as Default) */}
@@ -20,6 +20,9 @@ const ProjectCard = ({ imgUrl, videoUrl, title, description }) => {
                 <h5 className="text-lg font-semibold mb-1">{title}</h5>
                 {/* Description Section */}
                 <p className="text-sm">{description}</p>
+                <div className="mt-2 text-sm border-t border-gray-400 pt-2">
+                    <strong>Tech Stack:</strong> {techStack}
+                </div>
             </div>
 
             {/* Title and Description for Mobile */}
@@ -28,6 +31,10 @@ const ProjectCard = ({ imgUrl, videoUrl, title, description }) => {
                 <h5 className="text-xl font-semibold mb-2">{title}</h5>
                 {/* Description Section */}
                 <p className="text-md">{description}</p>
+                {/* Tech Stack */}
+                <div className="block md:hidden mt-2 text-sm text-gray-600 border-t border-gray-300 pt-2">
+                    <strong>Tech Stack:</strong> {techStack}
+                </div>
             </div>
         </div>
     );
