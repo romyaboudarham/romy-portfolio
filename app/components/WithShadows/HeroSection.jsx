@@ -1,27 +1,7 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { ChevronDown, ChevronLeft } from "lucide-react";
 
 export default function HeroSection() {
-  // Track touch positions
-  const touchStartX = useRef(0);
-  const touchEndX = useRef(0);
-
-  // Handle touch events
-  const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchMove = (e) => {
-    touchEndX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = () => {
-    if (!videoUrl) return; // Ignore swipe if no video is playing
-
-    const deltaX = touchStartX.current - touchEndX.current;
-    if (deltaX > 100) handleBackClick();
-  };
-
   // Video States
   const [videoUrl, setVideoUrl] = useState(null);
   const [fadeClass, setFadeClass] = useState("opacity-0");
@@ -57,9 +37,6 @@ export default function HeroSection() {
   return (
     <section
       className="h-[100dvh] bg-black relative flex items-center justify-center text-center px-4 lg:px-12 overflow-hidden"
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
     >
       {videoUrl ? (
         <>
