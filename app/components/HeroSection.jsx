@@ -1,45 +1,41 @@
-import React from 'react';
-import Image from "next/image";
-import { ChevronDown } from 'lucide-react';
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
+  const [displayedText, setDisplayedText] = useState("");
+  const fullText = "Romy Aboudarham";
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setDisplayedText(fullText.slice(0, index + 1)); // Ensure correct substring
+      index += 1;
+      if (index === fullText.length) clearInterval(interval); // Stop at full length
+    }, 150);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section>
-      <div className="h-[100dvh] grid grid-cols-1 lg:grid-cols-12 relative ">
-        <div className="col-span-7 place-self-center text-center lg:text-left text-gray-900">
-          <h1 className="mb-4 text-3xl lg:text-4xl font-extrabold text-black">
-            Romy Aboudarham
-          </h1>
-          <p className="text-base sm:text-lg lg:text-xl mb-3 text-gray-800">
-            I'm a creative technologist driven by the power of storytelling and innovation. 
-            I merge art and technology to design immersive, impactful experiences that resonate deeply. 
-            By leveraging cutting-edge tools in Augmented and Virtual Reality, I craft interactions that
-            seek to not lose sight of the physical world we live in, prioritizing the body of the person experiencing the art.
-          </p>
-          <div>
-            <button className="px-6 py-3 rounded-md mr-4 bg-[#ff6562] hover:bg-[#db5654] text-white">Let's Connect</button>
-            <button className="px-6 py-3 rounded-md bg-transparent hover:bg-[#db5654] hover:text-white border border-[#ff6562] mt-3">Download CV</button>
-          </div>
-        </div>
-        <div className="col-span-5 place-self-center mb-20 lg:mt-0">
-          <div className="w-[215px] h-[215px] lg:w-[300px] lg:h-[300px] overflow-hidden rounded-full relative">
-            <Image
-              src="/media/romy.png"
-              alt="Romy Headshot"
-              width={300}
-              height={300}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            />
-          </div>
-        </div>
-        
-        {/* Down Arrow Icon */}
-        <div className="absolute mb-4 bottom-6 left-1/2 transform -translate-x-1/2">
-          <ChevronDown className="w-14 h-8 text-[#ff6562]" />
-        </div>
+    <section className="h-screen sm:h-auto flex flex-col items-center justify-center text-gray-900 px-4">
+      <h1
+        className="text-5xl md:text-6xl text-center"
+        style={{ fontFamily: "Londrina Outline, cursive" }}
+      >
+        {displayedText}
+      </h1>
+      <p className="text-base sm:text-lg lg:text-md text-center max-w-3xl mt-4">
+        creative technologist & empathy-driven storyteller
+      </p>
+
+      {/* Down Arrow Icon */}
+      <div className="md:hidden absolute mb-4 bottom-6 left-1/2 transform -translate-x-1/2">
+        <ChevronDown className="w-14 h-8 text-[#ff6562]" />
       </div>
     </section>
   );
-}
+};
 
 export default HeroSection;

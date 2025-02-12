@@ -10,7 +10,7 @@ export default function EnvironmentDesign() {
       <h2 className="text-2xl font-semibold opacity-90">Environment Design</h2>
       <p className="mt-2 lg:text-xl text-gray-800">
         These VR environments were designed based on real-life references to enhance the emotional depth of the experience. Each scene was carefully crafted to reflect themes of grief and memory, ensuring an immersive and meaningful connection for users.
-        Referenced my real-life bedside table with a framed photo of my brother, recreated in VR to capture the presence of grief first thing when you wake up while.
+        Referenced my real-life bedside table with a framed photo of my brother and messy room, recreated in VR to capture the presence of grief first thing when you wake up while.
         Referenced my real-life messy room, used as inspiration for the VR scene to reflect the struggle of daily tasks.
       </p>
       

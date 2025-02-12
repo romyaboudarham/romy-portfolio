@@ -4,9 +4,10 @@ import Image from "next/image";
 import Carousel from "@/app/components/Carousel";
 
 const slides = [
-    { image: "/media/projects/VR-GriefsShadow/storyboard1.png", caption: "This is the first slide" },
-    { image: "/media/projects/VR-GriefsShadow/storyboard2.png", caption: "This is the second slide" },
-    { image: "/media/projects/VR-GriefsShadow/storyboard3.png", caption: "This is the third slide" },
+    { image: "/media/projects/VR-GriefsShadow/Storyboard/initial storyboard.png", caption: "Initial Storyboard (pg 1/1)"},
+    { image: "/media/projects/VR-GriefsShadow/Storyboard/storyboard1.png", caption: "Second Storyboard (pg 1/3)" },
+    { image: "/media/projects/VR-GriefsShadow/Storyboard/storyboard2.png", caption: "Second Storyboard (pg 2/3)" },
+    { image: "/media/projects/VR-GriefsShadow/Storyboard/storyboard3.png", caption: "Second Storyboard (pg 3/3)" },
   ];
 
 export default function Storyboard() {

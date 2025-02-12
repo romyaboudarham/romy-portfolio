@@ -66,14 +66,15 @@ export default function HeroSection() {
           <div className="relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
             {/* Title & Description Box */}
             <div className="p-3 lg:p-5 text-white bg-[white]/20 backdrop-blur-lg shadow-xl text-center">
-              <div className="mt-3 lg:mt-5 text-4xl lg:text-6xl font-bold opacity-90">
+              <div className="mt-3 lg:mt-5 text-5xl lg:text-6xl opacity-90" style={{ fontFamily: 'Londrina Outline, cursive' }}>
                 With Shadows
               </div>
               <p className="mt-3 lg:mt-5 text-lg lg:text-2xl">
                 An Immersive Virtual Reality Experience about Grieving the Loss of a Loved One
               </p>
               <p className="mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-80">
-                Using VR to build empathy for people processing the loss of someone close to them by experiencing someone's moment-to-moment relationship with grief over time. Serves as a therapeutic tool for processing.
+              Utilizing VR to foster empathy and understanding for those navigating the loss of a loved one by immersing users in the evolving, moment-to-moment experience of grief. 
+              Designed as a therapeutic tool for processing and reflection.
               </p>
             </div>
             {/* Button Below */}

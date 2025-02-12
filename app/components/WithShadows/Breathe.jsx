@@ -29,7 +29,7 @@ export default function PortfolioGrid() {
       {/* Text Content */}
       <div>
         <p className="mt-2 lg:text-xl text-gray-800">
-          This grid captures a my favorite moment—users, immersed in the VR world, responding to a simple yet powerful prompt: to take a breath.
+          This grid captures my favorite moment—users, immersed in the VR world, responding to a simple yet powerful prompt: to take a breath.
           In that pause, technology goes beyond simple simulation, guiding real human emotions and bodily awareness.
           This moment reflects my approach to creative technology: crafting empathy-driven experiences that resonate deeply, inviting users not just to engage but to feel, reflect, and heal.
           Through VR, I design spaces where digital and emotional realities intertwine, fostering genuine connection and presence.

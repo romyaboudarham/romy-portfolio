@@ -18,7 +18,7 @@ export default function GriefsShadow() {
 
       {/* Project Overview */}
       <section className="mx-3 my-6 lg:my-8 lg:mx-[170px]">
-        <h2 className="text-center mb-7 lg:mb-16 text-4xl lg:text-5xl font-semibold opacity-90">Project Overview</h2>
+        <h2 className="text-center mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold opacity-90">Project Overview</h2>
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
             {/* Emphasized Assignment */}
@@ -58,7 +58,7 @@ export default function GriefsShadow() {
       {/* Conceptualization */}
       {/* We all enter this world with the capacity to carry grief. To love is to lose. Through grieving and processing a personal loss, I created this immersive VR experience for everyone—whether you have yet to face a significant loss or are seeking a mindful space for healing. */}
       <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
-          <h2 className="mb-7 lg:mb-16 text-4xl lg:text-5xl font-semibold text-center opacity-90">Conceptualization</h2>
+          <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Conceptualization</h2>
           <Concept />
       </section>
 
@@ -69,20 +69,10 @@ export default function GriefsShadow() {
 
       {/* Design & Developement */}
       <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
-          <h2 className="mb-7 lg:mb-16 text-4xl lg:text-5xl font-semibold text-center opacity-90">Design & Development Process</h2>
+          <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Design & Development Process</h2>
           <Storyboard />
-          <EnvironmentDesign />
+          {/* <EnvironmentDesign /> */}
           <InteractionDesign />
-      </section>
-
-      {/* Dividing Line */}
-      <div className="my-6 mx-3 lg:mx-[170px]">
-        <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
-      </div>
-
-      {/* Challenges & Iterations */}
-      <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
-          <h2 className="mb-7 lg:mb-16 text-4xl lg:text-5xl font-semibold text-center opacity-90">Challenges & Iterations</h2>
       </section>
 
       {/* Dividing Line */}
@@ -92,7 +82,7 @@ export default function GriefsShadow() {
 
       {/* Final Experience */}
       <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
-        <h2 className="mb-7 lg:mb-16 text-4xl lg:text-5xl font-semibold text-center">Final Experience</h2>
+        <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center">Final Experience</h2>
         <div className="w-full max-w-xl mx-auto   border border-gray-300 overflow-hidden">
           <iframe
             className="w-full h-96 lg:h-[600px]"
@@ -111,7 +101,7 @@ export default function GriefsShadow() {
 
       {/* Impact */}
       <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
-          <h2 className="mb-7 lg:mb-16 text-4xl lg:text-5xl font-semibold text-center opacity-90">Impact</h2>
+          <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Impact</h2>
           <Breathe />
       </section>
       
@@ -125,7 +115,7 @@ export default function GriefsShadow() {
           className="absolute w-full h-full object-cover opacity-100"
         />
         <div className="my-3 relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
-          <h2 className="text-4xl font-bold text-white">Let’s Connect!</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white">Let’s Connect!</h2>
           <p className="text-white mt-6 text-lg opacity-80">Interested in my work? Let’s chat.</p>
           <button className="mt-8 px-6 py-3  text-lg transparent hover:text-white border border-[#cd5cc4] text-white font-semibold  ">
             Contact Me

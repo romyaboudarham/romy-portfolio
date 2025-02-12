@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ProjectCard from './ProjectCard';
 import ProjectTag from './ProjectTag';
 import Link from "next/link";
@@ -7,21 +7,22 @@ import Link from "next/link";
 const projectsData = [
     {
         id: 1,
-        title: "With Shadows",
+        title: "With Shadows - Interactive VR Story About Grief",
         slug: "with-shadows",
         description: "Utilizing VR to foster empathy and understanding for those navigating the loss of a loved one by immersing users in the evolving, moment-to-moment experience of grief. Designed as a therapeutic tool for processing and reflection.",
         image: "/media/projects/VR-GriefsShadow/ProjectSection-WithShadow.gif",
+        video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/with-shadows-project-card-9OsgVvaujPI2DcflfwtpjW4f16C7q1.mp4",
         tag: ["All", "VR"],
-        techStack: "Unity, C#, Blender"
+        techStack: "Unity, C#, Oculus, Blender"
     },
     {
         id: 2,
-        title: "Ghosts of Irish Hill",
+        title: "Ghosts of Irish Hill - AR Narrative Journalism",
         slug: "ghosts-of-irish-hill",
         description: "Using AR to tell another side of history of a physical site in SF through an AR walking tour.",
         image: "/media/projects/AR-Monument-IrishHill/",
         tag: ["All", "AR"],
-        techStack: "Unity, Vuforia Plugin, Blender"
+        techStack: "Unity, Vuforia AR Plugin, Blender"
     },
     {
         id: 3,
@@ -52,7 +53,7 @@ const projectsData = [
     },
     {
         id: 6,
-        title: "Finn's Fishbowl - Chapter 3",
+        title: "Finn's Fishbowl - Chapter 3 in VR",
         slug: "finns-fishbowl-ch3",
         description: "VR experience made with AFrame designed for an installation",
         image: "/media/projects/VR-AFrame/VR-Aframe.png",
@@ -68,35 +69,51 @@ const projectsData = [
         tag: ["All", "Arduino"],
         techStack: "Embedded Systems, C++, Sensor Data"
     },
-    {
-        id: 8,
-        title: "Handmaid Memorial Plaque",
-        slug: "handmaid-memorial",
-        description: "",
-        image: "/media/projects/Memorial-Plaque/Memorial-Plaque.jpg",
-        tag: ["All", "Other"],
-        techStack: "Metalwork, CNC, Physical Fabrication"
-    },
 ];
 
 const ProjectsSection = () => {
     const [tag, setTag] = useState("All");
+    const [isSticky, setIsSticky] = useState(false);
+    const tagRef = useRef(null);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [originalOffset, setOriginalOffset] = useState(0);
+
+    useEffect(() => {
+        if (tagRef.current) {
+            setOriginalOffset(tagRef.current.offsetTop); // Store original position on mount
+        }
+
+        const handleScroll = () => {
+            const currentScrollPos = window.scrollY;
+
+            if (tagRef.current) {
+                if (currentScrollPos > prevScrollPos && currentScrollPos >= originalOffset) {
+                    setIsSticky(true);  // Stick when scrolling down past original position
+                } else if (currentScrollPos < prevScrollPos && currentScrollPos <= originalOffset) {
+                    setIsSticky(false); // Unstick and snap back when scrolling up above original position
+                }
+            }
+
+            setPrevScrollPos(currentScrollPos);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [prevScrollPos, originalOffset]);
 
     const handleTagChange = (newTag) => {
         setTag(newTag);
     };
 
-    const filteredProjects = projectsData.filter((project) =>
-        project.tag.includes(tag)
-    );
-
     return (
         <>
-            <h2 className="text-black text-center text-4xl font-bold mt-4 mb-4 md:mb-6">
-                My Projects
-            </h2>
-            <div className="flex flex-wrap justify-center items-center gap-2 py-6">
-                {["All", "VR", "AR", "Arduino", "Exhibitions", "Other"].map((category) => (
+            <div 
+                ref={tagRef} 
+                className={`flex flex-wrap justify-center items-center gap-2 py-3 bg-white transition-all duration-300 
+                ${isSticky ? "fixed top-0 left-0 w-full shadow-md z-50" : ""}`}
+                style={isSticky ? { position: "fixed", top: "0", left: "0", width: "100%", zIndex: 50 } : {}}
+            >
+                {["All", "VR", "AR", "Embedded Systems", "Exhibitions"].map((category) => (
                     <ProjectTag 
                         key={category}
                         onClick={handleTagChange} 
@@ -105,20 +122,23 @@ const ProjectsSection = () => {
                     />
                 ))}
             </div>
-            <div className="mx-auto grid md:grid-cols-2 gap-5">
-                {filteredProjects.map((project) => (
-                    <Link key={project.id} href={`/projects/${project.slug}`} passHref>
-                        <div className="cursor-pointer mb-8 md:mb-0 lg:mb-0">
-                            <ProjectCard 
-                                title={project.title} 
-                                description={project.description} 
-                                imgUrl={project.image} 
-                                videoUrl={project.video}
-                                techStack={project.techStack}
-                            />
-                        </div>
-                    </Link>
-                ))}
+
+            <div className="mx-auto grid md:grid-cols-2 gap-5 mt-6">
+                {projectsData
+                    .filter((project) => project.tag.includes(tag))
+                    .map((project) => (
+                        <Link key={project.id} href={`/projects/${project.slug}`} passHref>
+                            <div className="cursor-pointer mb-5 lg:mb-0">
+                                <ProjectCard 
+                                    title={project.title} 
+                                    description={project.description} 
+                                    imgUrl={project.image} 
+                                    techStack={project.techStack}
+                                    videoUrl={project.video}
+                                />
+                            </div>
+                        </Link>
+                    ))}
             </div>
         </>
     );

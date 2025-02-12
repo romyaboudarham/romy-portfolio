@@ -3,22 +3,28 @@ import React from 'react';
 const ProjectCard = ({ imgUrl, videoUrl, title, description, techStack }) => {
     return (
         <div className="overflow-hidden relative group w-full">
-            {/* Media Section (Image as Default) */}
+            {/* Media Section: Video (if available) or Image */}
             <div className="relative h-[400px] md:h-[500px]">
-                {/* Image Section */}
-                <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{
-                        backgroundImage: `url(${imgUrl})`,
-                    }}
-                ></div>
+                {videoUrl ? (
+                    <video 
+                        className="absolute inset-0 w-full h-full object-cover" 
+                        src={videoUrl} 
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline
+                    />
+                ) : (
+                    <div 
+                        className="absolute inset-0 bg-cover bg-center"
+                        style={{ backgroundImage: `url(${imgUrl})` }}
+                    ></div>
+                )}
             </div>
 
             {/* Title and Description for Larger Screens */}
             <div className="hidden md:block absolute bottom-0 left-0 w-full bg-[#181818] bg-opacity-60 text-white px-4 py-3 text-sm translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                {/* Title Section */}
                 <h5 className="text-lg font-semibold mb-1">{title}</h5>
-                {/* Description Section */}
                 <p className="text-sm">{description}</p>
                 <div className="mt-2 text-sm border-t border-gray-400 pt-2">
                     <strong>Tech Stack:</strong> {techStack}
@@ -27,11 +33,8 @@ const ProjectCard = ({ imgUrl, videoUrl, title, description, techStack }) => {
 
             {/* Title and Description for Mobile */}
             <div className="md:hidden mt-3 text-black">
-                {/* Title Section */}
                 <h5 className="text-xl font-semibold mb-2">{title}</h5>
-                {/* Description Section */}
                 <p className="text-md">{description}</p>
-                {/* Tech Stack */}
                 <div className="block md:hidden mt-2 text-sm text-gray-600 border-t border-gray-300 pt-2">
                     <strong>Tech Stack:</strong> {techStack}
                 </div>
