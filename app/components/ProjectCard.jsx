@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProjectCard = ({ imgUrl, videoUrl, title, description, techStack }) => {
     return (
-        <div className="overflow-hidden relative group w-full">
+        <div className="overflow-hidden relative group w-full rounded-md">
             {/* Media Section: Video (if available) or Image */}
             <div className="relative h-[400px] md:h-[500px]">
                 {videoUrl ? (

@@ -14,7 +14,7 @@ export default function InteractionDesign() {
               <img
                 src="/media/projects/VR-GriefsShadow/Interaction-Voicemail-DataChange.gif"
                 alt="Interaction 1"
-                className="w-full max-w-md md:max-w-lg lg:max-w-2xl"
+                className="w-full max-w-md md:max-w-lg lg:max-w-2xl rounded-md"
               />
               <h2 className="text-xl opacity-90 mt-2">Day Counter</h2>
             </div>
@@ -64,7 +64,7 @@ export default function InteractionDesign() {
               <img
                 src="/media/projects/VR-GriefsShadow/Room-Collision-Timeline.gif"
                 alt="Interaction 2"
-                className="w-full max-w-md md:max-w-lg lg:max-w-2xl"
+                className="w-full max-w-md md:max-w-lg lg:max-w-2xl rounded-md"
               />
               <h2 className="text-xl opacity-90 mt-2">Collision Timeline Trigger</h2>
             </div>

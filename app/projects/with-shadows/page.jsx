@@ -86,7 +86,7 @@ export default function GriefsShadow() {
         <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center">Final Experience</h2>
         <div className="w-full max-w-xl mx-auto   border border-gray-300 overflow-hidden">
           <iframe
-            className="w-full h-96 lg:h-[600px]"
+            className="w-full h-96 lg:h-[600px] rounded-md"
             src="https://www.youtube.com/embed/iVC51VEGku4"
             title="YouTube Video"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
