@@ -35,18 +35,17 @@ export default function HeroSection() {
   };
 
   return (
-    <section
-      className="h-[100dvh] bg-black relative flex items-center justify-center text-center px-4 lg:px-12 overflow-hidden"
-    >
+    <section className="h-[100dvh] bg-black relative flex items-center justify-center text-center px-4 lg:px-12 overflow-hidden">
       {videoUrl ? (
-        <>
+        <div className="absolute inset-0 z-[70] flex items-center justify-center">
           {/* Back Arrow in Top Left */}
           <div
             onClick={handleBackClick}
-            className="absolute top-4 left-4 z-20 text-white cursor-pointer"
+            className="absolute top-4 left-4 z-[75] text-white cursor-pointer"
           >
             <ChevronLeft className="w-8 h-8" />
           </div>
+          {/* Video */}
           <video
             src={videoUrl}
             autoPlay
@@ -54,7 +53,7 @@ export default function HeroSection() {
             onEnded={handleVideoEnd}
             className={`absolute w-full h-full object-cover border-4 border-[#cd5cc4] transition-opacity duration-500 ${fadeClass}`}
           />
-        </>
+        </div>
       ) : (
         <>
           {/* Default Hero Section */}
@@ -73,8 +72,8 @@ export default function HeroSection() {
                 An Immersive Virtual Reality Experience about Grieving the Loss of a Loved One
               </p>
               <p className="mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-80">
-              Utilizing VR to foster empathy and understanding for those navigating the loss of a loved one by immersing users in the evolving, moment-to-moment experience of grief. 
-              Designed as a therapeutic tool for processing and reflection.
+                Utilizing VR to foster empathy and understanding for those navigating the loss of a loved one by immersing users in the evolving, moment-to-moment experience of grief. 
+                Designed as a therapeutic tool for processing and reflection.
               </p>
             </div>
             {/* Button Below */}

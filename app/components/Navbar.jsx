@@ -31,7 +31,6 @@ export default function Navbar({ textColor = 'text-black' }) {
         </div>
       )}
 
-
       {/* Collapsed Floating Navbar - Appears in the top-right when scrolling */}
       {!isAtTop && (
         <nav className="fixed bottom-4 md:top-2 right-4 z-[60]">
@@ -45,16 +44,14 @@ export default function Navbar({ textColor = 'text-black' }) {
 
           {/* Dropdown Menu - Opens below the button when clicked */}
           {isOpen && (
-          <div className="absolute right-0 bg-white shadow-lg rounded-lg p-2 space-y-3 
-            md:top-12 md:bottom-auto bottom-12 inline-flex flex-col text-right">
-            <NavItem href="#projects" text="Projects" />
-            <NavItem href="#about" text="About" />
-            <NavItem href="#resume" text="Resume" />
-            <NavItem href="#contact" text="Contact Me"/>
-          </div>
-)}
-
-
+            <div className="absolute right-0 bg-white shadow-lg rounded-lg p-2 space-y-3 
+              md:top-12 md:bottom-auto bottom-12 inline-flex flex-col text-right min-w-max px-4">
+              <NavItem href="#projects" text="Projects" />
+              <NavItem href="#about" text="About" />
+              <NavItem href="#resume" text="Resume" />
+              <NavItem href="#contact" text="Contact Me"/>
+            </div>
+          )}
 
         </nav>
       )}
