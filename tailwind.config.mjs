@@ -11,6 +11,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"], // Set 'Inter' as the default sans-serif font
+      },
     },
   },
   plugins: [],
