@@ -7,12 +7,13 @@ import Storyboard from "@/app/components/WithShadows/Storyboard";
 import Breathe from "@/app/components/WithShadows/Breathe"
 import HeroSection from "@/app/components/WithShadows/HeroSection"
 import InteractionDesign from "@/app/components/WithShadows/InteractionDesign"
+import Navbar from "@/app/components/Navbar.jsx";
 
 export default function GriefsShadow() {
     
-
   return (
     <div className="bg-[#f9f9f9] text-black font-sans">
+      <Navbar textColor="text-white" />
       {/* Hero Section */}
       <HeroSection />
 
