@@ -72,7 +72,7 @@ export default function GriefsShadow() {
       <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
           <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Design & Development Process</h2>
           <Storyboard />
-          {/* <EnvironmentDesign /> */}
+          <EnvironmentDesign />
           <InteractionDesign />
       </section>
 

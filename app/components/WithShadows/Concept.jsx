@@ -20,9 +20,7 @@ export default function Concept() {
               Research
             </div>
             <p className="mt-2 lg:text-xl text-gray-800">
-              I began by researching existing empathy-driven, immersive, and interactive digital experiences to understand different approaches to point of view (POV) and engagement. 
-              From there, I explored what people wished others understood better about grief. 
-              I then turned inward, reflecting on my own grief through journaling, conversations with family, meditation, crying, and reading.
+              I began by researching existing empathy-driven, immersive, and interactive digital experiences to understand different approaches to point of view perspectives and engagement.
             </p>
             <img
                 src="/media/projects/VR-GriefsShadow/Process/research-inspiration.png"
