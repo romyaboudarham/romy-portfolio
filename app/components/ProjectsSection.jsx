@@ -18,7 +18,7 @@ const projectsData = [
     {
         id: 2,
         title: "Ghosts of Irish Hill - AR Narrative Journalism",
-        slug: "ghosts-of-irish-hill",
+        slug: "ar-irish-hill",
         description: "Using AR to tell another side of history of a physical site in SF through an AR walking tour.",
         image: "/media/projects/AR-Monument-IrishHill/",
         tag: ["All", "AR"],
@@ -29,9 +29,9 @@ const projectsData = [
         title: "AR Mixed Emotions Card Deck",
         slug: "ar-mixed-emotions",
         description: "Using AR as a tool to aid in identifying emotions in the body.",
-        image: "/media/projects/AR-MixedEmotions/AR-MixedEmotions.jpg",
+        image: "/media/projects/ARMixedEmotions/AR-MixedEmotions.jpg",
         tag: ["All", "AR"],
-        techStack: "Unity, QuillVR"
+        techStack: "Unity, QuillVR, Vuforia AR Plugin"
     },
     {
         id: 4,

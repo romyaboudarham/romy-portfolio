@@ -58,47 +58,40 @@ export default function HeroSection() {
         <>
           {/* Default Hero Section */}
           <img
-            src="/media/projects/VR-GriefsShadow/WithShadow-SkyboxBG.gif"
+            src="/media/projects/ARMixedEmotions/hero-bg.jpg"
             alt="Skybox"
             className="absolute w-full h-full object-cover"
           />
           <div className="relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
             {/* Title & Description Box */}
-            <div className="p-3 lg:p-5 text-white bg-[white]/20 backdrop-blur-lg shadow-xl text-center rounded-md">
+            <div className="p-3 lg:p-5 bg-[white]/20 backdrop-blur-lg shadow-xl text-center rounded-md">
               <div className="mt-3 lg:mt-5 text-5xl lg:text-6xl" style={{ fontFamily: 'Londrina Outline, cursive' }}>
-                With Shadows
+                AR Mixed Emotions Card Deck
               </div>
-              <p className="mt-3 lg:mt-5 text-lg lg:text-2xl">
-                An Immersive Virtual Reality Experience about Grieving the Loss of a Loved One
+              <p className="mt-3 opacity-80 lg:mt-5 text-lg lg:text-2xl">
+                Using Augmented Reality to deepen the way you engage with your emotions.
               </p>
-              <p className="mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-80">
-                Utilizing VR to foster empathy and understanding for those navigating the loss of a loved one by immersing users in the evolving, moment-to-moment experience of grief. 
-                Designed as a therapeutic tool for processing and reflection.
+              <p className="mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-87">
+                This is an AR feature added to the Mixed Emotions card deck created by Petra Martin illustrated by Kris Wiltse.
               </p>
             </div>
             {/* Button Below */}
             <div className="mt-3 lg:mt-10 flex flex-col justify-center items-center w-[150px] mx-auto">
               <button
                 onClick={handleWatchDemo}
-                className="px-6 py-3 w-full bg-transparent text-white hover:bg-[#cd5cc4]
-                hover:text-white border border-[#cd5cc4] mt-3 rounded-md"
+                className="px-6 py-3 w-full bg-transparent hover:bg-black
+                hover:text-white border border-black mt-3 rounded-md"
               >
                 Watch Demo
               </button>
-              <button
-                onClick={handleWatchFull}
-                className="px-6 py-3 w-full bg-transparent text-white hover:bg-[#cd5cc4]
-                hover:text-white border border-[#cd5cc4] mt-3 lg:mt-5 rounded-md"
-              >
-                Watch Full
-              </button>
+
             </div>
           </div>
         </>
       )}
       {/* Down Arrow Icon */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-        <ChevronDown className="w-14 h-8 text-[#cd5cc4]" />
+        <ChevronDown className="w-14 h-8" />
       </div>
     </section>
   );
