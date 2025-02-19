@@ -14,7 +14,7 @@ export default function Home() {
         <div className="mb-6 lg:my-6 mx-3 lg:mx-[170px]">
           <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
         </div>
-        <ProjectsSection />
+        <ProjectsSection id="projects" />
       </div>
 
       {/* Dividing Line */}

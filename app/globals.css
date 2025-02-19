@@ -23,3 +23,7 @@ body {
   background: var(--background);
   font-family: Inter, sans-serif; /* Set Montserrat as the default font */
 }
+
+html {
+  scroll-behavior: smooth;
+}

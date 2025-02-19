@@ -71,7 +71,7 @@ const projectsData = [
     },
 ];
 
-const ProjectsSection = () => {
+export default function ProjectsSection({ id }) {
     const [tag, setTag] = useState("All");
     const [isSticky, setIsSticky] = useState(false);
     const tagRef = useRef(null);
@@ -106,7 +106,7 @@ const ProjectsSection = () => {
     };
 
     return (
-        <>
+        <section id={id}>
             <div 
                 ref={tagRef} 
                 className={`flex flex-wrap justify-center items-center gap-2 py-3 bg-white transition-all duration-300 
@@ -140,8 +140,6 @@ const ProjectsSection = () => {
                         </Link>
                     ))}
             </div>
-        </>
+        </section>
     );
 };
-
-export default ProjectsSection;
