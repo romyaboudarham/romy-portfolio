@@ -51,7 +51,7 @@ export default function HeroSection() {
             autoPlay
             controls
             onEnded={handleVideoEnd}
-            className={`absolute w-full h-full object-cover border-4 border-[#cd5cc4] transition-opacity duration-500 ${fadeClass}`}
+            className={`absolute w-full h-full object-cover border-4 border-[#ff7f02] transition-opacity duration-500 ${fadeClass}`}
           />
         </div>
       ) : (
@@ -64,14 +64,14 @@ export default function HeroSection() {
           />
           <div className="relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
             {/* Title & Description Box */}
-            <div className="p-3 lg:p-5 bg-[white]/20 backdrop-blur-lg shadow-xl text-center rounded-md">
-              <div className="mt-3 lg:mt-5 text-5xl lg:text-6xl" style={{ fontFamily: 'Londrina Outline, cursive' }}>
+            <div className="p-3 lg:p-5 bg-[black]/80 backdrop-blur-lg shadow-xl text-center rounded-md">
+              <div className="text-white mt-3 lg:mt-5 text-5xl lg:text-6xl" style={{ fontFamily: 'Londrina Outline, cursive' }}>
                 AR Mixed Emotions Card Deck
               </div>
-              <p className="mt-3 opacity-80 lg:mt-5 text-lg lg:text-2xl">
+              <p className="text-white mt-3 opacity-80 lg:mt-5 text-lg lg:text-2xl">
                 Using Augmented Reality to deepen the way you engage with your emotions.
               </p>
-              <p className="mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-87">
+              <p className="text-white mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-80">
                 This is an AR feature added to the Mixed Emotions card deck created by Petra Martin illustrated by Kris Wiltse.
               </p>
             </div>
@@ -79,8 +79,8 @@ export default function HeroSection() {
             <div className="mt-3 lg:mt-10 flex flex-col justify-center items-center w-[150px] mx-auto">
               <button
                 onClick={handleWatchDemo}
-                className="px-6 py-3 w-full bg-transparent hover:bg-black
-                hover:text-white border border-black mt-3 rounded-md"
+                className="px-6 py-3 w-full text-white bg-black/90 hover:bg-transparent
+                hover:text-black border border-black mt-10 rounded-md"
               >
                 Watch Demo
               </button>

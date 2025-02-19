@@ -6,9 +6,6 @@ export default function Storyboard() {
   return (
     <section>
         <h2 className="text-2xl font-semibold opacity-90">Storyboard</h2>  
-        <p className="mt-2 lg:text-xl text-gray-800">
-          TODO
-          </p>
         <img
               src="/media/projects/ARMixedEmotions/ar-storyboard.png"
               alt="Research"

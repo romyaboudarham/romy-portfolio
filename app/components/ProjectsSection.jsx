@@ -20,7 +20,7 @@ const projectsData = [
         title: "Ghosts of Irish Hill - AR Narrative Journalism",
         slug: "ar-irish-hill",
         description: "Using AR to tell another side of history of a physical site in SF through an AR walking tour.",
-        image: "/media/projects/AR-Monument-IrishHill/",
+        image: "/media/projects/ARIrishHill/irish-hill-photo.jpg",
         tag: ["All", "AR"],
         techStack: "Unity, Vuforia AR Plugin, Blender"
     },
