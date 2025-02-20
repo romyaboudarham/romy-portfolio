@@ -54,7 +54,7 @@ const projectsData = [
     {
         id: 6,
         title: "Finn's Fishbowl - Chapter 3 in VR",
-        slug: "finns-fishbowl-ch3",
+        slug: "ff-ch3-vr",
         description: "VR experience made with AFrame designed for an installation",
         image: "/media/projects/VR-AFrame/VR-Aframe.png",
         tag: ["All", "VR"],
