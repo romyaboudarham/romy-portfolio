@@ -30,7 +30,7 @@ export default function Home() {
                 Let’s Connect!
           </h2>
           <p className="mt-6 text-md opacity-80">Interested in my work? Let’s chat.</p>
-          <button className="mt-8 px-6 py-3  text-lg transparent hover:text-white border border-[#cd5cc4]">
+          <button className="mt-8 px-6 py-3 text-lg rounded-md transparent hover:text-white border border-black">
             Contact Me
           </button>
         </div>

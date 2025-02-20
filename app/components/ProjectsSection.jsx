@@ -45,9 +45,9 @@ const projectsData = [
     {
         id: 5,
         title: "Exhibition - Finn's Fishbowl",
-        slug: "exhibition-finns-fishbowl",
+        slug: "finns-fishbowl",
         description: "",
-        image: "/media/projects/InteractiveStory-FinnsFishbowl/Installation-FinnsFishbowl.jpg",
+        image: "/media/projects/FinnsFishbowl/FinnsFishbowl.jpg",
         tag: ["All", "Exhibitions"],
         techStack: "A-Frame VR, HTML/CSS/JS, Physical Programming ESP32, Projection Mapping, Blender"
     },
