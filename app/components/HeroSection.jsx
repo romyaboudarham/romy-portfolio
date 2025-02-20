@@ -20,7 +20,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="h-screen sm:h-auto flex flex-col items-center justify-center text-gray-900 px-4">
+    <section className="h-screen md:h-auto flex flex-col items-center justify-center text-gray-900 px-4">
       <div className="mb-5 block md:hidden w-[200px] h-[200px] overflow-hidden rounded-full relative">
             <Image
               src="/media/romy.png"

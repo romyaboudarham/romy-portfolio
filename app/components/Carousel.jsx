@@ -45,10 +45,10 @@ export default function Carousel({ slides }) {
 
       {/* Nav Buttons */}
       <div className="absolute inset-0 flex items-center justify-between p-4">
-        <button onClick={prev} className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white">
+        <button onClick={prev} className="p-1 rounded-full shadow bg-black/60 text-white hover:bg-black/90">
           <ChevronLeft size={30}/>
         </button>
-        <button onClick={next} className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white">
+        <button onClick={next} className="p-1 rounded-full shadow bg-black/60 text-white hover:bg-black/90">
           <ChevronRight size={30}/>
         </button>
       </div>
