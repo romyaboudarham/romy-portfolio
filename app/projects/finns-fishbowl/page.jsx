@@ -8,6 +8,7 @@ import Breathe from "@/app/components/FinnsFishbowl/Breathe"
 import HeroSection from "@/app/components/FinnsFishbowl/HeroSection"
 import InteractionDesign from "@/app/components/FinnsFishbowl/InteractionDesign"
 import Navbar from "@/app/components/Navbar.jsx";
+import Ch3VR from "@/app/components/FinnsFishbowl/Ch3VR";
 
 export default function FinnsFishbowl() {
     
@@ -73,7 +74,17 @@ export default function FinnsFishbowl() {
           <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Design & Development Process</h2>
           <ExhibitLayout />
           <MobileUXDesign />
-          <InteractionDesign />
+      </section>
+
+      {/* Dividing Line */}
+      <div className="my-6 mx-3 lg:mx-[180px]">
+        <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
+      </div>
+
+      {/* Impact */}
+      <section id="ch3vr" className="mx-3 my-6 lg:my-10 lg:mx-[180px]">
+          <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Chapter 3 in Virtual Reality</h2>
+          <Ch3VR />
       </section>
 
       {/* Dividing Line */}
@@ -111,14 +122,14 @@ export default function FinnsFishbowl() {
       {/* Footer - Let's Connect */}
       <section className="relative flex items-center justify-center py-3 text-center px-6 md:px-20 rounded-t-2xl shadow-inner">
         <img 
-          src="/media/projects/VR-GriefsShadow/WithShadow-SkyboxBG.gif" 
+          src="/media/projects/FinnsFishbowl/hero-footer.jpg" 
           alt="Skybox" 
           className="absolute w-full h-full object-cover opacity-100"
         />
         <div className="my-3 relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
           <h2 className="text-3xl lg:text-4xl font-bold text-white">Let’s Connect!</h2>
           <p className="text-white mt-6 text-lg opacity-80">Interested in my work? Let’s chat.</p>
-          <button className="mt-8 px-6 py-3  text-lg transparent hover:text-white border border-[#cd5cc4] text-white font-semibold  ">
+          <button className="mt-8 px-6 py-3 rounded-md text-lg transparent hover:text-white border border-[#cd5cc4] text-white font-semibold  ">
             Contact Me
           </button>
         </div>

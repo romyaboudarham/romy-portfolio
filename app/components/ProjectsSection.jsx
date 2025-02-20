@@ -54,9 +54,9 @@ const projectsData = [
     {
         id: 6,
         title: "Finn's Fishbowl - Chapter 3 in VR",
-        slug: "ff-ch3-vr",
+        slug: "finns-fishbowl",
         description: "VR experience made with AFrame designed for an installation",
-        image: "/media/projects/VR-AFrame/VR-Aframe.png",
+        image: "/media/projects/FinnsFishbowl/VR-Aframe.png",
         tag: ["All", "VR"],
         techStack: "A-Frame VR, HTML/CSS/JS, Blender"
     },
@@ -71,7 +71,7 @@ const projectsData = [
     },
 ];
 
-export default function ProjectsSection({ id }) {
+export default function ProjectsSection() {
     const [tag, setTag] = useState("All");
     const [isSticky, setIsSticky] = useState(false);
     const tagRef = useRef(null);
@@ -106,7 +106,7 @@ export default function ProjectsSection({ id }) {
     };
 
     return (
-        <section id={id}>
+        <section>
             <div 
                 ref={tagRef} 
                 className={`flex flex-wrap justify-center items-center gap-2 py-3 bg-white transition-all duration-300 
@@ -127,7 +127,11 @@ export default function ProjectsSection({ id }) {
                 {projectsData
                     .filter((project) => project.tag.includes(tag))
                     .map((project) => (
-                        <Link key={project.id} href={`/projects/${project.slug}`} passHref>
+                        <Link 
+                            key={project.id} 
+                            href={project.id === 6 ? "/projects/finns-fishbowl#ch3vr" : `/projects/${project.slug}`} 
+                            passHref
+                        >
                             <div className="cursor-pointer mb-5 lg:mb-0">
                                 <ProjectCard 
                                     title={project.title} 
