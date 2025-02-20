@@ -9,7 +9,7 @@ const projectsData = [
         id: 1,
         title: "With Shadows - Interactive VR Story About Grief",
         slug: "with-shadows",
-        description: "Utilizing VR to foster empathy and understanding for those navigating the loss of a loved one by immersing users in the evolving, moment-to-moment experience of grief. Designed as a therapeutic tool for processing and reflection.",
+        description: "Utilizing VR to immerse users in the moment to moment reality of someone grieving the loss of a loved one. Designed as a therapeutic tool for learning how to move through grief.",
         image: "/media/projects/VR-GriefsShadow/ProjectSection-WithShadow.gif",
         video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/with-shadows-project-card-9OsgVvaujPI2DcflfwtpjW4f16C7q1.mp4",
         tag: ["All", "VR"],

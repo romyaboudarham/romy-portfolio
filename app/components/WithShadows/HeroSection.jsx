@@ -72,8 +72,8 @@ export default function HeroSection() {
                 An Immersive Virtual Reality Experience about Grieving the Loss of a Loved One
               </p>
               <p className="mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-80">
-                Utilizing VR to foster empathy and understanding for those navigating the loss of a loved one by immersing users in the evolving, moment-to-moment experience of grief. 
-                Designed as a therapeutic tool for processing and reflection.
+              Utilizing VR to immerse users in the moment to moment reality of someone grieving the loss of a loved one. 
+              Designed as a therapeutic tool for learning how to move through grief.
               </p>
             </div>
             {/* Button Below */}
