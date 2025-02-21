@@ -64,7 +64,7 @@ export default function HeroSection() {
           />
           <div className="relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
             {/* Title & Description Box */}
-            <div className="p-3 lg:p-5 bg-[black]/80 backdrop-blur-lg shadow-xl text-center rounded-md">
+            <div className="p-3 lg:p-5 bg-[black]/70 backdrop-blur-lg shadow-xl text-center rounded-md">
               <div className="text-white mt-3 lg:mt-5 text-5xl lg:text-6xl" style={{ fontFamily: 'Londrina Outline, cursive' }}>
                 AR Mixed Emotions Card Deck
               </div>
@@ -79,8 +79,8 @@ export default function HeroSection() {
             <div className="mt-3 lg:mt-10 flex flex-col justify-center items-center w-[150px] mx-auto">
               <button
                 onClick={handleWatchDemo}
-                className="px-6 py-3 w-full text-white bg-black/90 hover:bg-transparent
-                hover:text-black border border-black mt-10 rounded-md"
+                className="px-6 py-3 w-full hover:bg-[black]/70 
+                hover:text-white border border-black mt-10 rounded-md"
               >
                 Watch Demo
               </button>

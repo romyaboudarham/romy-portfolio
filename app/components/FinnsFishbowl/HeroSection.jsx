@@ -8,7 +8,7 @@ export default function HeroSection() {
 
   const handleWatchDemo = () => {
     setVideoUrl(
-      "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FF-Demo-NHjZj0Vzym0HzqKLnM3WbMtnz99KmJ.mp4"
+      "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FF-Demo-WoL1pqcFx4acnfukak2ptvN7LrQbW1.mp4"
     );
     setFadeClass("opacity-100");
   };
@@ -37,7 +37,7 @@ export default function HeroSection() {
   return (
     <section className="h-[100dvh] bg-black relative flex items-center justify-center text-center px-4 lg:px-12 overflow-hidden">
       {videoUrl ? (
-        <div className="absolute inset-0 z-[70] flex items-center justify-center">
+        <div className="absolute inset-0 z-[70] flex items-center justify-center bg-black">
           {/* Back Arrow in Top Left */}
           <div
             onClick={handleBackClick}
@@ -99,7 +99,7 @@ export default function HeroSection() {
       )}
       {/* Down Arrow Icon */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-        <ChevronDown className="w-14 h-8 text-white" />
+        <ChevronDown className="w-14 h-8 text-[#67ed54]" />
       </div>
     </section>
   );
