@@ -44,7 +44,7 @@ export default function FinnsFishbowl() {
           {/* Logo Image */}
           <div className="hidden lg:flex justify-center">
             <img 
-              src="/media/projects/VR-GriefsShadow/griefs-shadow-logos.png" 
+              src="/media/projects/FinnsFishbowl/FF-Tools.png" 
               alt="tools-logos" 
               width={500} 
             />
@@ -129,7 +129,7 @@ export default function FinnsFishbowl() {
         <div className="my-3 relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
           <h2 className="text-3xl lg:text-4xl font-bold text-white">Let’s Connect!</h2>
           <p className="text-white mt-6 text-lg opacity-80">Interested in my work? Let’s chat.</p>
-          <button className="mt-8 px-6 py-3 rounded-md text-lg transparent hover:text-white border border-[#cd5cc4] text-white font-semibold  ">
+          <button className="mt-8 px-6 py-3 rounded-md text-lg transparent hover:text-white border border-[#67ed54] text-white font-semibold  ">
             Contact Me
           </button>
         </div>

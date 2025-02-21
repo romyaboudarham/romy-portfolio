@@ -8,7 +8,7 @@ export default function HeroSection() {
 
   const handleWatchDemo = () => {
     setVideoUrl(
-      "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/griefs-shadow-demo-qxXFnmlF6amyNoLCxo54Y8eR4GvhWu.mp4"
+      "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FF-Demo-NHjZj0Vzym0HzqKLnM3WbMtnz99KmJ.mp4"
     );
     setFadeClass("opacity-100");
   };
@@ -47,12 +47,14 @@ export default function HeroSection() {
           </div>
           {/* Video */}
           <video
-            src={videoUrl}
-            autoPlay
-            controls
-            onEnded={handleVideoEnd}
-            className={`absolute w-full h-full border-4 border-[#cd5cc4] transition-opacity duration-500 ${fadeClass}`}
-          />
+          src={videoUrl}
+          autoPlay
+          controls
+          onEnded={handleVideoEnd}
+          className={`absolute w-full h-full ${
+            videoUrl.includes("FF-Demo") ? "object-cover lg:object-contain" : ""
+          } border-4 border-[#67ed54] transition-opacity duration-500 ${fadeClass}`}
+        />
         </div>
       ) : (
         <>
@@ -79,15 +81,15 @@ export default function HeroSection() {
             <div className="mt-3 lg:mt-10 flex flex-col justify-center items-center w-[150px] mx-auto">
               <button
                 onClick={handleWatchDemo}
-                className="px-6 py-3 w-full bg-transparent text-white hover:bg-[#cd5cc4]
-                hover:text-white border border-[#cd5cc4] mt-3 rounded-md"
+                className="px-6 py-3 w-full bg-[white]/20 backdrop-blur-lg shadow-xl text-white hover:bg-transparent
+                hover:text-white border border-[#67ed54] mt-3 rounded-md"
               >
                 Watch Demo
               </button>
               <button
                 onClick={handleWatchFull}
-                className="px-6 py-3 w-full bg-transparent text-white hover:bg-[#cd5cc4]
-                hover:text-white border border-[#cd5cc4] mt-3 lg:mt-5 rounded-md"
+                className="px-6 py-3 w-full bg-[white]/20 backdrop-blur-lg shadow-xl text-white hover:bg-transparent
+                hover:text-white border border-[#67ed54] mt-3 lg:mt-5 rounded-md"
               >
                 Watch Full
               </button>
@@ -97,7 +99,7 @@ export default function HeroSection() {
       )}
       {/* Down Arrow Icon */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-        <ChevronDown className="w-14 h-8 text-[#cd5cc4]" />
+        <ChevronDown className="w-14 h-8 text-white" />
       </div>
     </section>
   );

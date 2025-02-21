@@ -27,7 +27,7 @@ export default function Navbar({ textColor = 'text-black' }) {
           <NavItem href="/#projects" text="Projects" textColor={textColor} />
           <NavItem href="#about" text="About" textColor={textColor} />
           <NavItem href="#resume" text="Resume" textColor={textColor} />
-          <NavItem href="#contact" text="Contact Me" textColor={textColor} />
+          <NavItem href="mailto:romyaboudarham@gmail.com" text="Contact Me" />
         </div>
       )}
 
@@ -39,7 +39,7 @@ export default function Navbar({ textColor = 'text-black' }) {
             onClick={() => setIsOpen(!isOpen)} 
             className="p-3 rounded-full border border-gray-800 bg-white shadow-lg"
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            {isOpen ? <X size={28} /> : <Menu size={28} className="text-black" />}
           </button>
 
           {/* Dropdown Menu - Opens below the button when clicked */}
@@ -49,7 +49,7 @@ export default function Navbar({ textColor = 'text-black' }) {
               <NavItem href="/#projects" text="Projects" />
               <NavItem href="#about" text="About" />
               <NavItem href="#resume" text="Resume" />
-              <NavItem href="#contact" text="Contact Me"/>
+              <NavItem href="mailto:romyaboudarham@gmail.com" text="Contact Me" />
             </div>
           )}
         </nav>
@@ -63,19 +63,25 @@ function NavItem({ href, text, isSelected, textColor, onClick }) {
     ? "border-[#ff6562] text-[#ff6562]"
     : "border-gray-300 text-gray-700 hover:bg-[#db5654] hover:text-white";
 
+  const handleClick = (e) => {
+    // Only prevent default behavior for non-email links
+    if (!href.startsWith("mailto:")) {
+      e.preventDefault(); // Prevent default for internal navigation
+      setTimeout(() => {
+        window.location.href = href; // Navigate after slight delay
+      }, 50);
+    }
+  };
+
   return (
     <Link 
       href={href} 
       className={`${textColor} hover:text-blue-500 transition font-medium`}
-      onClick={(e) => {
-        e.preventDefault(); // Prevent immediate navigation
-        setTimeout(() => {
-          window.location.href = href; // Navigate to the section
-
-        }, 50); // Delay navigation slightly to ensure it happens after the scroll
-      }}
+      onClick={handleClick}
     >
       {text}
     </Link>
   );
 }
+
+
