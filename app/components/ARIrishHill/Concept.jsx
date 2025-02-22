@@ -19,10 +19,11 @@ export default function Concept() {
               Research
             </div>
             <p className="mt-2 lg:text-xl text-gray-800">
-              TODO
+              Site research. Went walking around Irish hill a number of times to scope out a route for the tour.
+              Scoped out where would be good target, surface, and mid-air AR interactions. Timed the walk to plan the script for the audio.
             </p>
             <img
-                src="/media/projects/VR-GriefsShadow/Process/research-inspiration.png"
+                src="/media/projects/ARIrishHill/IrishHill-research-site.png"
                 alt="Research"
                 className="mt-5 mx-auto w-full"
               />
