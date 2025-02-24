@@ -48,7 +48,10 @@ export default function PortfolioGrid() {
                 <img
                   src={`${loadedGifs[index]}?t=${Date.now()}`}
                   alt={`Project ${index + 1}`}
-                  className="w-full h-full object-cover object-top rounded-md"
+                  className={`w-full h-full object-cover ${
+                    index == 2 ? "object-[50%_20%]" 
+                    : "object-top"
+                  } rounded-md`}
                 />
               </div>
             ))}

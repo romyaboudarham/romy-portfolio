@@ -98,7 +98,7 @@ export default function FinnsFishbowl() {
         <div className="w-full max-w-xl mx-auto   border border-gray-300 overflow-hidden">
           <iframe
             className="w-full h-96 lg:h-[600px] rounded-md"
-            src="https://www.youtube.com/embed/iVC51VEGku4"
+            src="https://www.youtube.com/embed/Bd18tS8uOhI"
             title="YouTube Video"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -129,9 +129,11 @@ export default function FinnsFishbowl() {
         <div className="my-3 relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
           <h2 className="text-3xl lg:text-4xl font-bold text-white">Let’s Connect!</h2>
           <p className="text-white mt-6 text-lg opacity-80">Interested in my work? Let’s chat.</p>
-          <button className="mt-8 px-6 py-3 rounded-md text-lg transparent hover:text-white border border-[#67ed54] text-white font-semibold  ">
-            Contact Me
-          </button>
+          <a href="mailto:romyaboudarham@gmail.com">
+            <button className="mt-8 px-6 py-3 rounded-md text-lg transparent hover:text-white border border-[#67ed54] text-white font-semibold  ">
+              Contact Me
+            </button>
+          </a>
         </div>
       </section>
     </div>

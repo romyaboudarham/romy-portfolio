@@ -13,12 +13,12 @@ export default function HeroSection() {
     setFadeClass("opacity-100");
   };
 
-  const handleWatchFull = () => {
-    setVideoUrl(
-      "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FinnsFishbowl-final-5-23-23-3eAsSWywqTB4Bd3wjd0xzLkhWwDfdr.mp4"
-    );
-    setFadeClass("opacity-100");
-  };
+  // const handleWatchFull = () => {
+  //   setVideoUrl(
+  //     "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FinnsFishbowl-final-5-23-23-3eAsSWywqTB4Bd3wjd0xzLkhWwDfdr.mp4"
+  //   );
+  //   setFadeClass("opacity-100");
+  // };
 
   const handleVideoEnd = () => {
     setFadeClass("opacity-0");
@@ -71,7 +71,7 @@ export default function HeroSection() {
                 Finn's Fishbowl
               </div>
               <p className="mt-3 lg:mt-5 text-lg lg:text-2xl">
-                An Immersive Exhibit
+                An Immersive, Interactive Exhibit
               </p>
               <p className="mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-80">
               Using various technological mediums such as audio, projections, physical computing, and virtual reality to guide a participant through an emotionally compelling story about visiting our inner child and healing childhood trauma.
@@ -81,18 +81,18 @@ export default function HeroSection() {
             <div className="mt-3 lg:mt-10 flex flex-col justify-center items-center w-[150px] mx-auto">
               <button
                 onClick={handleWatchDemo}
-                className="px-6 py-3 w-full bg-[white]/20 backdrop-blur-lg shadow-xl text-white hover:bg-transparent
-                hover:text-white border border-[#67ed54] mt-3 rounded-md"
+                className="px-6 py-3 w-full bg-[white]/20 backdrop-blur-lg shadow-xl text-white
+                hover:bg-transparent hover:text-white border border-[#67ed54] mt-10 rounded-md"
               >
                 Watch Demo
               </button>
-              <button
+              {/* <button
                 onClick={handleWatchFull}
                 className="px-6 py-3 w-full bg-[white]/20 backdrop-blur-lg shadow-xl text-white hover:bg-transparent
                 hover:text-white border border-[#67ed54] mt-3 lg:mt-5 rounded-md"
               >
                 Watch Full
-              </button>
+              </button> */}
             </div>
           </div>
         </>

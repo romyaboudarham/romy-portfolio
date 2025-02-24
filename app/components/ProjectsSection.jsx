@@ -48,7 +48,7 @@ const projectsData = [
         slug: "finns-fishbowl",
         description: "An immersive, interactive story told using various technological mediums an emotionally compelling story about visiting our inner child and healing childhood trauma.",
         image: "/media/projects/FinnsFishbowl/FinnsFishbowl.jpg",
-        tag: ["All", "Exhibitions"],
+        tag: ["All", "Physical Prototyping", "Exhibitions"],
         techStack: "A-Frame VR, HTML/CSS/JS, Physical Programming ESP32, Projection Mapping, Blender"
     },
     {
@@ -66,7 +66,7 @@ const projectsData = [
         slug: "arduino-examples",
         description: "Designed and executed an Arduino example display for students.",
         image: "/media/projects/Arduino-Examples/Arduino-Examples.jpeg",
-        tag: ["All", "Arduino"],
+        tag: ["All", "Physical Prototyping"],
         techStack: "Embedded Systems, C++, Sensor Data"
     },
 ];
@@ -113,7 +113,7 @@ export default function ProjectsSection() {
                 ${isSticky ? "fixed top-0 left-0 w-full shadow-md z-50" : ""}`}
                 style={isSticky ? { position: "fixed", top: "0", left: "0", width: "100%", zIndex: 50 } : {}}
             >
-                {["All", "VR", "AR", "Embedded Systems", "Exhibitions"].map((category) => (
+                {["All", "VR", "AR", "Physical Prototyping", "Exhibitions"].map((category) => (
                     <ProjectTag 
                         key={category}
                         onClick={handleTagChange} 

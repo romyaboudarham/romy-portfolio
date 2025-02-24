@@ -79,8 +79,8 @@ export default function HeroSection() {
             <div className="mt-3 lg:mt-10 flex flex-col justify-center items-center w-[150px] mx-auto">
               <button
                 onClick={handleWatchDemo}
-                className="px-6 py-3 w-full hover:bg-[black]/70 
-                hover:text-white border border-black mt-10 rounded-md"
+                className="px-6 py-3 w-full bg-[black]/70 
+                text-white border hover:bg-transparent hover:text-black border-black mt-10 rounded-md"
               >
                 Watch Demo
               </button>

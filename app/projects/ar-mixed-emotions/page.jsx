@@ -119,10 +119,11 @@ export default function GriefsShadow() {
         <div className="my-3 relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
           <h2 className="text-3xl lg:text-4xl font-bold opacity-80">Let’s Connect!</h2>
           <p className="mt-6 text-lg opacity-70">Interested in my work? Let’s chat.</p>
-          <button className="rounded-md mt-8 px-6 py-3  text-lg transparent hover:bg-[black]/70 
-                hover:text-white border border-black ">
-            Contact Me
-          </button>
+          <a href="mailto:romyaboudarham@gmail.com">
+            <button className="rounded-md mt-8 px-6 py-3 text-lg bg-[black]/70 text-white border hover:bg-transparent hover:text-black border-black">
+              Contact Me
+            </button>
+          </a>
         </div>
       </section>
     </div>

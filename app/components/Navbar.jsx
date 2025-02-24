@@ -24,9 +24,10 @@ export default function Navbar({ textColor = 'text-black' }) {
         <div className="fixed top-0 left-0 right-0  p-4 z-[60] flex justify-center space-x-6 
           md:justify-end md:items-end md:w-auto md:h-auto md:top-4 md:right-4 md:flex-col md:space-y-4 
           md:bg-transparent md:left-auto">
+          <NavItem href="/" text="Home" textColor={textColor} />
           <NavItem href="/#projects" text="Projects" textColor={textColor} />
-          <NavItem href="#about" text="About" textColor={textColor} />
-          <NavItem href="#resume" text="Resume" textColor={textColor} />
+          {/* <NavItem href="#about" text="About" textColor={textColor} /> */}
+          <NavItem href="/romy_aboudarham_resume_2025.pdf" text="Download Resume" textColor={textColor} download />
           <NavItem href="mailto:romyaboudarham@gmail.com" text="Contact Me" textColor={textColor} />
         </div>
       )}
@@ -46,9 +47,10 @@ export default function Navbar({ textColor = 'text-black' }) {
           {isOpen && (
             <div className="text-black absolute right-0 bg-white shadow-lg rounded-lg p-2 space-y-3 
               md:top-12 md:bottom-auto bottom-12 inline-flex flex-col text-right min-w-max px-4">
-              <NavItem href="/#projects" text="Projects"/>
-              <NavItem href="#about" text="About" />
-              <NavItem href="#resume" text="Resume" />
+              <NavItem href="/" text="Home" />
+              <NavItem href="/#projects" text="Projects" />
+              {/* <NavItem href="#about" text="About" /> */}
+              <NavItem href="/romyaboudarham-resume-2025.pdf" text="Download Resume" download />
               <NavItem href="mailto:romyaboudarham@gmail.com" text="Contact Me" />
             </div>
           )}
@@ -58,29 +60,26 @@ export default function Navbar({ textColor = 'text-black' }) {
   );
 }
 
-function NavItem({ href, text, isSelected, textColor = "text-gray-700", onClick }) {
-  const handleClick = (e) => {
-    if (href.startsWith("mailto:")) {
-      return; // Let the browser handle it normally
-    }
+function NavItem({ href, text, textColor = "text-gray-700", download = false }) {
+  if (download || href.endsWith(".pdf")) {
+    return (
+      <a 
+        href={href} 
+        className={`${textColor} hover:text-[#800000] transition font-medium`} 
+        download 
+      >
+        {text}
+      </a>
+    );
+  }
 
-    e.preventDefault(); // Prevent default for internal navigation
-    setTimeout(() => {
-      window.location.href = href; // Navigate after slight delay
-    }, 50);
-  };
-
-  // Use <a> instead of <Link> for mailto:
-  return href.startsWith("mailto:") ? (
-    <a href={href} className={`${textColor} hover:text-blue-500 transition font-medium`}>
-      {text}
-    </a>
-  ) : (
-    <Link href={href} className={`${textColor} hover:text-blue-500 transition font-medium`} onClick={handleClick}>
+  return (
+    <Link href={href} className={`${textColor} hover:text-[#800000] transition font-medium`}>
       {text}
     </Link>
   );
 }
+
 
 
 

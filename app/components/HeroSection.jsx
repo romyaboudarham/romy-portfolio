@@ -30,10 +30,10 @@ const HeroSection = () => {
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             />
           </div>
-      <h1
-        className="text-5xl md:text-6xl text-center"
-        style={{ fontFamily: "Londrina Outline, cursive" }}
-      >
+        <h1 
+          className="text-5xl text-[#800000] md:text-6xl text-center"
+          style={{ fontFamily: "Londrina Outline, cursive" }}
+        >
         {displayedText}
       </h1>
       <p className="text-base sm:text-lg lg:text-md text-center max-w-3xl mt-4">
@@ -42,7 +42,7 @@ const HeroSection = () => {
 
       {/* Down Arrow Icon */}
       <div className="md:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2">
-        <ChevronDown className="w-14 h-8 text-[#ff6562]" />
+        <ChevronDown className="w-14 h-8 text-[#800000]" />
       </div>
     </section>
   );

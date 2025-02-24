@@ -23,16 +23,18 @@ export default function Home() {
         </div>
 
       {/* Footer - Let's Connect */}
-      <section className="relative flex items-center justify-center text-center py-3 px-6 md:px-20">
-        <div className="relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
+      <section className="relative flex items-center justify-center pb-3 text-center px-6 md:px-20 rounded-t-2xl">
+        <div className="my-3 relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
           <h2 className="text-4xl lg:text-5xl"
               style={{ fontFamily: "Londrina Outline, cursive" }}>
                 Let’s Connect!
           </h2>
-          <p className="mt-6 text-md opacity-80">Interested in my work? Let’s chat.</p>
-          <button className="mt-8 px-6 py-3 text-lg rounded-md transparent hover:text-white border border-black">
-            Contact Me
-          </button>
+          <p className="mt-6 text-lg opacity-80">Interested in my work? Let’s chat.</p>
+          <a href="mailto:romyaboudarham@gmail.com">
+            <button className="mt-8 px-6 py-3 rounded-md text-lg hover:bg-[#800000] hover:text-white border border-[#800000] text-[#800000] font-semibold  ">
+              Contact Me
+            </button>
+          </a>
         </div>
       </section>
     </main>
