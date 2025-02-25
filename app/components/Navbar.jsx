@@ -21,9 +21,9 @@ export default function Navbar({ textColor = 'text-black' }) {
     <>
       {/* Expanded Navbar - Horizontal on mobile, vertical on desktop */}
       {isAtTop && (
-        <div className="fixed top-0 left-0 right-0  p-4 z-[60] flex justify-center space-x-6 
+        <div className="fixed top-0 left-0 right-0  p-4 z-[60] flex justify-center gap-x-6
           md:justify-end md:items-end md:w-auto md:h-auto md:top-4 md:right-4 md:flex-col md:space-y-4 
-          md:bg-transparent md:left-auto">
+          md:bg-transparent md:left-auto text-center">
           <NavItem href="/" text="Home" textColor={textColor} />
           <NavItem href="/#projects" text="Projects" textColor={textColor} />
           {/* <NavItem href="#about" text="About" textColor={textColor} /> */}
@@ -65,7 +65,7 @@ function NavItem({ href, text, textColor = "text-gray-700", download = false }) 
     return (
       <a 
         href={href} 
-        className={`${textColor} hover:text-[#800000] transition font-medium`} 
+        className={`${textColor} hover:text-[#800000] transition font-medium text-center`} 
         download 
       >
         {text}

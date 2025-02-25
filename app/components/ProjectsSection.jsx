@@ -47,7 +47,7 @@ const projectsData = [
         title: "Exhibition - Finn's Fishbowl",
         slug: "finns-fishbowl",
         description: "An immersive, interactive story told using various technological mediums an emotionally compelling story about visiting our inner child and healing childhood trauma.",
-        image: "/media/projects/FinnsFishbowl/FinnsFishbowl.jpg",
+        video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FF-Demo-WoL1pqcFx4acnfukak2ptvN7LrQbW1.mp4",
         tag: ["All", "Physical Prototyping", "Exhibitions"],
         techStack: "A-Frame VR, HTML/CSS/JS, Physical Programming ESP32, Projection Mapping, Blender"
     },

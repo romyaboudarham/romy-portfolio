@@ -13,12 +13,9 @@ export default function HeroSection() {
     setFadeClass("opacity-100");
   };
 
-  // const handleWatchFull = () => {
-  //   setVideoUrl(
-  //     "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FinnsFishbowl-final-5-23-23-3eAsSWywqTB4Bd3wjd0xzLkhWwDfdr.mp4"
-  //   );
-  //   setFadeClass("opacity-100");
-  // };
+  const handleWatchFull = () => {
+    window.open("https://www.youtube.com/watch?v=Bd18tS8uOhI", "_blank");
+  };
 
   const handleVideoEnd = () => {
     setFadeClass("opacity-0");
@@ -82,17 +79,17 @@ export default function HeroSection() {
               <button
                 onClick={handleWatchDemo}
                 className="px-6 py-3 w-full bg-[white]/20 backdrop-blur-lg shadow-xl text-white
-                hover:bg-transparent hover:text-white border border-[#67ed54] mt-10 rounded-md"
+                hover:bg-transparent hover:text-white border border-[#67ed54] mt-3 rounded-md"
               >
                 Watch Demo
               </button>
-              {/* <button
+              <button
                 onClick={handleWatchFull}
                 className="px-6 py-3 w-full bg-[white]/20 backdrop-blur-lg shadow-xl text-white hover:bg-transparent
                 hover:text-white border border-[#67ed54] mt-3 lg:mt-5 rounded-md"
               >
                 Watch Full
-              </button> */}
+              </button>
             </div>
           </div>
         </>
