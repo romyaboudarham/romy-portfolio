@@ -11,7 +11,8 @@ const projectsData = [
         slug: "with-shadows",
         description: "Utilizing VR to immerse users in the moment to moment reality of someone grieving the loss of a loved one. Designed as a therapeutic tool for learning how to move through grief.",
         image: "/media/projects/VR-GriefsShadow/ProjectSection-WithShadow.gif",
-        video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/with-shadows-project-card-9OsgVvaujPI2DcflfwtpjW4f16C7q1.mp4",
+        video: "https://ucarecdn.com/d654c3c0-1428-42b5-84b5-e01baf19dfa7/withshadowcard.mp4",
+        //video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/with-shadows-project-card-9OsgVvaujPI2DcflfwtpjW4f16C7q1.mp4",
         tag: ["All", "VR"],
         techStack: "Unity, C#, Oculus, Blender"
     },
@@ -29,36 +30,38 @@ const projectsData = [
         title: "AR Mixed Emotions Card Deck",
         slug: "ar-mixed-emotions",
         description: "Using AR as a tool to aid in identifying emotions in the body.",
-        image: "/media/projects/ARMixedEmotions/AR-MixedEmotions.jpg",
+        video: "https://ucarecdn.com/27620f52-08e4-4aa1-b304-9bc765dd4d9d/MixedEmotionsCard.mp4",
         tag: ["All", "AR"],
         techStack: "Unity, QuillVR, Vuforia AR Plugin"
     },
     {
         id: 4,
+        title: "Exhibition - Finn's Fishbowl",
+        slug: "finns-fishbowl",
+        description: "An immersive, interactive story told using various technological mediums an emotionally compelling story about visiting our inner child and healing childhood trauma.",
+        video: "https://ucarecdn.com/22b94a46-9f2b-4525-9b55-5890ae9a05b9/FFDemoCard.mp4",
+        //video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FF-Demo-WoL1pqcFx4acnfukak2ptvN7LrQbW1.mp4",
+        tag: ["All", "Physical Prototyping", "Exhibitions"],
+        techStack: "A-Frame VR, HTML/CSS/JS, Physical Programming ESP32, Projection Mapping, Blender"
+    },
+    {
+        id: 5,
+        title: "Finn's Fishbowl - Chapter 3 in VR",
+        slug: "finns-fishbowl",
+        description: "VR experience made with AFrame designed for an installation",
+        video: "https://ucarecdn.com/8dbcc2f4-a318-4dc8-b7da-e42b95c2155b/",
+        //video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FFCh3VR-slow-L4lC7GsHiaWzQX5BNCiQ4ueh5Gafx1.mp4",
+        tag: ["All", "VR"],
+        techStack: "A-Frame VR, HTML/CSS/JS, Blender"
+    },
+    {
+        id: 6,
         title: "Metaverse - Modern Day Impact of Historical Redlining",
         slug: "metaverse-redlining",
         description: "",
         image: "/media/projects/Metaverse-Redlining/Metaverse-Census.png",
         tag: ["All", "Unreal 5"],
         techStack: "Unreal Engine 5, Blueprint, GIS Data, Cesium Plugin, R Studio"
-    },
-    {
-        id: 5,
-        title: "Exhibition - Finn's Fishbowl",
-        slug: "finns-fishbowl",
-        description: "An immersive, interactive story told using various technological mediums an emotionally compelling story about visiting our inner child and healing childhood trauma.",
-        video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FF-Demo-WoL1pqcFx4acnfukak2ptvN7LrQbW1.mp4",
-        tag: ["All", "Physical Prototyping", "Exhibitions"],
-        techStack: "A-Frame VR, HTML/CSS/JS, Physical Programming ESP32, Projection Mapping, Blender"
-    },
-    {
-        id: 6,
-        title: "Finn's Fishbowl - Chapter 3 in VR",
-        slug: "finns-fishbowl",
-        description: "VR experience made with AFrame designed for an installation",
-        video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FFCh3VR-slow-L4lC7GsHiaWzQX5BNCiQ4ueh5Gafx1.mp4",
-        tag: ["All", "VR"],
-        techStack: "A-Frame VR, HTML/CSS/JS, Blender"
     },
     {
         id: 7,
