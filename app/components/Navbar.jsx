@@ -27,7 +27,7 @@ export default function Navbar({ textColor = 'text-black' }) {
           <NavItem href="/" text="Home" textColor={textColor} />
           <NavItem href="/#projects" text="Projects" textColor={textColor} />
           {/* <NavItem href="#about" text="About" textColor={textColor} /> */}
-          <NavItem href="/romy_aboudarham_resume_2025.pdf" text="Download Resume" textColor={textColor} download />
+          <NavItem href="/romy_aboudarham_resume_2025.pdf" text="Resume" textColor={textColor} download />
           <NavItem href="mailto:romyaboudarham@gmail.com" text="Contact Me" textColor={textColor} />
         </div>
       )}
@@ -46,11 +46,11 @@ export default function Navbar({ textColor = 'text-black' }) {
           {/* Dropdown Menu - Opens below the button when clicked */}
           {isOpen && (
             <div className="text-black absolute right-0 bg-white shadow-lg rounded-lg p-2 space-y-3 
-              md:top-12 md:bottom-auto bottom-12 inline-flex flex-col text-right min-w-max px-4">
+            md:top-12 md:bottom-auto bottom-12 flex flex-col items-end text-right min-w-max px-4">
               <NavItem href="/" text="Home" />
               <NavItem href="/#projects" text="Projects" />
               {/* <NavItem href="#about" text="About" /> */}
-              <NavItem href="/romyaboudarham-resume-2025.pdf" text="Download Resume" download />
+              <NavItem href="/romyaboudarham-resume-2025.pdf" text="Resume" download />
               <NavItem href="mailto:romyaboudarham@gmail.com" text="Contact Me" />
             </div>
           )}

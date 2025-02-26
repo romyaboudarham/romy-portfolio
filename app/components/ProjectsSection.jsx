@@ -88,17 +88,16 @@ export default function ProjectsSection() {
 
         const handleScroll = () => {
             const currentScrollPos = window.scrollY;
-
-            if (tagRef.current) {
-                if (currentScrollPos > prevScrollPos && currentScrollPos >= originalOffset) {
-                    setIsSticky(true);  // Stick when scrolling down past original position
-                } else if (currentScrollPos < prevScrollPos && currentScrollPos <= originalOffset) {
-                    setIsSticky(false); // Unstick and snap back when scrolling up above original position
-                }
+        
+            if (currentScrollPos < 50) {
+                setIsSticky(false);  // Force unstick when scrolling above 50px
+            } else if (tagRef.current && currentScrollPos >= originalOffset) {
+                setIsSticky(true);   // Stick when scrolling down past original position
             }
-
+            
             setPrevScrollPos(currentScrollPos);
         };
+        
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
@@ -110,43 +109,52 @@ export default function ProjectsSection() {
 
     return (
         <section>
-            <div 
-                ref={tagRef} 
-                className={`flex flex-wrap justify-center items-center gap-2 py-3 bg-white transition-all duration-300 
-                ${isSticky ? "fixed top-0 left-0 w-full shadow-md z-50" : ""}`}
-                style={isSticky ? { position: "fixed", top: "0", left: "0", width: "100%", zIndex: 50 } : {}}
-            >
-                {["All", "VR", "AR", "Physical Prototyping", "Exhibitions"].map((category) => (
-                    <ProjectTag 
-                        key={category}
-                        onClick={handleTagChange} 
-                        name={category} 
-                        isSelected={tag === category} 
-                    />
-                ))}
-            </div>
+            <div style={{ height: isSticky ? `${tagRef.current?.offsetHeight}px` : "auto" }}></div>
 
-            <div className="mx-auto grid md:grid-cols-2 gap-5 mt-6">
-                {projectsData
-                    .filter((project) => project.tag.includes(tag))
-                    .map((project) => (
-                        <Link 
-                            key={project.id} 
-                            href={project.id === 6 ? "/projects/finns-fishbowl#ch3vr" : `/projects/${project.slug}`} 
-                            passHref
-                        >
-                            <div className="cursor-pointer mb-5 lg:mb-0">
-                                <ProjectCard 
-                                    title={project.title} 
-                                    description={project.description} 
-                                    imgUrl={project.image} 
-                                    techStack={project.techStack}
-                                    videoUrl={project.video}
-                                />
-                            </div>
-                        </Link>
-                    ))}
-            </div>
+        <div 
+            ref={tagRef} 
+            className={`flex flex-wrap justify-center items-center gap-2 py-3 bg-white transition-all duration-300 
+            ${isSticky ? "fixed top-0 left-0 w-full shadow-md z-50" : ""}`}
+            style={{
+                padding: "12px 16px", // Keep padding consistent
+                width: "100%",        // Ensure it doesn’t shrink
+                maxWidth: "100vw",    // Prevents overflow issues
+                display: "flex",
+                flexWrap: "wrap",     // Ensures wrapping stays the same
+                justifyContent: "center", // Keeps items centered
+            }}
+        >
+            {["All", "VR", "AR", "Physical Prototyping", "Exhibitions"].map((category) => (
+                <ProjectTag 
+                    key={category}
+                    onClick={handleTagChange} 
+                    name={category} 
+                    isSelected={tag === category} 
+                />
+            ))}
+        </div>
+
+        <div className="mx-auto grid md:grid-cols-2 gap-5 mt-6">
+            {projectsData
+                .filter((project) => project.tag.includes(tag))
+                .map((project) => (
+                    <Link 
+                        key={project.id} 
+                        href={project.id === 6 ? "/projects/finns-fishbowl#ch3vr" : `/projects/${project.slug}`} 
+                        passHref
+                    >
+                        <div className="cursor-pointer mb-5 lg:mb-0">
+                            <ProjectCard 
+                                title={project.title} 
+                                description={project.description} 
+                                imgUrl={project.image} 
+                                techStack={project.techStack}
+                                videoUrl={project.video}
+                            />
+                        </div>
+                    </Link>
+                ))}
+        </div>
         </section>
     );
 };
