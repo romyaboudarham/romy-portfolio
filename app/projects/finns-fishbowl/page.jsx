@@ -5,6 +5,7 @@ import Concept from "@/app/components/FinnsFishbowl/Concept";
 import MobileUXDesign from "@/app/components/FinnsFishbowl/MobileUXDesign";
 import ExhibitLayout from "@/app/components/FinnsFishbowl/ExhibitLayout";
 import Breathe from "@/app/components/FinnsFishbowl/Breathe"
+import ESP32 from "@/app/components/FinnsFishbowl/ESP32"
 import HeroSection from "@/app/components/FinnsFishbowl/HeroSection"
 import InteractionDesign from "@/app/components/FinnsFishbowl/InteractionDesign"
 import Navbar from "@/app/components/Navbar.jsx";
@@ -74,6 +75,7 @@ export default function FinnsFishbowl() {
           <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Design & Development Process</h2>
           <ExhibitLayout />
           <MobileUXDesign />
+          <ESP32 id="esp32"/>
       </section>
 
       {/* Dividing Line */}
@@ -81,7 +83,7 @@ export default function FinnsFishbowl() {
         <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
       </div>
 
-      {/* Impact */}
+      {/* Ch3 VR */}
       <section id="ch3vr" className="mx-3 my-6 lg:my-10 lg:mx-[180px]">
           <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Chapter 3 in Virtual Reality</h2>
           <Ch3VR />
@@ -105,19 +107,6 @@ export default function FinnsFishbowl() {
           ></iframe>
         </div>
       </section>
-
-      {/* Dividing Line */}
-      <div className="my-6 mx-3 lg:mx-[180px]">
-        <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
-      </div>
-
-      {/* Impact */}
-      <section className="mx-3 my-6 lg:my-10 lg:mx-[180px]">
-          <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Impact</h2>
-          <Breathe />
-      </section>
-      
-
 
       {/* Footer - Let's Connect */}
       <section className="relative flex items-center justify-center py-3 text-center px-6 md:px-20 rounded-t-2xl shadow-inner">

@@ -40,7 +40,7 @@ export default function Navbar({ textColor = 'text-black' }) {
             onClick={() => setIsOpen(!isOpen)} 
             className="p-3 rounded-full border border-gray-800 bg-white shadow-lg"
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} className="text-black" />}
+            {isOpen ? <X size={28} className="text-black"/> : <Menu size={28} className="text-black" />}
           </button>
 
           {/* Dropdown Menu - Opens below the button when clicked */}

@@ -41,8 +41,8 @@ const projectsData = [
         description: "An immersive, interactive story told using various technological mediums an emotionally compelling story about visiting our inner child and healing childhood trauma.",
         video: "https://ucarecdn.com/22b94a46-9f2b-4525-9b55-5890ae9a05b9/FFDemoCard.mp4",
         //video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FF-Demo-WoL1pqcFx4acnfukak2ptvN7LrQbW1.mp4",
-        tag: ["All", "Physical Prototyping", "Exhibitions"],
-        techStack: "A-Frame VR, HTML/CSS/JS, Physical Programming ESP32, Projection Mapping, Blender"
+        tag: ["All", "Physical Computing", "Exhibitions"],
+        techStack: "A-Frame VR, P5.js, Node.js HTML/CSS/JS, Physical Programming ESP32, Projection Mapping, Blender"
     },
     {
         id: 5,
@@ -63,15 +63,15 @@ const projectsData = [
         tag: ["All", "Unreal 5"],
         techStack: "Unreal Engine 5, Blueprint, GIS Data, Cesium Plugin, R Studio"
     },
-    {
-        id: 7,
-        title: "Embedded Systems Examples & Tutorials",
-        slug: "arduino-examples",
-        description: "Designed and executed an Arduino example display for students.",
-        image: "/media/projects/Arduino-Examples/Arduino-Examples.jpeg",
-        tag: ["All", "Physical Prototyping"],
-        techStack: "Embedded Systems, C++, Sensor Data"
-    },
+    // {
+    //     id: 7,
+    //     title: "Embedded Systems Examples & Tutorials",
+    //     slug: "arduino-examples",
+    //     description: "Designed and executed an Arduino example display for students.",
+    //     image: "/media/projects/Arduino-Examples/Arduino-Examples.jpeg",
+    //     tag: ["All", "Physical Prototyping"],
+    //     techStack: "Embedded Systems, C++, Sensor Data"
+    // },
 ];
 
 export default function ProjectsSection() {
@@ -124,7 +124,7 @@ export default function ProjectsSection() {
                 justifyContent: "center", // Keeps items centered
             }}
         >
-            {["All", "VR", "AR", "Physical Prototyping", "Exhibitions"].map((category) => (
+            {["All", "VR", "AR", "Physical Computing", "Exhibitions"].map((category) => (
                 <ProjectTag 
                     key={category}
                     onClick={handleTagChange} 
@@ -140,9 +140,13 @@ export default function ProjectsSection() {
                 .map((project) => (
                     <Link 
                         key={project.id} 
-                        href={project.id === 6 ? "/projects/finns-fishbowl#ch3vr" : `/projects/${project.slug}`} 
+                        href={project.id === 5 
+                            ? "/projects/finns-fishbowl#ch3vr" 
+                            : (project.id === 4 && (tag === "Physical Computing"))
+                            ? "/projects/finns-fishbowl#esp32"  // Scroll to #esp32 if id is 4 and tag is "Physical Computing"
+                            : `/projects/${project.slug}`}
                         passHref
-                    >
+                        >
                         <div className="cursor-pointer mb-5 lg:mb-0">
                             <ProjectCard 
                                 title={project.title} 
