@@ -109,7 +109,7 @@ export default function GriefsShadow() {
       {/* Footer - Let's Connect */}
       <section className="relative flex items-center justify-center py-3 text-center px-6 md:px-20 rounded-t-2xl shadow-inner">
         <img 
-          src="/media/projects/VR-GriefsShadow/WithShadow-SkyboxBG.gif" 
+          src="/media/projects/ARIrishHill/serpentine-2-bg.jpg" 
           alt="Skybox" 
           className="absolute w-full h-full object-cover opacity-100"
         />
@@ -117,7 +117,8 @@ export default function GriefsShadow() {
           <h2 className="text-3xl lg:text-4xl font-bold text-white">Let’s Connect!</h2>
           <p className="text-white mt-6 text-lg opacity-80">Interested in my work? Let’s chat.</p>
           <a href="mailto:romyaboudarham@gmail.com">
-            <button className="mt-8 px-6 py-3  text-lg transparent hover:text-white border border-[#cd5cc4] text-white font-semibold  ">
+            <button className="mt-8 px-6 py-3  text-lg bg-[black]/70 backdrop-blur-lg text-white hover:bg-[white]/40
+                hover:text-black border border-black rounded-md">
               Contact Me
             </button>
           </a>
