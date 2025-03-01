@@ -4,6 +4,7 @@ import React from "react";
 import Concept from "@/app/components/ARIrishHill/Concept";
 import ARDesign from "@/app/components/ARIrishHill/ARDesign";
 import Storyboard from "@/app/components/ARIrishHill/Storyboard";
+import Research from "@/app/components/ARIrishHill/Research";
 import NextSteps from "@/app/components/ARIrishHill/NextSteps"
 import HeroSection from "@/app/components/ARIrishHill/HeroSection"
 import Navbar from "@/app/components/Navbar.jsx";
@@ -26,15 +27,16 @@ export default function GriefsShadow() {
               Assignment  
             </div>
             <p className="mt-2 lg:text-xl text-gray-800">
-              Design and prototype a VR experience using Unity that fosters empathy through the perspective of the individual for whom you're building empathy.
+            Select a hidden or lost incident, movement, or person as the focus of an AR monument. 
+            Using tenets of narrative journalism, express a point of view (POV) about the subject, through well-researched information expressed through a creative lens.
             </p>
 
             {/* Additional Details */}
             <div className="mt-6 space-y-2 lg:text-lg text-gray-800">
-              <p><strong className="text-black opacity-90">Duration:</strong> 7 weeks, completed December 2024</p>
+              <p><strong className="text-black opacity-90">Duration:</strong> 6 weeks, completed October 2024</p>
               <p><strong className="text-black opacity-90">Role:</strong> Creative Technologist, Designer, Developer</p>
-              <p><strong className="text-black opacity-90">Tools:</strong> Unity, C#, Oculus VR, Storyboarding</p>
-              <p><strong className="text-black opacity-90">Focus:</strong> Empathy-Driven Storytelling, VR Design, and Technical Implementation in Unity</p>
+              <p><strong className="text-black opacity-90">Tools:</strong> Unity, C#, Storyboarding, Vuforia, Blender</p>
+              <p><strong className="text-black opacity-90">Focus:</strong> Narrative Journalism, AR Design, Technical Implementation in Unity</p>
               <p><strong className="text-black opacity-90">Context:</strong> Audited CCA Grad class “XR: Immersive Experiences and Scripted Spaces”</p>
             </div>
           </div>
@@ -42,7 +44,7 @@ export default function GriefsShadow() {
           {/* Logo Image */}
           <div className="hidden lg:flex justify-center">
             <img 
-              src="/media/projects/VR-GriefsShadow/griefs-shadow-logos.png" 
+              src="/media/projects/ARIrishHill/irishhill-tools.png" 
               alt="tools-logos" 
               width={500} 
             />
@@ -70,6 +72,7 @@ export default function GriefsShadow() {
       {/* Design & Developement */}
       <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
           <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Design & Development Process</h2>
+          <Research />
           <Storyboard />
           <ARDesign />
       </section>

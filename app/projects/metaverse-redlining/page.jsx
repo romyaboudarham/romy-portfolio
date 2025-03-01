@@ -32,7 +32,7 @@ export default function Metaverse() {
             <div className="mt-6 space-y-2 lg:text-lg text-gray-800">
               <p><strong className="text-black opacity-90">Duration:</strong> 7 weeks, completed December 2023</p>
               <p><strong className="text-black opacity-90">Role:</strong> Creative Technologist, Designer, Developer</p>
-              <p><strong className="text-black opacity-90">Tools:</strong> Unreal Engine 5, Blender, Blueprinting, R Studio, Cesium</p>
+              <p><strong className="text-black opacity-90">Tools:</strong> Unreal Engine 5, UE5 Blueprints, Blender, R Studio, Cesium</p>
               <p><strong className="text-black opacity-90">Focus:</strong> Empathy-Driven Storytelling, VR Design, and Technical Implementation in Unity</p>
               <p><strong className="text-black opacity-90">Featured: </strong>
                 <a href="https://apuzinio.medium.com/empathy-and-coexistence-in-the-metaverse-2f2b27303232" target="_blank" rel="noopener noreferrer" className="text-decoration-line: underline hover:underline">
@@ -50,7 +50,7 @@ export default function Metaverse() {
           {/* Logo Image */}
           <div className="hidden lg:flex justify-center">
             <img 
-              src="/media/projects/VR-GriefsShadow/griefs-shadow-logos.png" 
+              src="/media/projects/Metaverse-Redlining/metaverse-tools.png" 
               alt="tools-logos" 
               width={500} 
             />
@@ -118,7 +118,7 @@ export default function Metaverse() {
           <h2 className="text-3xl lg:text-4xl font-bold text-white">Let’s Connect!</h2>
           <p className="text-white mt-6 text-lg opacity-80">Interested in my work? Let’s chat.</p>
           <a href="mailto:romyaboudarham@gmail.com">
-          <button className="mt-8 px-6 py-3  text-lg bg-[black]/70 backdrop-blur-lg text-white hover:bg-[white]/40
+            <button className="mt-8 px-6 py-3  text-lg bg-[black]/70 backdrop-blur-lg text-white hover:bg-[white]/40
                 hover:text-black border border-black rounded-md">
               Contact Me
             </button>
