@@ -8,16 +8,13 @@ export default function HeroSection() {
 
   const handleWatchDemo = () => {
     setVideoUrl(
-      "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/griefs-shadow-demo-qxXFnmlF6amyNoLCxo54Y8eR4GvhWu.mp4"
+      "https://ucarecdn.com/e3326e47-d21c-42f4-ba0c-7bc2db93b37f/"
     );
     setFadeClass("opacity-100");
   };
 
   const handleWatchFull = () => {
-    setVideoUrl(
-      "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FinalExperience-1d0HQfB3BhD8Qn3gvc1dtpcynj1iBE.mp4"
-    );
-    setFadeClass("opacity-100");
+    window.open("https://youtu.be/GFocypMe5fA", "_blank");
   };
 
   const handleVideoEnd = () => {
@@ -58,15 +55,15 @@ export default function HeroSection() {
         <>
           {/* Default Hero Section */}
           <img
-            src="/media/projects/ARIrishHill/hero-bg.jpg"
+            src="/media/projects/ARIrishHill/serpentine-2-bg.jpg"
             alt="Skybox"
             className="absolute w-full h-full object-cover"
           />
           <div className="relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
             {/* Title & Description Box */}
-            <div className="p-3 lg:p-5 bg-[white]/20 backdrop-blur-lg shadow-xl text-center rounded-md">
+            <div className="p-3 lg:p-5 bg-[black]/70 backdrop-blur-lg shadow-xl text-center rounded-md">
               <div className="text-white mt-3 lg:mt-5 text-5xl lg:text-6xl" style={{ fontFamily: 'Londrina Outline, cursive' }}>
-                AR Mixed Emotions Card Deck
+                Ghosts of Irish Hill
               </div>
               <p className="text-white mt-3 opacity-70 lg:mt-5 text-lg lg:text-2xl">
                 Using Augmented Reality to deepen the way you engage with your emotions.
@@ -79,15 +76,15 @@ export default function HeroSection() {
             <div className="mt-3 lg:mt-10 flex flex-col justify-center items-center w-[150px] mx-auto">
             <button
                 onClick={handleWatchDemo}
-                className="px-6 py-3 w-full bg-transparent text-white hover:bg-[#cd5cc4]
-                hover:text-white border border-[#dbaf02] mt-3 rounded-md"
+                className="px-6 py-3 w-full bg-[black]/70 backdrop-blur-lg text-white hover:bg-[white]/40
+                hover:text-black border border-black mt-3 rounded-md"
               >
                 Watch Demo
               </button>
               <button
                 onClick={handleWatchFull}
-                className="px-6 py-3 w-full bg-transparent text-white hover:bg-[#cd5cc4]
-                hover:text-white border border-[#dbaf02] mt-3 lg:mt-5 rounded-md"
+                className="px-6 py-3 w-full bg-[black]/70 backdrop-blur-lg text-white hover:bg-[white]/40
+                hover:text-black border border-black mt-3 lg:mt-5 rounded-md"
               >
                 Watch Full
               </button>

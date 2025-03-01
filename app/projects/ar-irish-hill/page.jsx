@@ -2,17 +2,16 @@
 
 import React from "react";
 import Concept from "@/app/components/ARIrishHill/Concept";
-import EnvironmentDesign from "@/app/components/ARIrishHill/EnvironmentDesign";
+import ARDesign from "@/app/components/ARIrishHill/ARDesign";
 import Storyboard from "@/app/components/ARIrishHill/Storyboard";
-import Breathe from "@/app/components/ARIrishHill/Breathe"
+import NextSteps from "@/app/components/ARIrishHill/NextSteps"
 import HeroSection from "@/app/components/ARIrishHill/HeroSection"
-import InteractionDesign from "@/app/components/ARIrishHill/InteractionDesign"
 import Navbar from "@/app/components/Navbar.jsx";
 
 export default function GriefsShadow() {
     
   return (
-    <div className="bg-[#f9f9f9] text-black font-sans">
+    <div className="bg-[rgb(249,249,249)] text-black font-sans">
        <Navbar textColor="text-white" />
       {/* Hero Section */}
       <HeroSection />
@@ -72,8 +71,7 @@ export default function GriefsShadow() {
       <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
           <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Design & Development Process</h2>
           <Storyboard />
-          <EnvironmentDesign />
-          <InteractionDesign />
+          <ARDesign />
       </section>
 
       {/* Dividing Line */}
@@ -87,7 +85,7 @@ export default function GriefsShadow() {
         <div className="w-full max-w-xl mx-auto   border border-gray-300 overflow-hidden">
           <iframe
             className="w-full h-96 lg:h-[600px] rounded-md"
-            src="https://www.youtube.com/embed/iVC51VEGku4"
+            src="https://www.youtube.com/embed/GFocypMe5fA"
             title="YouTube Video"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -102,8 +100,8 @@ export default function GriefsShadow() {
 
       {/* Impact */}
       <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
-          <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Impact</h2>
-          <Breathe />
+          <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Next Steps</h2>
+          <NextSteps />
       </section>
       
 

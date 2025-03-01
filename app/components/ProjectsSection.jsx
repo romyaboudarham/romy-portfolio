@@ -22,6 +22,7 @@ const projectsData = [
         slug: "ar-irish-hill",
         description: "Using AR to tell another side of history of a physical site in SF through an AR walking tour.",
         image: "/media/projects/ARIrishHill/irish-hill-photo.jpg",
+        video: "https://ucarecdn.com/ee586c55-e784-4e76-ac5a-ee6045ea3921/",
         tag: ["All", "AR"],
         techStack: "Unity, Vuforia AR Plugin, Blender"
     },
@@ -39,7 +40,9 @@ const projectsData = [
         title: "Exhibition - Finn's Fishbowl",
         slug: "finns-fishbowl",
         description: "An immersive, interactive story told using various technological mediums an emotionally compelling story about visiting our inner child and healing childhood trauma.",
-        video: "https://ucarecdn.com/22b94a46-9f2b-4525-9b55-5890ae9a05b9/FFDemoCard.mp4",
+        image: "/media/projects/FinnsFishbowl/FinnsFishbowl.jpg",
+        //video: "https://ucarecdn.com/aba55b84-e0e3-4f9e-8b5e-aa9bd85b9e49/",
+        //video: "https://ucarecdn.com/22b94a46-9f2b-4525-9b55-5890ae9a05b9/FFDemoCard.mp4",
         //video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FF-Demo-WoL1pqcFx4acnfukak2ptvN7LrQbW1.mp4",
         tag: ["All", "Physical Computing", "Exhibitions"],
         techStack: "A-Frame VR, P5.js, Node.js HTML/CSS/JS, Physical Programming ESP32, Projection Mapping, Blender"
