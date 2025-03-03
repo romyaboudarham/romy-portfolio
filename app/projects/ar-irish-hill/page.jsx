@@ -36,7 +36,7 @@ export default function GriefsShadow() {
               <p><strong className="text-black opacity-90">Duration:</strong> 6 weeks, completed October 2024</p>
               <p><strong className="text-black opacity-90">Role:</strong> Creative Technologist, Designer, Developer</p>
               <p><strong className="text-black opacity-90">Tools:</strong> Unity, C#, Storyboarding, Vuforia, Blender</p>
-              <p><strong className="text-black opacity-90">Focus:</strong> Narrative Journalism, AR Design, Technical Implementation in Unity</p>
+              <p><strong className="text-black opacity-90">Focus:</strong> Immersive Storytelling, Narrative Journalism, AR Design, Technical Implementation in Unity</p>
               <p><strong className="text-black opacity-90">Context:</strong> Audited CCA Grad class “XR: Immersive Experiences and Scripted Spaces”</p>
             </div>
           </div>

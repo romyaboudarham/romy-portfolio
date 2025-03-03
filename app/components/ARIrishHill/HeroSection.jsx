@@ -48,7 +48,7 @@ export default function HeroSection() {
             autoPlay
             controls
             onEnded={handleVideoEnd}
-            className={`absolute w-full h-full object-cover border-4 border-[#cd5cc4] transition-opacity duration-500 ${fadeClass}`}
+            className={`absolute w-full h-full object-cover border-4 border-[#6e8e76] transition-opacity duration-500 ${fadeClass}`}
           />
         </div>
       ) : (
@@ -66,10 +66,10 @@ export default function HeroSection() {
                 Ghosts of Irish Hill
               </div>
               <p className="text-white mt-3 opacity-70 lg:mt-5 text-lg lg:text-2xl">
-                Using Augmented Reality to deepen the way you engage with your emotions.
+                An Augmented Reality Walking Tour in San Francisco.
               </p>
               <p className="text-white mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-80">
-                This is an AR feature added to the Mixed Emotions card deck created by Petra Martin illustrated by Kris Wiltse.
+                Using AR and elements of narrative journalism to tell the forgotten history of Irish Hill, a working class community destroyed for other's growth and capital.
               </p>
             </div>
             {/* Button Below */}

@@ -49,7 +49,7 @@ export default function PortfolioGrid() {
                   src={`${loadedGifs[index]}?t=${Date.now()}`}
                   alt={`Project ${index + 1}`}
                   className={`w-full h-full object-cover ${
-                    index == 2 || index == 3 || index == 5 ? "object-[50%_20%]" 
+                    index == 2 || index == 3 || index == 5 || index == 6  ? "object-[50%_20%]" 
                     : "object-top"
                   } rounded-md`}
                 />

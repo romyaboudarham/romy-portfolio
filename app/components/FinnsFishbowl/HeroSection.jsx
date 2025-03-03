@@ -45,14 +45,12 @@ export default function HeroSection() {
           </div>
           {/* Video */}
           <video
-          src={videoUrl}
-          autoPlay
-          controls
-          onEnded={handleVideoEnd}
-          className={`absolute w-full h-full ${
-            videoUrl.includes("FF-Demo") ? "object-cover lg:object-contain" : ""
-          } border-4 border-[#67ed54] transition-opacity duration-500 ${fadeClass}`}
-        />
+            src={videoUrl}
+            autoPlay
+            controls
+            onEnded={handleVideoEnd}
+            className={`absolute w-full h-full object-cover border-4 border-[#67ed54] transition-opacity duration-500 ${fadeClass}`}
+          />
         </div>
       ) : (
         <>
