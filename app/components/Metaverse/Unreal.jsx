@@ -1,9 +1,9 @@
-export default function ARDesign() {
+export default function Unreal() {
   return (
       <section className="mt-8 lg:mt-10">
         {/* Text Content*/}
         {/* <div> */}
-        <div className="text-2xl font-semibold opacity-90">
+        {/* <div className="text-2xl font-semibold opacity-90">
           Augmented Reality Design
         </div>
         <p className="mt-2 lg:text-xl text-gray-800">
@@ -21,7 +21,7 @@ export default function ARDesign() {
           src="/media/projects/ARIrishHill/history-rendered.png"
           alt="Research"
           className="mt-5 mx-auto w-full"
-        />
+        /> */}
         {/* </div> */}
     </section>
   );

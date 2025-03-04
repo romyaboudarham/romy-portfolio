@@ -15,17 +15,6 @@ export default function Concept() {
             <p className="mt-2 lg:text-xl text-gray-800">
               Foster empathy and action towards uplifting communities by using an immersive, first person perspective to humanize the experience of living with varying access to resources.
             </p>
-            <div className="mt-8 lg:mt-10 text-2xl font-semibold opacity-90">
-              Research
-            </div>
-            <p className="mt-2 lg:text-xl text-gray-800">
-              TODO
-            </p>
-            <img
-                src="/media/projects/ARIrishHill/IrishHill-research-site.png"
-                alt="Research"
-                className="mt-5 mx-auto w-full"
-              />
           </div>
       </section>
     );

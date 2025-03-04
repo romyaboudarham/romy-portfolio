@@ -2,8 +2,8 @@
 
 import React from "react";
 import Concept from "@/app/components/Metaverse/Concept";
-import ARDesign from "@/app/components/Metaverse/ARDesign";
-import Storyboard from "@/app/components/Metaverse/Storyboard";
+import GISData from "@/app/components/Metaverse/GISData";
+import Unreal from "@/app/components/Metaverse/Unreal";
 import HeroSection from "@/app/components/Metaverse/HeroSection"
 import Navbar from "@/app/components/Navbar.jsx";
 
@@ -78,8 +78,8 @@ export default function Metaverse() {
       {/* Design & Developement */}
       <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
           <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Design & Development Process</h2>
-          <Storyboard />
-          <ARDesign />
+          <GISData />
+          <Unreal />
       </section>
 
       {/* Dividing Line */}
