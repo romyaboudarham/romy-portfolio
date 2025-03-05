@@ -74,7 +74,7 @@ export default function GriefsShadow() {
           <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Design & Development Process</h2>
           <Storyboard />
           <ObjectDesign />
-          <InteractionDesign />
+          {/* <InteractionDesign /> */}
       </section>
 
       {/* Dividing Line */}
@@ -82,8 +82,9 @@ export default function GriefsShadow() {
         <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
       </div>
 
+      Still under construction
       {/* Final Experience */}
-      <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
+      {/* <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
         <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center">Final Experience</h2>
         <div className="w-full max-w-xl mx-auto   border border-gray-300 overflow-hidden">
           <iframe
@@ -94,19 +95,7 @@ export default function GriefsShadow() {
             allowFullScreen
           ></iframe>
         </div>
-      </section>
-
-      {/* Dividing Line */}
-      <div className="my-6 mx-3 lg:mx-[170px]">
-        <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
-      </div>
-
-      {/* Impact */}
-      <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
-          <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Impact</h2>
-          <Breathe />
-      </section>
-      
+      </section> */}
 
 
       {/* Footer - Let's Connect */}
