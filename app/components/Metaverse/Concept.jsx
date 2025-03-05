@@ -4,7 +4,7 @@ export default function Concept() {
           {/* Text Content*/}
           <div>
             <div className="text-2xl font-semibold opacity-90">
-              Inspiration
+            Inspiration
             </div>
             <p className="mt-2 lg:text-xl text-gray-800">
             I wanted to challenge what we typically think of when we hear the word metaverse: a disconnected from the physical world

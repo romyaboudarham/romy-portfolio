@@ -18,9 +18,9 @@ const projectsData = [
     },
     {
         id: 2,
-        title: "Ghosts of Irish Hill - AR Narrative Journalism",
+        title: "Ghosts of Irish Hill - Augmented Reality Walking Tour",
         slug: "ar-irish-hill",
-        description: "Using AR to tell another side of history of a physical site in SF through an AR walking tour.",
+        description: "Using AR and elements of narrative journalism to tell the forgotten history of Irish Hill, a working class community destroyed for other's growth and capital.",
         image: "/media/projects/ARIrishHill/irish-hill-photo.jpg",
         video: "https://ucarecdn.com/ee586c55-e784-4e76-ac5a-ee6045ea3921/",
         tag: ["All", "AR"],
@@ -28,16 +28,16 @@ const projectsData = [
     },
     {
         id: 3,
-        title: "AR Mixed Emotions Card Deck",
+        title: "Augmented Reality Mixed Emotions Card Deck",
         slug: "ar-mixed-emotions",
-        description: "Using AR as a tool to aid in identifying emotions in the body.",
+        description: "Using AR to deepen the way you engage with your emotions.",
         video: "https://ucarecdn.com/27620f52-08e4-4aa1-b304-9bc765dd4d9d/MixedEmotionsCard.mp4",
         tag: ["All", "AR"],
         techStack: "Unity, QuillVR, Vuforia AR Plugin"
     },
     {
         id: 4,
-        title: "Exhibition - Finn's Fishbowl",
+        title: "Finn's Fishbowl - Immersive, Interactive Exhibit",
         slug: "finns-fishbowl",
         description: "An immersive, interactive story told using various technological mediums an emotionally compelling story about visiting our inner child and healing childhood trauma.",
         image: "/media/projects/FinnsFishbowl/FinnsFishbowl.jpg",
@@ -49,9 +49,9 @@ const projectsData = [
     },
     {
         id: 5,
-        title: "Finn's Fishbowl - Chapter 3 in VR",
+        title: "Finn's Fishbowl - Chapter 3 in Virtual Reality",
         slug: "finns-fishbowl",
-        description: "VR experience made with AFrame designed for an installation",
+        description: "VR immersive story made with AFrame designed for a public exhibit",
         video: "https://ucarecdn.com/8dbcc2f4-a318-4dc8-b7da-e42b95c2155b/",
         //video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FFCh3VR-slow-L4lC7GsHiaWzQX5BNCiQ4ueh5Gafx1.mp4",
         tag: ["All", "VR"],
@@ -59,9 +59,9 @@ const projectsData = [
     },
     {
         id: 6,
-        title: "Metaverse - Modern Day Impact of Historical Redlining",
+        title: "Redlined Neighborhoods in Alameda County",
         slug: "metaverse-redlining",
-        description: "",
+        description: "Leveraging the metaverse as an immersive educational tool to illustrate the present-day effects of historical redlining in Alameda County.",
         image: "/media/projects/Metaverse-Redlining/Metaverse-Census.png",
         tag: ["All", "Unreal 5"],
         techStack: "Unreal Engine 5, Blueprint, GIS Data, Cesium Plugin, R Studio"
