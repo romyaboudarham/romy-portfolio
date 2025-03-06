@@ -7,10 +7,7 @@ export default function HeroSection() {
   const [fadeClass, setFadeClass] = useState("opacity-0");
 
   const handleWatchDemo = () => {
-    setVideoUrl(
-      "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/griefs-shadow-demo-qxXFnmlF6amyNoLCxo54Y8eR4GvhWu.mp4"
-    );
-    setFadeClass("opacity-100");
+    window.open("https://www.youtube.com/watch?v=-vAeIj_-vVw", "_blank");
   };
 
   const handleWatchFull = () => {

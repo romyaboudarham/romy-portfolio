@@ -4,9 +4,9 @@ import React from "react";
 import Concept from "@/app/components/ARMixedEmotions/Concept";
 import ObjectDesign from "@/app/components/ARMixedEmotions/ObjectDesign";
 import Storyboard from "@/app/components/ARMixedEmotions/Storyboard";
-import Breathe from "@/app/components/ARMixedEmotions/Breathe"
 import HeroSection from "@/app/components/ARMixedEmotions/HeroSection"
-import InteractionDesign from "@/app/components/ARMixedEmotions/InteractionDesign"
+import UnityARDev from "@/app/components/ARMixedEmotions/UnityARDev"
+import Final from "@/app/components/ARMixedEmotions/Final"
 import Navbar from "@/app/components/Navbar.jsx";
 
 export default function GriefsShadow() {
@@ -74,7 +74,7 @@ export default function GriefsShadow() {
           <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Design & Development Process</h2>
           <Storyboard />
           <ObjectDesign />
-          {/* <InteractionDesign /> */}
+          <UnityARDev />
       </section>
 
       {/* Dividing Line */}
@@ -82,20 +82,11 @@ export default function GriefsShadow() {
         <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
       </div>
 
-      Still under construction
       {/* Final Experience */}
-      {/* <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
+      <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
         <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center">Final Experience</h2>
-        <div className="w-full max-w-xl mx-auto   border border-gray-300 overflow-hidden">
-          <iframe
-            className="w-full h-96 lg:h-[600px] rounded-md"
-            src="https://www.youtube.com/embed/iVC51VEGku4"
-            title="YouTube Video"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-      </section> */}
+        <Final />
+      </section>
 
 
       {/* Footer - Let's Connect */}
