@@ -7,7 +7,8 @@ export default function Concept() {
               Inspiration
             </div>
             <p className="mt-2 lg:text-xl text-gray-800">
-            TODO
+              When I design experiences with technology, I'm always very careful to consider the role that technology plays in the experience.
+              Assessing whether or not the technology is 
             </p>
             <img
                 src="/media/projects/ARMixedEmotions/mixed-emotions-deck.png"

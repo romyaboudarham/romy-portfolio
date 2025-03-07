@@ -8,7 +8,7 @@ export default function UnityARDev() {
         <h2 className="text-2xl font-semibold opacity-90">AR Developement in Unity</h2>
         <p className="mt-2 lg:text-xl text-gray-800">
         I used the Vuforia Unity Plugin to integrate augmented reality capabilities into my Unity application. 
-        It allowed me to track and augment real-world 2D images like a card.
+        It allowed me to track and augment real-world 2D images such as a card.
         </p>
         <img
               src="/media/projects/ARMixedEmotions/unity-ar-dev.png"

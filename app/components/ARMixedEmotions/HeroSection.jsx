@@ -12,7 +12,7 @@ export default function HeroSection() {
 
   const handleWatchFull = () => {
     setVideoUrl(
-      "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FinalExperience-1d0HQfB3BhD8Qn3gvc1dtpcynj1iBE.mp4"
+      //"https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FinalExperience-1d0HQfB3BhD8Qn3gvc1dtpcynj1iBE.mp4"
     );
     setFadeClass("opacity-100");
   };
