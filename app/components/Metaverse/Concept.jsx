@@ -7,7 +7,11 @@ export default function Concept() {
             Inspiration
             </div>
             <p className="mt-2 lg:text-xl text-gray-800">
-            I wanted to challenge what we typically think of when we hear the word metaverse: a disconnected from the physical world
+            I wanted to challenge what we typically think of when we hear the word metaverse: an alternate reality that's disconnects us from our real, physical world.
+            what if someone from another city could explore the neighborhoods that aren't accessible to them. Learn why some neighborhoods have such few tress, are near highways, and fewer resources. 
+            People study neighborhood health and that information isn't always readily accesible.Bring those findings to the user to mobilize, quesiton, get involved. 
+            I decided to use the metaverse as an educational tool to get users more engaged in their community. transporting them to different neighborhoods
+            and being able to wlak around and interact with the history and people of 
             </p>
             <div className="mt-8 lg:mt-10 text-2xl font-semibold opacity-90">
               Objective

@@ -1,18 +1,35 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 const ProjectCard = ({ imgUrl, videoUrl, title, description, techStack }) => {
+    const videoRef = useRef(null);
+
+    const handleMouseEnter = () => {
+        if (videoRef.current) {
+            videoRef.current.pause();
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (videoRef.current) {
+            videoRef.current.play();
+        }
+    };
+
     return (
         <div className="overflow-hidden relative group w-full rounded-md">
             {/* Media Section: Video (if available) or Image */}
             <div className="relative h-[400px] md:h-[500px]">
                 {videoUrl ? (
-                    <video 
-                        className="absolute inset-0 w-full h-full object-cover" 
-                        src={videoUrl} 
-                        autoPlay 
-                        loop 
-                        muted 
+                    <video
+                        ref={videoRef}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        src={videoUrl}
+                        autoPlay
+                        loop
+                        muted
                         playsInline
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
                     />
                 ) : (
                     <div 

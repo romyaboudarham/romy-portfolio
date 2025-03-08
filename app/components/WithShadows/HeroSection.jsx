@@ -8,8 +8,9 @@ export default function HeroSection() {
 
   const handleWatchDemo = () => {
     setVideoUrl(
+      "",
+      //"https://oaxvcculx5bxujie.public.blob.vercel-storage.com/griefs-shadow-demo-7R4Uz1Nd8rrLCsUHE5EtXxshGSJSHf.mp4",
       //"https://ucarecdn.com/0d56b55f-393d-4a1d-9c94-681a860a7962/",
-      //"https://oaxvcculx5bxujie.public.blob.vercel-storage.com/griefs-shadow-demo-qxXFnmlF6amyNoLCxo54Y8eR4GvhWu.mp4"
     );
     setFadeClass("opacity-100");
   };
