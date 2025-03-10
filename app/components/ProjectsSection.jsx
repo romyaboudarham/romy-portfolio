@@ -11,7 +11,7 @@ const projectsData = [
         slug: "with-shadows",
         description: "Utilizing VR to immerse users in the moment to moment reality of someone grieving the loss of a loved one. Designed as a therapeutic tool for learning how to move through grief.",
         image: "/media/projects/VR-GriefsShadow/VR-GriefsShadow.jpg",
-        //video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/with-shadow-card-1RrxgJS4seExij3S2xVDFGOUu4vrB5.mp4",
+        video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/with-shadow-card-1RrxgJS4seExij3S2xVDFGOUu4vrB5.mp4",
         //video: "https://ucarecdn.com/d654c3c0-1428-42b5-84b5-e01baf19dfa7/withshadowcard.mp4",
         tag: ["All", "VR"],
         techStack: "Unity, C#, Oculus, Blender"
@@ -22,7 +22,7 @@ const projectsData = [
         slug: "ar-irish-hill",
         description: "Using AR and elements of narrative journalism to tell the forgotten history of Irish Hill, a working class community destroyed for other's growth and capital.",
         image: "/media/projects/ARIrishHill/IrishHill-Card.png",
-        //video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/IrishHill-Card-Reverse-IGXxv4yT0LJ7DwUqhABzz173pxwuHr.mp4",
+        video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/IrishHill-Card-Reverse-IGXxv4yT0LJ7DwUqhABzz173pxwuHr.mp4",
         //video: "https://ucarecdn.com/ee586c55-e784-4e76-ac5a-ee6045ea3921/",
         tag: ["All", "AR"],
         techStack: "Unity, Vuforia AR Plugin, Blender"
@@ -33,7 +33,7 @@ const projectsData = [
         slug: "ar-mixed-emotions",
         description: "Using AR to deepen the way you engage with your emotions.",
         image: "/media/projects/ARMixedEmotions/MEgif-2-ezgif.com-video-to-gif-converter.gif",
-        //video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/MixedEmotions-Card-U7qFzdKtJKURDuQQeQR19QMIEpIr1G.mp4",
+        video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/MixedEmotions-Card-U7qFzdKtJKURDuQQeQR19QMIEpIr1G.mp4",
         //video: "https://ucarecdn.com/27620f52-08e4-4aa1-b304-9bc765dd4d9d/MixedEmotionsCard.mp4",
         tag: ["All", "AR"],
         techStack: "Unity, QuillVR, Vuforia AR Plugin"
@@ -53,7 +53,7 @@ const projectsData = [
         slug: "finns-fishbowl",
         description: "VR immersive story made with AFrame designed for a public exhibit",
         image: "/media/projects/FinnsFishbowl/VR-Aframe.png",
-        //video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FFCh3VR-slow-CdeQzOC0ZZQDiwpiqDywpEv7iWw3Af.mp4",
+        video: "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FFCh3VR-slow-CdeQzOC0ZZQDiwpiqDywpEv7iWw3Af.mp4",
         //video: "https://ucarecdn.com/8dbcc2f4-a318-4dc8-b7da-e42b95c2155b/",
         tag: ["All", "VR"],
         techStack: "A-Frame VR, HTML/CSS/JS, Blender"
