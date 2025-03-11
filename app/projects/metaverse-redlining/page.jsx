@@ -77,7 +77,7 @@ export default function Metaverse() {
 
       {/* Design & Developement */}
       <section className="mx-3 my-6 lg:my-10 lg:mx-[170px]">
-          <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Design & Development Process</h2>
+          <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">Data, Design, & Development Process</h2>
           <GISData />
           <Unreal />
       </section>
@@ -104,6 +104,9 @@ export default function Metaverse() {
             alt="presentation"
             className="mt-5 mx-auto w-full max-w-md md:max-w-lg lg:max-w-2xl rounded-md"
           />
+          <p className="mb-2 text-center text-md lg:text-lg text-gray-600">
+            Me presenting my research, data, and demo for the class and guests. 2023
+          </p>
       </section>
 
 

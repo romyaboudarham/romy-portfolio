@@ -29,7 +29,7 @@ const projectsData = [
     },
     {
         id: 3,
-        title: "Augmented Reality Mixed Emotions Card Deck",
+        title: "Mixed Emotions Card Deck - Augmented Reality Feature",
         slug: "ar-mixed-emotions",
         description: "Using AR to deepen the way you engage with your emotions.",
         image: "/media/projects/ARMixedEmotions/MEgif-2-ezgif.com-video-to-gif-converter.gif",
@@ -40,6 +40,15 @@ const projectsData = [
     },
     {
         id: 4,
+        title: "Redlined Neighborhoods in Alameda County - Metaverse",
+        slug: "metaverse-redlining",
+        description: "Leveraging the metaverse as an immersive educational tool to illustrate the present-day effects of historical redlining in Alameda County.",
+        image: "/media/projects/Metaverse-Redlining/Metaverse-Census.png",
+        tag: ["All", "Unreal 5"],
+        techStack: "Unreal Engine 5, Blueprint, GIS Data, Cesium Plugin, R Studio"
+    },
+    {
+        id: 5,
         title: "Finn's Fishbowl - Immersive, Interactive Exhibit",
         slug: "finns-fishbowl",
         description: "An immersive, interactive story told using various technological mediums an emotionally compelling story about visiting our inner child and healing childhood trauma.",
@@ -48,7 +57,7 @@ const projectsData = [
         techStack: "A-Frame VR, P5.js, Node.js HTML/CSS/JS, Physical Programming ESP32, Projection Mapping, Blender"
     },
     {
-        id: 5,
+        id: 6,
         title: "Finn's Fishbowl - Chapter 3 in Virtual Reality",
         slug: "finns-fishbowl",
         description: "VR immersive story made with AFrame designed for a public exhibit",
@@ -57,15 +66,6 @@ const projectsData = [
         //video: "https://ucarecdn.com/8dbcc2f4-a318-4dc8-b7da-e42b95c2155b/",
         tag: ["All", "VR"],
         techStack: "A-Frame VR, HTML/CSS/JS, Blender"
-    },
-    {
-        id: 6,
-        title: "Redlined Neighborhoods in Alameda County",
-        slug: "metaverse-redlining",
-        description: "Leveraging the metaverse as an immersive educational tool to illustrate the present-day effects of historical redlining in Alameda County.",
-        image: "/media/projects/Metaverse-Redlining/Metaverse-Census.png",
-        tag: ["All", "Unreal 5"],
-        techStack: "Unreal Engine 5, Blueprint, GIS Data, Cesium Plugin, R Studio"
     },
     // {
     //     id: 7,
@@ -144,7 +144,7 @@ export default function ProjectsSection() {
                 .map((project) => (
                     <Link 
                         key={project.id} 
-                        href={project.id === 5 
+                        href={project.id === 6 
                             ? "/projects/finns-fishbowl#ch3vr" 
                             : (project.id === 4 && (tag === "Physical Computing"))
                             ? "/projects/finns-fishbowl#esp32"  // Scroll to #esp32 if id is 4 and tag is "Physical Computing"

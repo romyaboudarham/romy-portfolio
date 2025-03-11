@@ -20,6 +20,7 @@
     "react-dom": "^19.0.0",
     "react-feather": "^2.0.10",
     "react-swipeable": "^7.0.2",
+    "react-syntax-highlighter": "^15.6.1",
     "three": "^0.173.0",
     "vercel": "^41.0.2"
   },
