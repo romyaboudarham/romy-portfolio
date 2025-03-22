@@ -8,6 +8,10 @@ const HeroSection = () => {
   const [displayedText, setDisplayedText] = useState("");
   const fullText = "Romy Aboudarham";
 
+  const handleWatchDemo = () => {
+    window.open("https://www.youtube.com/watch?v=-stuub37-NQ", "_blank");
+  };
+
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
@@ -39,6 +43,18 @@ const HeroSection = () => {
       <p className="text-base sm:text-lg lg:text-md text-center max-w-3xl mt-4">
         creative technologist & immersive, empathy-driven storyteller
       </p>
+
+      {/* Button Below */}
+      <div className="mt-10 lg:mt-5 flex flex-col justify-center items-center w-[150px] mx-auto">
+        <button
+          onClick={handleWatchDemo}
+          className="px-6 py-3 w-full border-[#800000] 
+          text-black border hover:text-white hover:bg-[#800000] rounded-md"
+        >
+          Watch Reel
+        </button>
+
+      </div>
 
       {/* Down Arrow Icon */}
       <div className="md:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2">

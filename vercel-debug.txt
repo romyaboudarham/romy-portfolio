@@ -1,0 +1,464 @@
+Domain to test (e.g. example.com): 
+┌───────────────────────────────────────
+├─────── STARTING
+│
+│ Domain to test: romyaboudarham.com 
+│ Timestamp (UTC): Mon Mar 17 19:48:26 UTC 2025
+| Timestamp (Local): Mon Mar 17 12:48:26 PDT 2025
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── IP Information 
+
+{
+  "ip": "209.40.95.249",
+  "city": "Oakland",
+  "region": "California",
+  "country": "US",
+  "loc": "37.8044,-122.2708",
+  "org": "AS19165 Webpass Inc.",
+  "postal": "94604",
+  "timezone": "America/Los_Angeles",
+  "readme": "https://ipinfo.io/missingauth"
+}
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 76.76.21.21 
+
+PING 76.76.21.21 (76.76.21.21): 56 data bytes
+64 bytes from 76.76.21.21: icmp_seq=0 ttl=241 time=5.396 ms
+64 bytes from 76.76.21.21: icmp_seq=1 ttl=241 time=5.513 ms
+64 bytes from 76.76.21.21: icmp_seq=2 ttl=241 time=6.068 ms
+64 bytes from 76.76.21.21: icmp_seq=3 ttl=241 time=6.716 ms
+
+--- 76.76.21.21 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 5.396/5.923/6.716/0.523 ms
+
+ 1  10.120.80.1 (10.120.80.1)  3.038 ms  2.512 ms  2.360 ms
+ 2  10.120.0.101 (10.120.0.101)  2.361 ms  2.081 ms  1.927 ms
+ 3  10.111.6.5 (10.111.6.5)  2.546 ms  3.070 ms  2.998 ms
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  * * *
+13  * * *
+14  * * *
+15  76.76.21.21 (76.76.21.21)  7.024 ms  5.819 ms  5.310 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 66.33.60.33 
+
+PING 66.33.60.33 (66.33.60.33): 56 data bytes
+64 bytes from 66.33.60.33: icmp_seq=0 ttl=241 time=4.914 ms
+64 bytes from 66.33.60.33: icmp_seq=1 ttl=241 time=5.982 ms
+64 bytes from 66.33.60.33: icmp_seq=2 ttl=241 time=6.648 ms
+64 bytes from 66.33.60.33: icmp_seq=3 ttl=241 time=8.844 ms
+
+--- 66.33.60.33 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 4.914/6.597/8.844/1.437 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 66.33.60.34 
+
+PING 66.33.60.34 (66.33.60.34): 56 data bytes
+64 bytes from 66.33.60.34: icmp_seq=0 ttl=241 time=5.861 ms
+64 bytes from 66.33.60.34: icmp_seq=1 ttl=241 time=6.105 ms
+64 bytes from 66.33.60.34: icmp_seq=2 ttl=241 time=5.480 ms
+64 bytes from 66.33.60.34: icmp_seq=3 ttl=241 time=5.277 ms
+
+--- 66.33.60.34 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 5.277/5.681/6.105/0.322 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 66.33.60.35 
+
+PING 66.33.60.35 (66.33.60.35): 56 data bytes
+64 bytes from 66.33.60.35: icmp_seq=0 ttl=241 time=4.510 ms
+64 bytes from 66.33.60.35: icmp_seq=1 ttl=241 time=6.725 ms
+64 bytes from 66.33.60.35: icmp_seq=2 ttl=241 time=7.641 ms
+64 bytes from 66.33.60.35: icmp_seq=3 ttl=241 time=21.497 ms
+
+--- 66.33.60.35 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 4.510/10.093/21.497/6.682 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 66.33.60.65 
+
+PING 66.33.60.65 (66.33.60.65): 56 data bytes
+64 bytes from 66.33.60.65: icmp_seq=0 ttl=241 time=14.467 ms
+64 bytes from 66.33.60.65: icmp_seq=1 ttl=241 time=128.399 ms
+64 bytes from 66.33.60.65: icmp_seq=2 ttl=241 time=6.574 ms
+64 bytes from 66.33.60.65: icmp_seq=3 ttl=241 time=7.482 ms
+
+--- 66.33.60.65 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 6.574/39.231/128.399/51.572 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 66.33.60.66 
+
+PING 66.33.60.66 (66.33.60.66): 56 data bytes
+64 bytes from 66.33.60.66: icmp_seq=0 ttl=241 time=7.288 ms
+64 bytes from 66.33.60.66: icmp_seq=1 ttl=241 time=6.599 ms
+64 bytes from 66.33.60.66: icmp_seq=2 ttl=241 time=8.942 ms
+64 bytes from 66.33.60.66: icmp_seq=3 ttl=241 time=8.495 ms
+
+--- 66.33.60.66 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 6.599/7.831/8.942/0.934 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 66.33.60.67 
+
+PING 66.33.60.67 (66.33.60.67): 56 data bytes
+64 bytes from 66.33.60.67: icmp_seq=0 ttl=241 time=6.501 ms
+64 bytes from 66.33.60.67: icmp_seq=1 ttl=241 time=5.999 ms
+64 bytes from 66.33.60.67: icmp_seq=2 ttl=241 time=8.061 ms
+64 bytes from 66.33.60.67: icmp_seq=3 ttl=241 time=6.358 ms
+
+--- 66.33.60.67 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 5.999/6.730/8.061/0.790 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 66.33.60.129 
+
+PING 66.33.60.129 (66.33.60.129): 56 data bytes
+64 bytes from 66.33.60.129: icmp_seq=0 ttl=241 time=9.260 ms
+64 bytes from 66.33.60.129: icmp_seq=1 ttl=241 time=10.457 ms
+64 bytes from 66.33.60.129: icmp_seq=2 ttl=241 time=14.092 ms
+64 bytes from 66.33.60.129: icmp_seq=3 ttl=241 time=33.977 ms
+
+--- 66.33.60.129 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 9.260/16.947/33.977/9.992 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 66.33.60.130 
+
+PING 66.33.60.130 (66.33.60.130): 56 data bytes
+64 bytes from 66.33.60.130: icmp_seq=0 ttl=241 time=8.865 ms
+64 bytes from 66.33.60.130: icmp_seq=1 ttl=241 time=5.857 ms
+64 bytes from 66.33.60.130: icmp_seq=2 ttl=241 time=5.925 ms
+64 bytes from 66.33.60.130: icmp_seq=3 ttl=241 time=114.075 ms
+
+--- 66.33.60.130 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 5.857/33.681/114.075/46.432 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 66.33.60.193 
+
+PING 66.33.60.193 (66.33.60.193): 56 data bytes
+64 bytes from 66.33.60.193: icmp_seq=0 ttl=241 time=7.472 ms
+64 bytes from 66.33.60.193: icmp_seq=1 ttl=241 time=6.215 ms
+64 bytes from 66.33.60.193: icmp_seq=2 ttl=241 time=6.227 ms
+64 bytes from 66.33.60.193: icmp_seq=3 ttl=241 time=10.134 ms
+
+--- 66.33.60.193 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 6.215/7.512/10.134/1.598 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 66.33.60.194 
+
+PING 66.33.60.194 (66.33.60.194): 56 data bytes
+64 bytes from 66.33.60.194: icmp_seq=0 ttl=241 time=10.396 ms
+Request timeout for icmp_seq 1
+64 bytes from 66.33.60.194: icmp_seq=2 ttl=241 time=7.310 ms
+64 bytes from 66.33.60.194: icmp_seq=3 ttl=241 time=5.902 ms
+
+--- 66.33.60.194 ping statistics ---
+4 packets transmitted, 3 packets received, 25.0% packet loss
+round-trip min/avg/max/stddev = 5.902/7.869/10.396/1.877 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 76.76.21.9 
+
+PING 76.76.21.9 (76.76.21.9): 56 data bytes
+64 bytes from 76.76.21.9: icmp_seq=0 ttl=241 time=8.083 ms
+64 bytes from 76.76.21.9: icmp_seq=1 ttl=241 time=8.299 ms
+64 bytes from 76.76.21.9: icmp_seq=2 ttl=241 time=5.094 ms
+64 bytes from 76.76.21.9: icmp_seq=3 ttl=241 time=22.915 ms
+
+--- 76.76.21.9 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 5.094/11.098/22.915/6.939 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 76.76.21.22 
+
+PING 76.76.21.22 (76.76.21.22): 56 data bytes
+64 bytes from 76.76.21.22: icmp_seq=0 ttl=241 time=5.320 ms
+64 bytes from 76.76.21.22: icmp_seq=1 ttl=241 time=4.867 ms
+64 bytes from 76.76.21.22: icmp_seq=2 ttl=241 time=7.185 ms
+64 bytes from 76.76.21.22: icmp_seq=3 ttl=241 time=8.780 ms
+
+--- 76.76.21.22 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 4.867/6.538/8.780/1.559 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 76.76.21.61 
+
+PING 76.76.21.61 (76.76.21.61): 56 data bytes
+64 bytes from 76.76.21.61: icmp_seq=0 ttl=241 time=5.218 ms
+64 bytes from 76.76.21.61: icmp_seq=1 ttl=241 time=4.862 ms
+64 bytes from 76.76.21.61: icmp_seq=2 ttl=241 time=7.009 ms
+64 bytes from 76.76.21.61: icmp_seq=3 ttl=241 time=137.016 ms
+
+--- 76.76.21.61 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 4.862/38.526/137.016/56.869 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 76.76.21.93 
+
+PING 76.76.21.93 (76.76.21.93): 56 data bytes
+64 bytes from 76.76.21.93: icmp_seq=0 ttl=241 time=4.582 ms
+64 bytes from 76.76.21.93: icmp_seq=1 ttl=241 time=5.193 ms
+64 bytes from 76.76.21.93: icmp_seq=2 ttl=241 time=85.693 ms
+64 bytes from 76.76.21.93: icmp_seq=3 ttl=241 time=4.997 ms
+
+--- 76.76.21.93 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 4.582/25.116/85.693/34.975 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 76.76.21.98 
+
+PING 76.76.21.98 (76.76.21.98): 56 data bytes
+64 bytes from 76.76.21.98: icmp_seq=0 ttl=241 time=5.657 ms
+64 bytes from 76.76.21.98: icmp_seq=1 ttl=241 time=5.174 ms
+64 bytes from 76.76.21.98: icmp_seq=2 ttl=241 time=5.249 ms
+64 bytes from 76.76.21.98: icmp_seq=3 ttl=241 time=5.200 ms
+
+--- 76.76.21.98 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 5.174/5.320/5.657/0.196 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 76.76.21.123 
+
+PING 76.76.21.123 (76.76.21.123): 56 data bytes
+64 bytes from 76.76.21.123: icmp_seq=0 ttl=241 time=4.896 ms
+64 bytes from 76.76.21.123: icmp_seq=1 ttl=241 time=5.680 ms
+64 bytes from 76.76.21.123: icmp_seq=2 ttl=241 time=7.548 ms
+64 bytes from 76.76.21.123: icmp_seq=3 ttl=241 time=5.166 ms
+
+--- 76.76.21.123 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 4.896/5.823/7.548/1.035 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 76.76.21.142 
+
+PING 76.76.21.142 (76.76.21.142): 56 data bytes
+64 bytes from 76.76.21.142: icmp_seq=0 ttl=241 time=6.937 ms
+64 bytes from 76.76.21.142: icmp_seq=1 ttl=241 time=79.372 ms
+64 bytes from 76.76.21.142: icmp_seq=2 ttl=241 time=5.111 ms
+64 bytes from 76.76.21.142: icmp_seq=3 ttl=241 time=5.177 ms
+
+--- 76.76.21.142 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 5.111/24.149/79.372/31.891 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 76.76.21.164 
+
+PING 76.76.21.164 (76.76.21.164): 56 data bytes
+64 bytes from 76.76.21.164: icmp_seq=0 ttl=241 time=5.824 ms
+64 bytes from 76.76.21.164: icmp_seq=1 ttl=241 time=16.678 ms
+64 bytes from 76.76.21.164: icmp_seq=2 ttl=241 time=5.602 ms
+64 bytes from 76.76.21.164: icmp_seq=3 ttl=241 time=4.946 ms
+
+--- 76.76.21.164 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 4.946/8.263/16.678/4.869 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 76.76.21.241 
+
+PING 76.76.21.241 (76.76.21.241): 56 data bytes
+64 bytes from 76.76.21.241: icmp_seq=0 ttl=241 time=5.701 ms
+64 bytes from 76.76.21.241: icmp_seq=1 ttl=241 time=9.472 ms
+64 bytes from 76.76.21.241: icmp_seq=2 ttl=241 time=9.203 ms
+64 bytes from 76.76.21.241: icmp_seq=3 ttl=241 time=8.409 ms
+
+--- 76.76.21.241 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 5.701/8.196/9.472/1.493 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── dig romyaboudarham.com 
+
+
+; <<>> DiG 9.10.6 <<>> romyaboudarham.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 4455
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 13, ADDITIONAL: 27
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;romyaboudarham.com.		IN	A
+
+;; ANSWER SECTION:
+romyaboudarham.com.	1	IN	A	72.5.65.111
+
+;; AUTHORITY SECTION:
+com.			92421	IN	NS	a.gtld-servers.net.
+com.			92421	IN	NS	k.gtld-servers.net.
+com.			92421	IN	NS	l.gtld-servers.net.
+com.			92421	IN	NS	c.gtld-servers.net.
+com.			92421	IN	NS	e.gtld-servers.net.
+com.			92421	IN	NS	f.gtld-servers.net.
+com.			92421	IN	NS	b.gtld-servers.net.
+com.			92421	IN	NS	m.gtld-servers.net.
+com.			92421	IN	NS	i.gtld-servers.net.
+com.			92421	IN	NS	d.gtld-servers.net.
+com.			92421	IN	NS	g.gtld-servers.net.
+com.			92421	IN	NS	j.gtld-servers.net.
+com.			92421	IN	NS	h.gtld-servers.net.
+
+;; ADDITIONAL SECTION:
+c.gtld-servers.net.	92350	IN	A	192.26.92.30
+a.gtld-servers.net.	92350	IN	A	192.5.6.30
+b.gtld-servers.net.	92350	IN	A	192.33.14.30
+e.gtld-servers.net.	92350	IN	A	192.12.94.30
+f.gtld-servers.net.	92350	IN	A	192.35.51.30
+k.gtld-servers.net.	92350	IN	A	192.52.178.30
+i.gtld-servers.net.	92350	IN	A	192.43.172.30
+g.gtld-servers.net.	92350	IN	A	192.42.93.30
+j.gtld-servers.net.	92350	IN	A	192.48.79.30
+d.gtld-servers.net.	92350	IN	A	192.31.80.30
+l.gtld-servers.net.	92350	IN	A	192.41.162.30
+m.gtld-servers.net.	92350	IN	A	192.55.83.30
+h.gtld-servers.net.	92350	IN	A	192.54.112.30
+c.gtld-servers.net.	92350	IN	AAAA	2001:503:83eb::30
+a.gtld-servers.net.	92350	IN	AAAA	2001:503:a83e::2:30
+b.gtld-servers.net.	92350	IN	AAAA	2001:503:231d::2:30
+e.gtld-servers.net.	92350	IN	AAAA	2001:502:1ca1::30
+f.gtld-servers.net.	92350	IN	AAAA	2001:503:d414::30
+k.gtld-servers.net.	92350	IN	AAAA	2001:503:d2d::30
+i.gtld-servers.net.	92350	IN	AAAA	2001:503:39c1::30
+g.gtld-servers.net.	92350	IN	AAAA	2001:503:eea3::30
+j.gtld-servers.net.	92350	IN	AAAA	2001:502:7094::30
+d.gtld-servers.net.	92350	IN	AAAA	2001:500:856e::30
+l.gtld-servers.net.	92350	IN	AAAA	2001:500:d937::30
+m.gtld-servers.net.	92350	IN	AAAA	2001:501:b1f9::30
+h.gtld-servers.net.	92350	IN	AAAA	2001:502:8cc::30
+
+;; Query time: 38 msec
+;; SERVER: 10.16.8.254#53(10.16.8.254)
+;; WHEN: Mon Mar 17 12:50:02 PDT 2025
+;; MSG SIZE  rcvd: 859
+
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── dig romyaboudarham.com via 8.8.8.8
+
+
+; <<>> DiG 9.10.6 <<>> romyaboudarham.com @8.8.8.8
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 38283
+;; flags: qr rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+;; WARNING: recursion requested but not available
+
+;; QUESTION SECTION:
+;romyaboudarham.com.		IN	A
+
+;; ANSWER SECTION:
+romyaboudarham.com.	1	IN	A	72.5.65.111
+
+;; Query time: 35 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8)
+;; WHEN: Mon Mar 17 12:50:02 PDT 2025
+;; MSG SIZE  rcvd: 52
+
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── dig romyaboudarham.com via trace
+
+
+; <<>> DiG 9.10.6 <<>> romyaboudarham.com +trace
+;; global options: +cmd
+.			3211	IN	NS	c.root-servers.net.
+.			3211	IN	NS	i.root-servers.net.
+.			3211	IN	NS	m.root-servers.net.
+.			3211	IN	NS	k.root-servers.net.
+.			3211	IN	NS	h.root-servers.net.
+.			3211	IN	NS	d.root-servers.net.
+.			3211	IN	NS	j.root-servers.net.
+.			3211	IN	NS	e.root-servers.net.
+.			3211	IN	NS	f.root-servers.net.
+.			3211	IN	NS	b.root-servers.net.
+.			3211	IN	NS	g.root-servers.net.
+.			3211	IN	NS	l.root-servers.net.
+.			3211	IN	NS	a.root-servers.net.
+.			499809	IN	RRSIG	NS 8 0 518400 20250330050000 20250317040000 26470 . N6UXgU0inMgKanFZEdw3fkk0J43EVGHJ8PUNy3VEJydqMErDDp0CldJS lKvX+DH3XmT/RPfQEuj4CSzaSKXU4ImP72vqrSg7xCm7l56QnJuu/ypX G8D9uGMRKLzPTHUDIdiSCCTuF14ywaZ49627fvDo1sEqZ2sRySbQbkNK X+RMgwmoWi672r8PaHKsFsoMpWGR59sr8vazbJwowa6I2/BrmGBmm5Tz 30+nseLnMJpsceofQHILBv/92fWVLvRGCeQjM3IElalPBuc/iaOHwPbr FbAn6U6R/dCnabYnvtbrBrSgHsRRt3G0YBAei3+fx66rMtpuIal71cDB CD/aVw==
+;; Received 1109 bytes from 10.16.8.254#53(10.16.8.254) in 35 ms
+
+romyaboudarham.com.	1	IN	A	72.5.65.111
+;; Received 52 bytes from 170.247.170.2#53(b.root-servers.net) in 2 ms
+
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Output of romyaboudarham.com
+
+* Host romyaboudarham.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 72.5.65.111
+*   Trying 72.5.65.111:443...
+* connect to 72.5.65.111 port 443 from 10.120.90.209 port 59138 failed: Operation timed out
+* Failed to connect to romyaboudarham.com port 443 after 75007 ms: Couldn't connect to server
+* Closing connection
+
+└───────────────────────────────────────
+
+
+┌───────────────────────────────────────
+│ Time elapsed: 173 seconds
+│
+├─────── FINISHED
+└───────────────────────────────────────
+
+
+
+File can be found at /Users/romy/Documents/romy-portfolio/vercel-debug.txt
+
