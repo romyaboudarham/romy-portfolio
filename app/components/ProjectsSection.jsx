@@ -7,6 +7,15 @@ import Link from "next/link";
 const projectsData = [
     {
         id: 1,
+        title: "Phone a Friend - Gemini AI Lab Assistant",
+        slug: "lab-ai-assistant",
+        description: "A demo for CCA's Hybrid Lab on integrating AI models and databases into physical prototypes.",
+        image: "/media/projects/LabAIAssistant/ezgif.com-video-to-gif-converter.gif",
+        tag: ["All", "AI", "Physical Computing"],
+        techStack: "Gemini AI, Python, Raspberry Pi"
+    },
+    {
+        id: 2,
         title: "With Shadows - Interactive VR Story About Grief",
         slug: "with-shadows",
         description: "Utilizing VR to immerse users in the moment to moment reality of someone grieving the loss of a loved one. Designed as a therapeutic tool for learning how to move through grief.",
@@ -17,7 +26,7 @@ const projectsData = [
         techStack: "Unity, C#, Oculus, Blender"
     },
     {
-        id: 2,
+        id: 3,
         title: "Ghosts of Irish Hill - Augmented Reality Walking Tour",
         slug: "ar-irish-hill",
         description: "Using AR and elements of narrative journalism to tell the forgotten history of Irish Hill, a working class community destroyed for other's growth and capital.",
@@ -28,7 +37,7 @@ const projectsData = [
         techStack: "Unity, Vuforia AR Plugin, Blender"
     },
     {
-        id: 3,
+        id: 4,
         title: "Mixed Emotions Card Deck - Augmented Reality Feature",
         slug: "ar-mixed-emotions",
         description: "Using AR to deepen the way you engage with your emotions.",
@@ -39,7 +48,7 @@ const projectsData = [
         techStack: "Unity, QuillVR, Vuforia AR Plugin"
     },
     {
-        id: 4,
+        id: 5,
         title: "Redlined Neighborhoods in Alameda County - Metaverse",
         slug: "metaverse-redlining",
         description: "Leveraging the metaverse as an immersive educational tool to illustrate the present-day effects of historical redlining in Alameda County.",
@@ -48,7 +57,7 @@ const projectsData = [
         techStack: "Unreal Engine 5, Blueprint, GIS Data, Cesium Plugin, R Studio"
     },
     {
-        id: 5,
+        id: 6,
         title: "Finn's Fishbowl - Immersive, Interactive Exhibit",
         slug: "finns-fishbowl",
         description: "An immersive, interactive story told using various technological mediums an emotionally compelling story about visiting our inner child and healing childhood trauma.",
@@ -57,7 +66,7 @@ const projectsData = [
         techStack: "A-Frame VR, P5.js, Node.js HTML/CSS/JS, Physical Programming ESP32, Projection Mapping, Blender"
     },
     {
-        id: 6,
+        id: 7,
         title: "Finn's Fishbowl - Chapter 3 in Virtual Reality",
         slug: "finns-fishbowl",
         description: "VR immersive story made with AFrame designed for a public exhibit",
@@ -128,7 +137,7 @@ export default function ProjectsSection() {
                 justifyContent: "center", // Keeps items centered
             }}
         >
-            {["All", "VR", "AR", "Physical Computing", "Exhibitions"].map((category) => (
+            {["All", "AI", "VR", "AR", "Physical Computing", "Exhibitions"].map((category) => (
                 <ProjectTag 
                     key={category}
                     onClick={handleTagChange} 
@@ -144,9 +153,9 @@ export default function ProjectsSection() {
                 .map((project) => (
                     <Link 
                         key={project.id} 
-                        href={project.id === 6 
+                        href={project.id === 7 
                             ? "/projects/finns-fishbowl#ch3vr" 
-                            : (project.id === 4 && (tag === "Physical Computing"))
+                            : (project.id === 5 && (tag === "Physical Computing"))
                             ? "/projects/finns-fishbowl#esp32"  // Scroll to #esp32 if id is 4 and tag is "Physical Computing"
                             : `/projects/${project.slug}`}
                         passHref

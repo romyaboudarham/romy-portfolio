@@ -41,7 +41,7 @@ const HeroSection = () => {
         {displayedText}
       </h1>
       <p className="text-base sm:text-lg lg:text-md text-center max-w-3xl mt-4">
-        creative technologist & immersive, empathy-driven storyteller
+        creative technologist & immersive experience designer
       </p>
 
       {/* Button Below */}
