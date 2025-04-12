@@ -7,7 +7,7 @@ export default function HeroSection() {
   const [fadeClass, setFadeClass] = useState("opacity-0");
 
   const handleWatchDemo = () => {
-    window.open("https://youtu.be/GFocypMe5fA", "_blank");
+    window.open("https://youtu.be/U70IRBNUpqw", "_blank");
   };
 
   const handleVideoEnd = () => {

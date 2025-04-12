@@ -22,7 +22,8 @@ export default function GriefsShadow() {
               As the lab manager of CCA's interactive electronic art makerspace, I explore new technology and created a demo to teach students AI integration with Gemini and ChatGPT in physical prototypes.
               <br /><br />
               Inspired by CCA student Colin Chan's project using ChatGPT with an old phone, 
-              I repurposed the device, adding custom logic on a Raspberry Pi. Now, I'm integrating our lab's inventory so AI can assist with student resource questions.
+              I repurposed the device, adding new Gemini logic for the Raspberry Pi 5. 
+              Now, I'm integrating our lab's information so AI can assist with student resource questions.
             </p>
 
             {/* Additional Details */}
