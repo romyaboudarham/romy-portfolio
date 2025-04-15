@@ -59,6 +59,25 @@ export default function GriefsShadow() {
         <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
       </div>
 
+      {/* Final Experience */}
+      <section className="mx-3 my-6 lg:mx-[180px]">
+        <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center">Final Experience</h2>
+        <div className="w-full max-w-xl mx-auto   border border-gray-300 overflow-hidden">
+          <iframe
+            className="w-full h-96 lg:h-[600px] rounded-md"
+            src="https://www.youtube.com/embed/U70IRBNUpqw"
+            title="YouTube Video"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </section>
+
+      {/* Dividing Line */}
+      <div className="my-6 mx-3 lg:mx-[170px]">
+        <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
+      </div>
+
       {/* Footer - Let's Connect */}
       <section className="relative flex items-center justify-center py-3 text-center px-6 md:px-20 rounded-t-2xl shadow-inner">
         <img 
