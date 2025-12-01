@@ -1,87 +1,25 @@
-import { useState } from "react";
-import { ChevronDown, ChevronLeft } from "lucide-react";
+import ProjectHero from "@/app/components/ProjectHero";
 
 export default function HeroSection() {
-  // Video States
-  const [videoUrl, setVideoUrl] = useState(null);
-  const [fadeClass, setFadeClass] = useState("opacity-0");
-
-  const handleWatchDemo = () => {
-    window.open("https://youtu.be/U70IRBNUpqw", "_blank");
-  };
-
-  const handleVideoEnd = () => {
-    setFadeClass("opacity-0");
-    setTimeout(() => {
-      setVideoUrl(null);
-    }, 500);
-  };
-
-  const handleBackClick = () => {
-    setFadeClass("opacity-0");
-    setTimeout(() => {
-      setVideoUrl(null);
-    }, 500);
-  };
-
   return (
-    <section className="h-[100dvh] bg-black relative flex items-center justify-center text-center px-4 lg:px-12 overflow-hidden">
-      {videoUrl ? (
-        <div className="absolute inset-0 z-[70] flex items-center justify-center">
-          {/* Back Arrow in Top Left */}
-          <div
-            onClick={handleBackClick}
-            className="absolute top-4 left-4 z-[75] text-white cursor-pointer"
-          >
-            <ChevronLeft className="w-8 h-8" />
-          </div>
-          {/* Video */}
-          <video
-            src={videoUrl}
-            autoPlay
-            controls
-            onEnded={handleVideoEnd}
-            className={`absolute w-full h-full object-cover border-4 border-[#6e8e76] transition-opacity duration-500 ${fadeClass}`}
-          />
-        </div>
-      ) : (
-        <>
-          {/* Default Hero Section */}
-          <img
-            src="/media/projects/LabAIAssistant/bg.jpeg"
-            alt="Skybox"
-            className="absolute w-full h-full object-cover"
-          />
-          <div className="relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
-            {/* Title & Description Box */}
-            <div className="p-3 lg:p-5 bg-[black]/70 backdrop-blur-lg shadow-xl text-center rounded-md">
-              <div className="text-white mt-3 lg:mt-5 text-5xl lg:text-6xl" style={{ fontFamily: 'Londrina Outline, cursive' }}>
-                Phone a Friend
-              </div>
-              <p className="text-white mt-3 opacity-70 lg:mt-5 text-lg lg:text-2xl">
-                Gemini AI Lab Assistant
-              </p>
-              <p className="text-white mt-3 mb-3 lg:mb-5 lg:mt- 5 text-base lg:text-xl opacity-80">
-                A demo for CCA's Hybrid Lab on integrating AI models and databases into physical prototypes.
-              </p>
-            </div>
-            {/* Button Below */}
-            <div className="mt-3 lg:mt-10 flex flex-col justify-center items-center w-[150px] mx-auto">
-              <button
-                onClick={handleWatchDemo}
-                className="px-6 py-3 w-full bg-[black]/70 
-                text-white border hover:bg-transparent hover:text-black border-black mt-10 rounded-md"
-              >
-                Watch Demo
-              </button>
-            </div>
-          </div>
-        </>
-      )}
-      {/* Down Arrow Icon */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-        <ChevronDown className="w-14 h-8" />
-      </div>
-    </section>
+    <ProjectHero
+      title="Phone a Friend"
+      subtitle="Gemini AI Lab Assistant"
+      description="A demo for CCA's Hybrid Lab on integrating AI models and databases into physical prototypes."
+      bgImage="/media/projects/LabAIAssistant/bg.jpeg"
+      ctas={[
+        {
+          label: "Watch Demo",
+          action: {
+            type: "link",
+            url: "https://youtu.be/U70IRBNUpqw",
+          },
+        },
+      ]}
+      theme={{
+        buttonClassName:
+          "px-6 py-3 w-full bg-[black]/70 text-white border hover:bg-transparent hover:text-black border-black mt-10 rounded-md transition-colors duration-200",
+      }}
+    />
   );
 }
