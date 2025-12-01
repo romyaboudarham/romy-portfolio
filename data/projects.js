@@ -5,7 +5,7 @@ export const projectsData = [
     slug: "lab-ai-assistant",
     description:
       "A demo for CCA's Hybrid Lab on integrating AI models and databases into physical prototypes.",
-    image: "/media/projects/LabAIAssistant/ezgif.com-video-to-gif-converter.gif",
+    image: "/media/projects/LabAIAssistant/bg.jpeg",
     tag: ["AI", "Physical Computing"],
     techStack: "Gemini AI, Python, Raspberry Pi",
   },
@@ -16,7 +16,7 @@ export const projectsData = [
     description:
       "Utilizing VR to immerse users in the moment to moment reality of someone grieving the loss of a loved one. Designed as a therapeutic tool for learning how to move through grief.",
     image: "/media/projects/VR-GriefsShadow/VR-GriefsShadow.jpg",
-    video: "",
+    video: "/videos/WithShadows-Card.mp4",
     tag: ["VR"],
     techStack: "Unity, C#, Oculus, Blender",
   },
@@ -28,7 +28,7 @@ export const projectsData = [
       "Using AR and elements of narrative journalism to tell the forgotten history of Irish Hill, a working class community destroyed for other's growth and capital.",
     image: "/media/projects/ARIrishHill/IrishHill-Card.png",
     video:
-      "/videos/IrishHill-Card-Reverse-h264.mp4",
+      "/videos/IrishHill-Card-Reverse.mp4",
     tag: ["AR"],
     techStack: "Unity, Vuforia AR Plugin, Blender",
   },
@@ -39,7 +39,7 @@ export const projectsData = [
     description: "Using AR to deepen the way you engage with your emotions.",
     image:
       "/media/projects/ARMixedEmotions/MEgif-2-ezgif.com-video-to-gif-converter.gif",
-    video: "",
+    video: "/videos/MixedEmotions-Card.mp4",
     tag: ["AR"],
     techStack: "Unity, QuillVR, Vuforia AR Plugin",
   },
@@ -71,7 +71,7 @@ export const projectsData = [
     slug: "finns-fishbowl",
     description: "VR immersive story made with AFrame designed for a public exhibit",
     image: "/media/projects/FinnsFishbowl/VR-Aframe.png",
-    video: "",
+    video: "/videos/FFCh3VR-Card-slow.mp4",
     tag: ["VR"],
     techStack: "A-Frame VR, HTML/CSS/JS, Blender",
   },
