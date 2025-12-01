@@ -16,8 +16,7 @@ export const projectsData = [
     description:
       "Utilizing VR to immerse users in the moment to moment reality of someone grieving the loss of a loved one. Designed as a therapeutic tool for learning how to move through grief.",
     image: "/media/projects/VR-GriefsShadow/VR-GriefsShadow.jpg",
-    video:
-      "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/with-shadow-card-1RrxgJS4seExij3S2xVDFGOUu4vrB5.mp4",
+    video: "",
     tag: ["VR"],
     techStack: "Unity, C#, Oculus, Blender",
   },
@@ -40,8 +39,7 @@ export const projectsData = [
     description: "Using AR to deepen the way you engage with your emotions.",
     image:
       "/media/projects/ARMixedEmotions/MEgif-2-ezgif.com-video-to-gif-converter.gif",
-    video:
-      "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/MixedEmotions-Card-U7qFzdKtJKURDuQQeQR19QMIEpIr1G.mp4",
+    video: "",
     tag: ["AR"],
     techStack: "Unity, QuillVR, Vuforia AR Plugin",
   },
@@ -73,8 +71,7 @@ export const projectsData = [
     slug: "finns-fishbowl",
     description: "VR immersive story made with AFrame designed for a public exhibit",
     image: "/media/projects/FinnsFishbowl/VR-Aframe.png",
-    video:
-      "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/FFCh3VR-slow-CdeQzOC0ZZQDiwpiqDywpEv7iWw3Af.mp4",
+    video: "",
     tag: ["VR"],
     techStack: "A-Frame VR, HTML/CSS/JS, Blender",
   },
