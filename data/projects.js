@@ -17,7 +17,7 @@ export const projectsData = [
       "Utilizing VR to immerse users in the moment to moment reality of someone grieving the loss of a loved one. Designed as a therapeutic tool for learning how to move through grief.",
     image: "/media/projects/VR-GriefsShadow/VR-GriefsShadow.jpg",
     video: "/videos/WithShadows-Card.mp4",
-    tag: ["VR"],
+    tag: ["VR", "Exhibitions"],
     techStack: "Unity, C#, Oculus, Blender",
   },
   {

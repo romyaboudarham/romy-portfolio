@@ -31,7 +31,7 @@ export default function Navbar({ textColor = 'text-black' }) {
           md:bg-transparent text-center">
           <NavItem href="/" text="Home" textColor={textColor} />
           <NavItem href="/#projects" text="Projects" textColor={textColor} />
-          {/* <NavItem href="#about" text="About" textColor={textColor} /> */}
+          <NavItem href="/about-me" text="About Me"  textColor={textColor}/>
           <NavItem href="/romy_aboudarham_resume.pdf" text="Resume" textColor={textColor} download />
           <NavItem href="mailto:romyaboudarham@gmail.com" text="Contact Me" textColor={textColor} />
         </div>
@@ -54,7 +54,7 @@ export default function Navbar({ textColor = 'text-black' }) {
             md:top-12 md:bottom-auto bottom-12 flex flex-col items-start text-left min-w-max px-4">
               <NavItem href="/" text="Home" />
               <NavItem href="/#projects" text="Projects" />
-              {/* <NavItem href="#about" text="About" /> */}
+              <NavItem href="/about-me" text="About Me" />
               <NavItem href="/romy_aboudarham_resume.pdf" text="Resume" download />
               <NavItem href="mailto:romyaboudarham@gmail.com" text="Contact Me" />
             </div>

@@ -5,7 +5,7 @@ import Concept from "@/app/components/NowhereToBelong/Concept";
 import HeroSection from "@/app/components/NowhereToBelong/HeroSection"
 import Navbar from "@/app/components/Navbar.jsx";
 
-export default function FinnsFishbowl() {
+export default function NowhereToBelong() {
     
   return (
     <div className="bg-white text-black font-sans">
