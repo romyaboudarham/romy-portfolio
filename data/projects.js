@@ -1,6 +1,6 @@
 export const projectsData = [
   {
-    id: 1,
+    id: 7,
     title: "Phone a Friend - Gemini AI Lab Assistant",
     slug: "lab-ai-assistant",
     description:
@@ -10,7 +10,7 @@ export const projectsData = [
     techStack: "Gemini AI, Python, Raspberry Pi",
   },
   {
-    id: 2,
+    id: 6,
     title: "With Shadows - Interactive VR Story About Grief",
     slug: "with-shadows",
     description:
@@ -21,7 +21,7 @@ export const projectsData = [
     techStack: "Unity, C#, Oculus, Blender",
   },
   {
-    id: 3,
+    id: 5,
     title: "Ghosts of Irish Hill - Augmented Reality Walking Tour",
     slug: "ar-irish-hill",
     description:
@@ -44,7 +44,7 @@ export const projectsData = [
     techStack: "Unity, QuillVR, Vuforia AR Plugin",
   },
   {
-    id: 5,
+    id: 3,
     title: "Redlined Neighborhoods in Alameda County - Metaverse",
     slug: "metaverse-redlining",
     description:
@@ -55,7 +55,7 @@ export const projectsData = [
       "Unreal Engine 5, Blueprint, GIS Data, Cesium Plugin, R Studio",
   },
   {
-    id: 6,
+    id: 2,
     title: "Finn's Fishbowl - Immersive, Interactive Exhibit",
     slug: "finns-fishbowl",
     description:
@@ -66,7 +66,7 @@ export const projectsData = [
       "A-Frame VR, P5.js, Node.js HTML/CSS/JS, Physical Programming ESP32, Projection Mapping, Blender",
   },
   {
-    id: 7,
+    id: 1,
     title: "Finn's Fishbowl - Chapter 3 in Virtual Reality",
     slug: "finns-fishbowl",
     description: "VR immersive story made with AFrame designed for a public exhibit",
@@ -74,6 +74,16 @@ export const projectsData = [
     video: "/videos/FFCh3VR-Card-slow.mp4",
     tag: ["VR"],
     techStack: "A-Frame VR, HTML/CSS/JS, Blender",
+  },
+  {
+    id: 8,
+    title: "Nowhere to Belong - XRCC Hackathon Finalist",
+    slug: "nowhere-to-belong",
+    description: "VR documentary about a Ukrainian-born artist living in Berlin, where lifting simple objects opens intimate stories of exile, identity, and belonging.",
+    image: "/media/projects/NowhereToBelong/NowhereToBelong.png",
+    video: "",
+    tag: ["VR"],
+    techStack: "Unity, C#, Git, Blender, Figma, After Effects, Audacity, Gaussian Splats, Volumetric Video",
   },
 ];
 

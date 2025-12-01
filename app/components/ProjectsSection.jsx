@@ -67,6 +67,8 @@ export default function ProjectsSection() {
 
         <div className="mx-auto grid md:grid-cols-2 gap-5 mt-6">
             {(tag === "All" ? projectsData : projectsData.filter((project) => project.tag.includes(tag)))
+                .slice()
+                .sort((a, b) => b.id - a.id)
                 .map((project) => (
                     <Link 
                         key={project.id} 
