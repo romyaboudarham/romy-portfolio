@@ -28,7 +28,7 @@ export const projectsData = [
       "Using AR and elements of narrative journalism to tell the forgotten history of Irish Hill, a working class community destroyed for other's growth and capital.",
     image: "/media/projects/ARIrishHill/IrishHill-Card.png",
     video:
-      "/videos/IrishHill-Card-Reverse.mp4",
+      "/videos/IrishHill-Card-Reverse-h264.mp4",
     tag: ["AR"],
     techStack: "Unity, Vuforia AR Plugin, Blender",
   },
