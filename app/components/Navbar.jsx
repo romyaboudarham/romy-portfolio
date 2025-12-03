@@ -10,23 +10,28 @@ export default function Navbar({ textColor = 'text-black' }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsAtTop(window.scrollY < 50); // Navbar expands when at the top
+      const atTop = window.scrollY < 50;
+      setIsAtTop(atTop); // Navbar expands when at the top
+
+      if (!atTop && isOpen) {
+        setIsOpen(false);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isOpen]);
 
   return (
     <>
       {/* Expanded Navbar - Horizontal on mobile, vertical on desktop */}
       {isAtTop && (
-        <div className="fixed top-0 left-0 right-0  p-4 z-[60] flex justify-center gap-x-6
-          md:justify-end md:items-end md:w-auto md:h-auto md:top-4 md:right-4 md:flex-col md:space-y-4 
-          md:bg-transparent md:left-auto text-center">
+        <div className="fixed top-0 left-0 right-0  p-4 z-[60] flex justify-start gap-x-6
+          md:justify-start md:items-start md:w-auto md:h-auto md:top-4 md:left-4 md:flex-col md:space-y-4 
+          md:bg-transparent text-center">
           <NavItem href="/" text="Home" textColor={textColor} />
           <NavItem href="/#projects" text="Projects" textColor={textColor} />
-          {/* <NavItem href="#about" text="About" textColor={textColor} /> */}
+          <NavItem href="/about-me" text="About Me"  textColor={textColor}/>
           <NavItem href="/romy_aboudarham_resume.pdf" text="Resume" textColor={textColor} download />
           <NavItem href="mailto:romyaboudarham@gmail.com" text="Contact Me" textColor={textColor} />
         </div>
@@ -34,7 +39,7 @@ export default function Navbar({ textColor = 'text-black' }) {
 
       {/* Collapsed Floating Navbar - Appears in the top-right when scrolling */}
       {!isAtTop && (
-        <nav className="fixed bottom-4 md:top-2 right-4 z-[60]">
+        <nav className="fixed bottom-4 md:top-2 left-4 z-[60]">
           {/* Floating Button */}
           <button 
             onClick={() => setIsOpen(!isOpen)} 
@@ -45,11 +50,11 @@ export default function Navbar({ textColor = 'text-black' }) {
 
           {/* Dropdown Menu - Opens below the button when clicked */}
           {isOpen && (
-            <div className="text-black absolute right-0 bg-white shadow-lg rounded-lg p-2 space-y-3 
-            md:top-12 md:bottom-auto bottom-12 flex flex-col items-end text-right min-w-max px-4">
+            <div className="text-black absolute left-0 bg-white shadow-lg rounded-lg p-2 space-y-3 
+            md:top-12 md:bottom-auto bottom-12 flex flex-col items-start text-left min-w-max px-4">
               <NavItem href="/" text="Home" />
               <NavItem href="/#projects" text="Projects" />
-              {/* <NavItem href="#about" text="About" /> */}
+              <NavItem href="/about-me" text="About Me" />
               <NavItem href="/romy_aboudarham_resume.pdf" text="Resume" download />
               <NavItem href="mailto:romyaboudarham@gmail.com" text="Contact Me" />
             </div>
