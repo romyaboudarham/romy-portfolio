@@ -72,9 +72,9 @@ export default function ProjectsSection() {
                 .map((project) => (
                     <Link 
                         key={project.id} 
-                        href={project.id === 7 
+                        href={project.title === "Finn's Fishbowl - Chapter 3 in Virtual Reality" 
                             ? "/projects/finns-fishbowl#ch3vr" 
-                            : (project.id === 5 && (tag === "Physical Computing"))
+                            : (project.title === "Finn's Fishbowl - Immersive, Interactive Exhibit" && (tag === "Physical Computing"))
                             ? "/projects/finns-fishbowl#esp32"  // Scroll to #esp32 if id is 4 and tag is "Physical Computing"
                             : `/projects/${project.slug}`}
                         passHref
