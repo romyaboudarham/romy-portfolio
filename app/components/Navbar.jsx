@@ -26,9 +26,9 @@ export default function Navbar({ textColor = 'text-black' }) {
     <>
       {/* Expanded Navbar - Horizontal on mobile, vertical on desktop */}
       {isAtTop && (
-        <div className="fixed top-0 left-0 right-0  p-4 z-[60] flex justify-start gap-x-6
+        <div className="fixed top-0 left-0 p-4 z-[60] flex justify-start gap-x-6 pointer-events-none
           md:justify-start md:items-start md:w-auto md:h-auto md:top-4 md:left-4 md:flex-col md:space-y-4 
-          md:bg-transparent text-center">
+          md:bg-transparent text-center [&>*]:pointer-events-auto">
           <NavItem href="/" text="Home" textColor={textColor} />
           <NavItem href="/#projects" text="Projects" textColor={textColor} />
           <NavItem href="/about-me" text="About Me"  textColor={textColor}/>
