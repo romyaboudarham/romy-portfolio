@@ -6,7 +6,10 @@ import Navbar from "@/app/components/Navbar.jsx";
 const sections = [
   {
     title: "...",
-    copy: `coming soon`,
+    copy: `
+    I work at the intersection of creative design and engineering. I have an extensive knowledge of software tools and apply that to build interactive, user-focused products. 
+    As a designer with a computer science background, my creative approach to problem solving pushes the boundaries of interaction design with the guiding principle that we should never be restricted by our tools— following the problem to build solutions that feel like magic. 
+    `,
     image: "/media/About-SFDesignWeek.jpg",
     alt: "Romy SF Design Week Workshop",
     reverse: false,

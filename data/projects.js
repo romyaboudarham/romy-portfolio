@@ -5,7 +5,8 @@ export const projectsData = [
     slug: "lab-ai-assistant",
     description:
       "A demo for CCA's Hybrid Lab on integrating AI models and databases into physical prototypes.",
-    image: "/media/projects/LabAIAssistant/bg.jpeg",
+    image: "",
+    video: "/videos/GeminiPhone.mp4",
     tag: ["AI", "Physical Computing"],
     techStack: "Gemini AI, Python, Raspberry Pi",
   },
@@ -77,11 +78,11 @@ export const projectsData = [
   },
   {
     id: 8,
-    title: "Nowhere to Belong - XRCC Hackathon Finalist",
+    title: "XRCC Hackathon Winner - Interactive VR Documentary",
     slug: "nowhere-to-belong",
     description: "VR documentary about a Ukrainian-born artist living in Berlin, where lifting simple objects opens intimate stories of exile, identity, and belonging.",
     image: "/media/projects/NowhereToBelong/NowhereToBelong.png",
-    video: "",
+    video: "/videos/NowhereToBelongTrailer.mp4",
     tag: ["VR"],
     techStack: "Unity, C#, Git, Blender, Figma, After Effects, Audacity, Gaussian Splats, Volumetric Video",
   },

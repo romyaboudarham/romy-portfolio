@@ -8,7 +8,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-[#FFFFFF]">
       {/* TODO: left off at 28:04 */}
       <Navbar />
-      <div className="container mx-auto px-2 md:px-4 py-4">
+      <div className="w-full px-4 md:px-6 lg:px-6 py-4">
         <HeroSection />
         {/* Dividing Line */}
         <div id="projects" className="mb-6 lg:my-6 mx-3 lg:mx-[170px]">

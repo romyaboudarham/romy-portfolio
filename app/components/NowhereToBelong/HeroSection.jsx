@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <ProjectHero
       title="Nowhere to Belong"
-      subtitle="Finalist at XRCC Hackathon for Immersive Film & Storytelling Category"
+      subtitle="Winner at XRCC Hackathon for Immersive Film & Storytelling Category"
       description="An interactive documentary in VR about Elizaveta, a Ukrainian-born artist living in Berlin, where lifting simple objects opens intimate stories of exile, identity, and belonging."
       bgImage="/media/projects/NowhereToBelong/NowhereToBelong.png"
       ctas={[
@@ -13,16 +13,16 @@ export default function HeroSection() {
           action: {
             type: "link",
             url:
-              "https://vimeo.com/1137496932?fl=pl&fe=vl",
+              "https://www.youtube.com/watch?v=Aukul5M2N_c",
           },
         },
-        {
-          label: "More Info",
-          action: {
-            type: "link",
-            url: "https://xrcc-public-voting.replit.app/project/2ade272b-bf4f-81c6-8834-f9dde8984a20",
-          },
-        },
+        // {
+        //   label: "More Info",
+        //   action: {
+        //     type: "link",
+        //     url: "https://xrcc-public-voting.replit.app/project/2ade272b-bf4f-81c6-8834-f9dde8984a20",
+        //   },
+        // },
       ]}
       theme={{
         buttonClassName:

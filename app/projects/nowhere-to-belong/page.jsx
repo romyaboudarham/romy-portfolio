@@ -23,7 +23,7 @@ export default function NowhereToBelong() {
               <p><strong className="text-black opacity-90">Duration:</strong> 2 weeks, November 2025</p>
               <p><strong className="text-black opacity-90">Role:</strong> Game Designer & Developer</p>
               <p><strong className="text-black opacity-90">Collaborators: </strong> Lorenzo Carley (Director & Project Lead), Kinjal Kanzariya (Game Designer & Developer), Magnus Reichel (Sound Designer), Bernard Masika (3D Artist)</p>
-              <p><strong className="text-black opacity-90">Context: </strong> Finalist at{" "}
+              <p><strong className="text-black opacity-90">Context: </strong> Winner at{" "}
                 <a href="https://www.xrcc.events/" target="_blank" rel="noopener noreferrer" className="text-decoration-line: underline hover:underline">
                   XR Creator Con 2025 Hackathon for Immersive Film & Storytelling Category
                 </a>

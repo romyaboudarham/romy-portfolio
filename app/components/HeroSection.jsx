@@ -45,7 +45,7 @@ const HeroSection = () => {
       </p>
 
       {/* Button Below */}
-      <div className="mt-10 lg:mt-5 flex flex-col justify-center items-center w-[150px] mx-auto">
+      {/* <div className="mt-10 lg:mt-5 flex flex-col justify-center items-center w-[150px] mx-auto">
         <button
           onClick={handleWatchDemo}
           className="px-6 py-3 w-full border-[#800000] 
@@ -54,7 +54,7 @@ const HeroSection = () => {
           Watch Reel
         </button>
 
-      </div>
+      </div> */}
 
       {/* Down Arrow Icon */}
       <div className="md:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2">
