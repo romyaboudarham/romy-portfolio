@@ -18,7 +18,7 @@ export const projectsData = [
       "Utilizing VR to immerse users in the moment to moment reality of someone grieving the loss of a loved one. Designed as a therapeutic tool for learning how to move through grief.",
     image: "/media/projects/VR-GriefsShadow/VR-GriefsShadow.jpg",
     video: "/videos/WithShadows-Card.mp4",
-    tag: ["VR", "Exhibitions"],
+    tag: ["AR/VR", "Exhibitions"],
     techStack: "Unity, C#, Oculus, Blender",
   },
   {
@@ -30,7 +30,7 @@ export const projectsData = [
     image: "/media/projects/ARIrishHill/IrishHill-Card.png",
     video:
       "/videos/IrishHill-Card-Reverse.mp4",
-    tag: ["AR"],
+    tag: ["AR/VR"],
     techStack: "Unity, Vuforia AR Plugin, Blender",
   },
   {
@@ -41,7 +41,7 @@ export const projectsData = [
     image:
       "/media/projects/ARMixedEmotions/MEgif-2-ezgif.com-video-to-gif-converter.gif",
     video: "/videos/MixedEmotions-Card.mp4",
-    tag: ["AR"],
+    tag: ["AR/VR"],
     techStack: "Unity, QuillVR, Vuforia AR Plugin",
   },
   {
@@ -73,7 +73,7 @@ export const projectsData = [
     description: "VR immersive story made with AFrame designed for a public exhibit",
     image: "/media/projects/FinnsFishbowl/VR-Aframe.png",
     video: "/videos/FFCh3VR-Card-slow.mp4",
-    tag: ["VR"],
+    tag: ["AR/VR"],
     techStack: "A-Frame VR, HTML/CSS/JS, Blender",
   },
   {
@@ -83,7 +83,7 @@ export const projectsData = [
     description: "VR documentary about a Ukrainian-born artist living in Berlin, where lifting simple objects opens intimate stories of exile, identity, and belonging.",
     image: "/media/projects/NowhereToBelong/NowhereToBelong.png",
     video: "/videos/NowhereToBelongTrailer.mp4",
-    tag: ["VR"],
+    tag: ["AR/VR"],
     techStack: "Unity, C#, Git, Blender, Figma, After Effects, Audacity, Gaussian Splats, Volumetric Video",
   },
 ];
@@ -91,8 +91,7 @@ export const projectsData = [
 export const projectFilters = [
   "All",
   "AI",
-  "VR",
-  "AR",
+  "AR/VR",
   "Physical Computing",
   "Exhibitions",
 ];
