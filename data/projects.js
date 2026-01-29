@@ -1,6 +1,6 @@
 export const projectsData = [
   {
-    id: 7,
+    id: 6,
     title: "Phone a Friend - Gemini AI Lab Assistant",
     slug: "lab-ai-assistant",
     description:
@@ -11,7 +11,7 @@ export const projectsData = [
     techStack: "Gemini AI, Python, Raspberry Pi",
   },
   {
-    id: 6,
+    id: 7,
     title: "With Shadows - Interactive VR Story About Grief",
     slug: "with-shadows",
     description:
