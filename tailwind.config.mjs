@@ -10,9 +10,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#000000",
+        brand: "#000000",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"], // Set 'Inter' as the default sans-serif font
+        sans: ["Inria Sans", "Inter", "sans-serif"], // Changed: Inria Sans first
+        inter: ["Inter", "sans-serif"], // Optional: keep Inter available as font-inter
       },
     },
   },

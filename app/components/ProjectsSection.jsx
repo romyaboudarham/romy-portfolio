@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import Link from "next/link";
 import { projectsData, projectFilters } from "@/data/projects";
+import FeaturedSection from "./FeaturedSection";
 
 const tagDescriptions = {
   All: "A selection my projects designed and built end-to-end",
@@ -54,6 +55,14 @@ export default function ProjectsSection() {
         }}
       ></div>
 
+      <div className="flex items-center gap-3">
+        <div className="h-px flex-1 bg-gradient-to-r from-transparent via-brand to-transparent opacity-30" />
+        <h1 className="text-3xl text-brand md:text-4xl text-center min-h-[60px] md:min-h-[72px]">
+          Projects
+        </h1>
+        <div className="h-px flex-1 bg-gradient-to-r from-transparent via-brand to-transparent opacity-30" />
+      </div>
+
       <div
         ref={tagRef}
         className={`flex flex-wrap justify-center items-center gap-2 md:gap-3 py-3 bg-white transition-all duration-300 
@@ -77,9 +86,12 @@ export default function ProjectsSection() {
         ))}
       </div>
 
-      <div className="flex flex-wrap justify-center items-center">
+      {/* Tag Description */}
+      {/* <div className="flex flex-wrap justify-center items-center">
         <p className="text-gray-600 text-center mt-2">{tagDescriptions[tag]}</p>
-      </div>
+      </div> */}
+
+      <FeaturedSection />
 
       <div className="mx-auto grid md:grid-cols-2 gap-2 mt-6">
         {(tag === "All"

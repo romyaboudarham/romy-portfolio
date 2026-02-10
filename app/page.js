@@ -1,16 +1,21 @@
-import Image from "next/image";
-import HeroSection from "./components/HeroSection";
+"use client";
+
+import { useState, useEffect } from "react";
+import HomeHeroSection from "./components/HomeHeroSection";
 import Navbar from "./components/Navbar";
 import ProjectsSection from "./components/ProjectsSection";
 import Divider from "./components/Divider"
 
 export default function Home() {
+  const [heroLoaded, setHeroLoaded] = useState(false);
+
   return (
     <main className="flex min-h-screen flex-col bg-[#FFFFFF] px-2">
-      <Navbar />
-      <HeroSection />
-      <div className="w-full max-w-8xl mx-auto md:px-6 lg:px-8 py-4">
-        <Divider />
+      <Navbar show={heroLoaded} />
+      <HomeHeroSection onLoadComplete={() => setHeroLoaded(true)} />
+
+      <div className="w-full max-w-8xl mx-auto md:px-6 lg:px-8 py-12">
+        {/* <Divider /> */}
         <ProjectsSection />
         <Divider />
       </div>
