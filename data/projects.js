@@ -7,7 +7,7 @@ export const projectsData = [
       "A demo for CCA's Hybrid Lab on integrating AI models and databases into physical prototypes.",
     image: "",
     video: "/videos/GeminiPhone.mp4",
-    tag: ["AI", "Physical Computing"],
+    tag: ["AI", "Prototyping"],
     techStack: "Gemini AI, Python, Raspberry Pi",
   },
   {
@@ -62,7 +62,7 @@ export const projectsData = [
     description:
       "An immersive, interactive story told using various technological mediums an emotionally compelling story about visiting our inner child and healing childhood trauma.",
     image: "/media/projects/FinnsFishbowl/FinnsFishbowl.jpg",
-    tag: ["Physical Computing", "Exhibitions"],
+    tag: ["Prototyping", "Exhibitions"],
     techStack:
       "A-Frame VR, P5.js, Node.js HTML/CSS/JS, Physical Programming ESP32, Projection Mapping, Blender",
   },
@@ -92,7 +92,7 @@ export const projectFilters = [
   "All",
   "AI",
   "AR/VR",
-  "Physical Computing",
+  "Prototyping",
   "Exhibitions",
 ];
 

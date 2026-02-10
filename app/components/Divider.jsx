@@ -36,7 +36,7 @@ const DividingLine = () => {
     <div ref={lineRef} className="my-6">
       <div className="relative h-[2px]">
         <div
-          className="absolute top-0 left-1/2 -translate-x-1/2 h-full bg-gradient-to-r from-transparent via-[#800000] to-transparent transition-all duration-1000 ease-out"
+          className="absolute top-0 left-1/2 -translate-x-1/2 h-full bg-gradient-to-r from-transparent via-primary to-transparent transition-all duration-1000 ease-out"
           style={{ width: `${width}%` }}
         />
       </div>

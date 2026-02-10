@@ -10,15 +10,15 @@ export default function Home() {
   const [heroLoaded, setHeroLoaded] = useState(false);
 
   return (
-    <main className="flex min-h-screen flex-col bg-[#FFFFFF] px-2">
-      <Navbar show={heroLoaded} />
-      <HomeHeroSection onLoadComplete={() => setHeroLoaded(true)} />
-
-      <div className="w-full max-w-8xl mx-auto md:px-6 lg:px-8 py-12">
-        {/* <Divider /> */}
-        <ProjectsSection />
-        <Divider />
-      </div>
+    <main className="flex min-h-screen flex-col bg-[#FFFFFF]">
+  <Navbar show={heroLoaded} />
+  <HomeHeroSection onLoadComplete={() => setHeroLoaded(true)} />
+  
+  <div className="px-2">
+    <div className="w-full max-w-8xl mx-auto md:px-6 lg:px-8 py-12">
+      <ProjectsSection />
+      <Divider />
+    </div>
 
       {/* Footer - Let's Connect */}
       <section className="relative flex items-center justify-center pb-3 text-center px-6 md:px-20 rounded-t-2xl">
@@ -29,12 +29,13 @@ export default function Home() {
           </h2>
           <p className="mt-6 text-lg text-black opacity-80">Interested in my work? Let’s chat.</p>
           <a href="mailto:romyaboudarham@gmail.com">
-            <button className="mt-8 px-6 py-3 rounded-md text-lg hover:bg-[#800000] hover:text-white border border-[#800000] text-[#800000] font-semibold  ">
+            <button className="mt-8 px-6 py-3 rounded-md text-lg hover:bg-primary hover:text-white border border-[#800000] text-[#800000] font-semibold  ">
               Contact Me
             </button>
           </a>
         </div>
       </section>
+      </div>
     </main>
   );
 }

@@ -11,7 +11,7 @@ const tagDescriptions = {
   AI: "Projects that integrate large language models via API calls to enable intelligent application features.",
   "AR/VR":
     "Augmented and virtual reality experiences for mobile, Oculus headset, and web",
-  "Physical Computing": "Hardware prototypes and interactive installations",
+  Prototyping: "Hardware prototypes and interactive installations",
   Exhibitions: "Projects designed for public exhibition spaces.",
 };
 
@@ -109,8 +109,8 @@ export default function ProjectsSection() {
                   ? "/projects/finns-fishbowl#ch3vr"
                   : project.title ===
                         "Finn's Fishbowl - Immersive, Interactive Exhibit" &&
-                      tag === "Physical Computing"
-                    ? "/projects/finns-fishbowl#esp32" // Scroll to #esp32 if id is 4 and tag is "Physical Computing"
+                      tag === "Prototyping"
+                    ? "/projects/finns-fishbowl#esp32" // Scroll to #esp32 if id is 4 and tag is "Prototyping"
                     : `/projects/${project.slug}`
               }
               passHref
