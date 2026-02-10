@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
+import Divider from "./Divider";
+
 const ProjectCard = ({ imgUrl, videoUrl, title, description, techStack }) => {
   const videoRef = useRef(null);
 
@@ -7,11 +9,9 @@ const ProjectCard = ({ imgUrl, videoUrl, title, description, techStack }) => {
     if (!videoRef.current) return;
     // Restart playback when the video source changes
     videoRef.current.load();
-    videoRef.current
-      .play()
-      .catch(() => {
-        /* autoplay might be blocked; ignore */
-      });
+    videoRef.current.play().catch(() => {
+      /* autoplay might be blocked; ignore */
+    });
   }, [videoUrl]);
 
   const handleMouseEnter = () => {
@@ -22,11 +22,9 @@ const ProjectCard = ({ imgUrl, videoUrl, title, description, techStack }) => {
 
   const handleMouseLeave = () => {
     if (videoRef.current && videoUrl) {
-      videoRef.current
-        .play()
-        .catch(() => {
-          /* autoplay might be blocked; ignore */
-        });
+      videoRef.current.play().catch(() => {
+        /* autoplay might be blocked; ignore */
+      });
     }
   };
 
@@ -36,7 +34,7 @@ const ProjectCard = ({ imgUrl, videoUrl, title, description, techStack }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="relative h-[400px] md:h-[500px]">
+      <div className="relative h-[300px] md:h-[400px]">
         {videoUrl ? (
           <video
             ref={videoRef}
@@ -57,7 +55,7 @@ const ProjectCard = ({ imgUrl, videoUrl, title, description, techStack }) => {
         )}
       </div>
 
-      <div className="hidden md:block absolute bottom-0 left-0 w-full bg-[#181818] bg-opacity-60 text-white px-4 py-3 text-sm translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+      <div className="hidden md:block absolute bottom-0 left-0 w-full bg-[#181818] bg-opacity-80 text-white px-4 py-3 text-sm translate-y-full group-hover:translate-y-0 transition-transform duration-500">
         <h5 className="text-lg font-semibold mb-1">{title}</h5>
         <p className="text-sm">{description}</p>
         <div className="mt-2 text-sm border-t border-gray-400 pt-2">

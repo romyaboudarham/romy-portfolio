@@ -24,10 +24,6 @@ export default function NowhereToBelong() {
             {/* Additional Details */}
             <div className="space-y-2 lg:text-lg text-gray-800">
               <p>
-                <strong className="text-black opacity-90">Duration:</strong> 2
-                weeks, November 2025
-              </p>
-              <p>
                 <strong className="text-black opacity-90">Role:</strong> Game
                 Designer & Developer
               </p>

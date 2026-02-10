@@ -14,17 +14,17 @@ export default function Concept() {
           Objective
         </div>
         <p className="mt-2 lg:text-xl text-gray-800">
-          To design human-centered VR experiences using UI/UX principles,
-          prototyping technqieues, and immersive interaction to explore complex
-          emotional realities and foster empathy.
+          Design and prototype a human-centered VR experience in Unity that uses
+          immersive interaction to explore emotional realities and foster
+          empathy.
         </p>
         <div className="mt-8 lg:mt-10 text-2xl font-semibold opacity-90">
           Research
         </div>
         <p className="mt-2 lg:text-xl text-gray-800">
-          I began by researching existing empathy-driven, immersive, and
-          interactive digital experiences to understand different approaches to
-          point of view perspectives and engagement.
+          Researched existing empathy-driven, virtual reality experiences to
+          understand different approaches to point of view perspectives and
+          engagement.
         </p>
         <img
           src="/media/projects/VR-GriefsShadow/Process/research-inspiration.png"

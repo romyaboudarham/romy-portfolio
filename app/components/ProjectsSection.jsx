@@ -47,7 +47,7 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section>
+    <section id="projects">
       <div
         style={{
           height: isSticky ? `${tagRef.current?.offsetHeight}px` : "auto",
@@ -56,7 +56,7 @@ export default function ProjectsSection() {
 
       <div
         ref={tagRef}
-        className={`flex flex-wrap justify-center items-center gap-2 py-3 bg-white transition-all duration-300 
+        className={`flex flex-wrap justify-center items-center gap-2 md:gap-3 py-3 bg-white transition-all duration-300 
             ${isSticky ? "fixed top-0 left-0 w-full shadow-md z-50" : ""}`}
         style={{
           padding: "12px 16px", // Keep padding consistent
@@ -81,7 +81,7 @@ export default function ProjectsSection() {
         <p className="text-gray-600 text-center mt-2">{tagDescriptions[tag]}</p>
       </div>
 
-      <div className="mx-auto grid md:grid-cols-2 gap-5 mt-6">
+      <div className="mx-auto grid md:grid-cols-2 gap-2 mt-6">
         {(tag === "All"
           ? projectsData
           : projectsData.filter((project) => project.tag.includes(tag))

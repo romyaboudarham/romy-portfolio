@@ -2,62 +2,85 @@
 
 import React, { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
-import Image from "next/image"
+import Image from "next/image";
+import ProjectCard from "./ProjectCard";
 
 const HeroSection = () => {
   const [displayedText, setDisplayedText] = useState("");
+  const [isMounted, setIsMounted] = useState(false);
   const fullText = "Romy Aboudarham";
 
-  const handleWatchDemo = () => {
-    window.open("https://www.youtube.com/watch?v=-stuub37-NQ", "_blank");
-  };
-
   useEffect(() => {
+    setIsMounted(true); // Add this line back
     let index = 0;
     const interval = setInterval(() => {
-      setDisplayedText(fullText.slice(0, index + 1)); // Ensure correct substring
+      setDisplayedText(fullText.slice(0, index + 1));
       index += 1;
-      if (index === fullText.length) clearInterval(interval); // Stop at full length
+      if (index === fullText.length) clearInterval(interval);
     }, 150);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="h-screen md:h-auto flex flex-col items-center justify-center text-gray-900 px-4">
-      <div className="mb-5 block md:hidden w-[200px] h-[200px] overflow-hidden rounded-full relative">
-            <Image
-              src="/media/romy.png"
-              alt="Romy Headshot"
-              width={350}
-              height={350}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            />
-          </div>
-        <h1 
-          className="text-5xl text-[#800000] md:text-6xl text-center"
+    <section className="h-screen flex flex-col items-center text-gray-900 pt-16 md:pt-6 pb-16 md:pb-12">
+      {/* Header */}
+      <div className="flex-shrink-0 px-4 mt-6 md:mt-2">
+        <h1
+          className="text-5xl text-[#800000] md:text-6xl text-center min-h-[60px] md:min-h-[72px]"
           style={{ fontFamily: "Londrina Outline, cursive" }}
         >
-        {displayedText}
-      </h1>
-      <p className="text-base sm:text-lg lg:text-md text-center max-w-3xl mt-4">
-        creative technologist & immersive experience designer
-      </p>
+          {isMounted ? displayedText : fullText}
+        </h1>
 
-      {/* Button Below */}
-      {/* <div className="mt-10 lg:mt-5 flex flex-col justify-center items-center w-[150px] mx-auto">
-        <button
-          onClick={handleWatchDemo}
-          className="px-6 py-3 w-full border-[#800000] 
-          text-black border hover:text-white hover:bg-[#800000] rounded-md"
-        >
-          Watch Reel
-        </button>
+        <div className="flex items-center gap-3">
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#800000] to-transparent opacity-30" />
+          <h3 className="text-l md:text-xl font-light">
+            UI/UX Design Engineer
+          </h3>
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#800000] to-transparent opacity-30" />
+        </div>
+      </div>
 
+      {/* Featured Project */}
+      {/* <div className="w-full max-w-5xl px-4 mt-10 md:mt-0 md:flex-1 md:flex md:items-center">
+        <div className="w-full shadow-xl border border-[#800000]/10 rounded-md overflow-hidden relative [&_.relative]:!h-[280px] md:[&_.relative]:!h-[570px]">
+          <div className="absolute top-4 left-4 z-10 border-[#800000] text-white bg-[#800000] px-2 py-1 lg:px-2 lg:py-1 text-sm md:text-lg border rounded-md font-semibold shadow-lg">
+            Featured
+          </div>
+
+          <ProjectCard
+            videoUrl="/videos/CC-short.mp4"
+            imgUrl="/images/featured-poster.jpg"
+            title="Your Featured Project Title"
+            description="A compelling description of your most impressive work that showcases your design and engineering skills."
+            techStack="React, Next.js, Tailwind CSS, Framer Motion"
+          />
+        </div>
       </div> */}
 
+      <div className="w-full max-w-5xl mt-10 md:mt-0 md:flex-1 md:flex md:items-center">
+        <div className="w-full shadow-xl border border-[#800000]/10 rounded-md overflow-hidden relative">
+          {/* Featured Tag */}
+          <div className="absolute top-4 left-4 z-10 border-[#800000] text-white bg-[#800000] px-2 py-1 lg:px-2 lg:py-1 text-sm md:text-lg border rounded-md font-semibold shadow-lg">
+            Featured
+          </div>
+
+          {/* YouTube Embed */}
+          <div className="relative w-full h-[280px] md:h-[575px]">
+            <iframe
+              src="https://www.youtube.com/embed/enKps2PSPw4?autoplay=0&mute=0"
+              title="Featured Project"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Down Arrow Icon */}
-      <div className="md:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2">
+      <div className=" absolute bottom-4 left-1/2 transform -translate-x-1/2">
         <ChevronDown className="w-14 h-8 text-[#800000]" />
       </div>
     </section>

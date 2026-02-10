@@ -2,25 +2,18 @@ import Image from "next/image";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import ProjectsSection from "./components/ProjectsSection";
+import Divider from "./components/Divider"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#FFFFFF]">
-      {/* TODO: left off at 28:04 */}
+    <main className="flex min-h-screen flex-col bg-[#FFFFFF] px-2">
       <Navbar />
-      <div className="w-full px-4 md:px-6 lg:px-6 py-4">
-        <HeroSection />
-        {/* Dividing Line */}
-        <div id="projects" className="mb-6 lg:my-6 mx-3 lg:mx-[170px]">
-          <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
-        </div>
+      <HeroSection />
+      <div className="w-full max-w-8xl mx-auto md:px-6 lg:px-8 py-4">
+        <Divider />
         <ProjectsSection />
+        <Divider />
       </div>
-
-      {/* Dividing Line */}
-      <div className="my-6 mx-3 lg:mx-[170px]">
-          <div className="border-t-2 border-gray-300"></div> {/* The dividing line */}
-        </div>
 
       {/* Footer - Let's Connect */}
       <section className="relative flex items-center justify-center pb-3 text-center px-6 md:px-20 rounded-t-2xl">
