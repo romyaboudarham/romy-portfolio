@@ -4,32 +4,32 @@ import React, { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const HomeHeroSection = ({ onLoadComplete }) => {
-  const [displayedText, setDisplayedText] = useState("");
   const [isMounted, setIsMounted] = useState(false);
-  const [showContent, setShowContent] = useState(false);
-  const [showVideo, setShowVideo] = useState(false); // Add this
-  const fullText = "Romy Aboudarham";
+  const [showVideo, setShowVideo] = useState(false);
+  const [showText, setShowText] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
 
-    // Show video after line finishes (2 seconds)
-    setTimeout(() => {
+    const videoTimer = setTimeout(() => {
       setShowVideo(true);
     }, 1300);
 
-    setTimeout(() => {
-      setShowContent(true);
-      let index = 0;
-      const interval = setInterval(() => {
-        setDisplayedText(fullText.slice(0, index + 1));
-        index += 1;
-        if (index === fullText.length) {
-          clearInterval(interval);
-          if (onLoadComplete) onLoadComplete();
-        }
-      }, 150);
+    // Fade in hero text
+    const textTimer = setTimeout(() => {
+      setShowText(true);
     }, 1900);
+
+    // Fade in nav AFTER text
+    const navTimer = setTimeout(() => {
+      onLoadComplete?.();
+    }, 1900 + 400); // ← adjust this gap (ms)
+
+    return () => {
+      clearTimeout(videoTimer);
+      clearTimeout(textTimer);
+      clearTimeout(navTimer);
+    };
   }, []);
 
   return (
@@ -42,7 +42,6 @@ const HomeHeroSection = ({ onLoadComplete }) => {
           preserveAspectRatio="none"
         >
           <defs>
-            {/* Gradient for the line */}
             <linearGradient
               id="waveGradient"
               x1="0%"
@@ -55,18 +54,19 @@ const HomeHeroSection = ({ onLoadComplete }) => {
               <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
             </linearGradient>
 
-            {/* Mask: everything to the right of the wave */}
             <clipPath id="waveMask">
               <path d="M 0 100 Q 20 70, 40 60 T 80 20 T 100 0 L 100 100 Z" />
             </clipPath>
           </defs>
 
-          {/* Video as foreignObject inside SVG - with fade in */}
+          {/* Video */}
           <foreignObject
             width="100"
             height="100"
             clipPath="url(#waveMask)"
-            className={`transition-opacity duration-1000 ${showVideo ? "opacity-100" : "opacity-0"}`}
+            className={`transition-opacity duration-1000 ${
+              showVideo ? "opacity-100" : "opacity-0"
+            }`}
           >
             <video
               autoPlay
@@ -94,38 +94,29 @@ const HomeHeroSection = ({ onLoadComplete }) => {
           />
         </svg>
 
-        {/* Wave-side text */}
-        <div className="absolute inset-y-0 left-[20vw] md:left-[30vw] z-10 pointer-events-none">
-          <div className="flex h-full items-center translate-y-[-5rem] max-w-[40vw]">
-            <p
-              className={`text-md md:text-xl text-primary/70 leading-relaxed transition-opacity duration-1000 ${
-                showContent ? "opacity-100" : "opacity-0"
+        {/* Wave-side grouped text */}
+        <div className="absolute inset-y-0 left-[5vw] z-10 pointer-events-none">
+          <div className="flex h-full items-center translate-y-[-9rem] max-w-[50vw] md:max-w-[40vw]">
+            <div
+              className={`flex flex-col items-start gap-4 transition-opacity duration-1000 ${
+                showText ? "opacity-100" : "opacity-0"
               }`}
             >
-              Building thoughtful,
-              <br />
-              human-centered
-              <br />
-              digital experiences
-            </p>
+              <h1 className="text-3xl md:text-4xl text-primary text-left">
+                Romy Aboudarham
+              </h1>
+
+              <p className="text-sm md:text-xl text-primary/70 leading-relaxed text-left">
+                I work at the intersection of design and engineering to
+                prototype and build interactive products. With experience as a
+                full-stack engineer building UI components in React and as a
+                design technologist teaching advanced prototyping with Figma and
+                AI-driven tools, my practice focuses on helping teams adopt
+                emerging technologies while reducing friction between design
+                intent and implementation.
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
-
-      {/* Header */}
-      <div
-        className={`flex-shrink-0 px-4 mt-6 md:mt-2 relative z-10 transition-opacity duration-1000 ${
-          showContent ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <h1 className="text-3xl text-primary md:text-4xl text-center min-h-[40px] md:min-h-[50px]">
-          {showContent ? displayedText : ""}
-        </h1>
-
-        <div className="flex items-center gap-3">
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-30" />
-          <h3 className="text-l md:text-xl font-light">Design Engineer</h3>
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-30" />
         </div>
       </div>
 

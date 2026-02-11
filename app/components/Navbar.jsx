@@ -34,13 +34,9 @@ export default function Navbar({ textColor = "text-black", show = true }) {
     <div
       className={`transition-opacity duration-1000 ${show ? "opacity-100" : "opacity-0"}`}
     >
-      {/* Expanded Navbar */}
+      {/* Expanded Navbar - Centered */}
       {isAtTop && (
-        <nav
-          className="fixed top-0 left-0 p-4 z-[60] flex justify-start gap-x-6 pointer-events-none
-          md:justify-start md:items-start md:w-auto md:h-auto md:top-4 md:left-4 md:flex-col md:space-y-4 
-          md:bg-transparent text-center [&>*]:pointer-events-auto"
-        >
+        <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-[60] flex gap-x-6 pointer-events-none text-center [&>*]:pointer-events-auto">
           {navItems.map((item) => (
             <NavItem key={item.href} {...item} textColor={textColor} />
           ))}
