@@ -55,9 +55,9 @@ export default function ProjectsSection() {
         }}
       ></div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 mb-3">
         <div className="h-px flex-1 bg-gradient-to-r from-transparent via-brand to-transparent opacity-30" />
-        <h1 className="text-3xl text-brand md:text-4xl text-center min-h-[60px] md:min-h-[72px]">
+        <h1 className="text-3xl text-brand md:text-4xl text-center">
           Projects
         </h1>
         <div className="h-px flex-1 bg-gradient-to-r from-transparent via-brand to-transparent opacity-30" />
@@ -65,10 +65,9 @@ export default function ProjectsSection() {
 
       <div
         ref={tagRef}
-        className={`flex flex-wrap justify-center items-center gap-2 md:gap-3 py-3 bg-white transition-all duration-300 
+        className={`flex flex-wrap justify-center items-center gap-2 md:gap-3 py-2 md:py-3 bg-white transition-all duration-300 
             ${isSticky ? "fixed top-0 left-0 w-full shadow-md z-50" : ""}`}
         style={{
-          padding: "12px 0px", // Keep padding consistent
           width: "100%", // Ensure it doesn’t shrink
           maxWidth: "100vw", // Prevents overflow issues
           display: "flex",
@@ -91,9 +90,11 @@ export default function ProjectsSection() {
         <p className="text-gray-600 text-center mt-2">{tagDescriptions[tag]}</p>
       </div> */}
 
-      <div className="hidden md:block">
-        <FeaturedSection />
-      </div>
+      {(tag === "All" || tag === "AI") && (
+        <div className="mt-3 hidden md:block">
+          <FeaturedSection />
+        </div>
+      )}
 
       <div className="mx-auto grid md:grid-cols-2 gap-2 mt-6">
         {(tag === "All"
@@ -103,42 +104,46 @@ export default function ProjectsSection() {
           .slice()
           .sort((a, b) => b.id - a.id)
           .map((project) => {
-            // Determine link
-            let href = "";
-            if (
-              project.title === "Finn's Fishbowl - Chapter 3 in Virtual Reality"
-            ) {
-              href = "/projects/finns-fishbowl#ch3vr";
-            } else if (
-              project.title ===
-                "Finn's Fishbowl - Immersive, Interactive Exhibit" &&
-              tag === "Prototyping"
-            ) {
-              href = "/projects/finns-fishbowl#esp32";
-            } else if (!project.slug && project.url) {
-              href = project.url;
-            } else {
-              href = `/projects/${project.slug}`;
+            if (project.featured) {
+              return (
+                <div key={project.id} className="md:hidden">
+                  <ProjectLink project={project} />
+                </div>
+              );
             }
 
-            // Add responsive hidden class if featured
-            const featuredClass = project.featured ? "md:hidden" : "";
-
-            return (
-              <Link key={project.id} href={href} passHref>
-                <div className={`cursor-pointer mb-5 lg:mb-0 ${featuredClass}`}>
-                  <ProjectCard
-                    title={project.title}
-                    description={project.description}
-                    imgUrl={project.image}
-                    techStack={project.techStack}
-                    videoUrl={project.video}
-                  />
-                </div>
-              </Link>
-            );
+            return <ProjectLink key={project.id} project={project} />;
           })}
       </div>
     </section>
+  );
+}
+
+function ProjectLink({ project }) {
+  let href = "";
+  if (project.title === "Finn's Fishbowl - Chapter 3 in Virtual Reality") {
+    href = "/projects/finns-fishbowl#ch3vr";
+  } else if (
+    project.title === "Finn's Fishbowl - Immersive, Interactive Exhibit"
+  ) {
+    href = "/projects/finns-fishbowl#esp32";
+  } else if (!project.slug && project.url) {
+    href = project.url;
+  } else {
+    href = `/projects/${project.slug}`;
+  }
+
+  return (
+    <Link href={href}>
+      <div className="cursor-pointer mb-5 lg:mb-0">
+        <ProjectCard
+          title={project.title}
+          description={project.description}
+          imgUrl={project.image}
+          techStack={project.techStack}
+          videoUrl={project.video}
+        />
+      </div>
+    </Link>
   );
 }

@@ -36,7 +36,7 @@ export default function Navbar({ textColor = "text-black", show = true }) {
     >
       {/* Expanded Navbar - Centered */}
       {isAtTop && (
-        <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-[60] flex gap-x-6 pointer-events-none text-center [&>*]:pointer-events-auto">
+        <nav className="flex fixed top-4 md:text-lg left-1/2 -translate-x-1/2 z-[60] gap-x-6 pointer-events-none text-center [&>*]:pointer-events-auto">
           {navItems.map((item) => (
             <NavItem key={item.href} {...item} textColor={textColor} />
           ))}
