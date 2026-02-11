@@ -91,7 +91,37 @@ export const projectsData = [
     title: "AI Flashcards App",
     slug: "",
     url: "https://www.youtube.com/watch?v=enKps2PSPw4",
-    description: "VR documentary about a Ukrainian-born artist living in Berlin, where lifting simple objects opens intimate stories of exile, identity, and belonging.",
+    description: (
+    <>
+      Designed and built an{" "} 
+      <a
+        href="https://curiosity-cards-app.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline hover:opacity-70"
+      >
+        end-to-end web app
+      </a>{" "}
+      with a custom semantic{" "}
+      <a
+        href="https://www.figma.com/design/55ZZEpMgA8KUjIGNv4ZcJd/CuriosityCards?node-id=38-186&t=BhQFCwQnlZEMixgn-1"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline hover:opacity-70"
+      >
+        design system
+      </a>{" "}
+      , reusable React components, and OpenAI API integration to create dynamic, interactive learning experiences. {" "}
+       <a
+        href="https://github.com/romyaboudarham/curiosity-cards-app"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline hover:opacity-70"
+      >
+        See Github.
+      </a>
+    </>
+  ),
     image: "/media/projects/NowhereToBelong/NowhereToBelong.png",
     video: "/videos/CC-short.mp4",
     tag: ["AI"],
