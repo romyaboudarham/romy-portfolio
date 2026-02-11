@@ -68,7 +68,7 @@ export default function ProjectsSection() {
         className={`flex flex-wrap justify-center items-center gap-2 md:gap-3 py-3 bg-white transition-all duration-300 
             ${isSticky ? "fixed top-0 left-0 w-full shadow-md z-50" : ""}`}
         style={{
-          padding: "12px 16px", // Keep padding consistent
+          padding: "12px 0px", // Keep padding consistent
           width: "100%", // Ensure it doesn’t shrink
           maxWidth: "100vw", // Prevents overflow issues
           display: "flex",

@@ -7,7 +7,7 @@ import Link from "next/link";
 const navItems = [
   { href: "/", text: "Home" },
   { href: "/#projects", text: "Projects" },
-  { href: "/about-me", text: "About" },
+  // { href: "/about-me", text: "About" },
   { href: "/romy_aboudarham_resume.pdf", text: "Resume", download: true },
   { href: "mailto:romyaboudarham@gmail.com", text: "Contact" },
 ];
