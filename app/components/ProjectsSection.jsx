@@ -91,7 +91,9 @@ export default function ProjectsSection() {
         <p className="text-gray-600 text-center mt-2">{tagDescriptions[tag]}</p>
       </div> */}
 
-      <FeaturedSection />
+      <div className="hidden md:block">
+        <FeaturedSection />
+      </div>
 
       <div className="mx-auto grid md:grid-cols-2 gap-2 mt-6">
         {(tag === "All"
@@ -100,32 +102,42 @@ export default function ProjectsSection() {
         )
           .slice()
           .sort((a, b) => b.id - a.id)
-          .map((project) => (
-            <Link
-              key={project.id}
-              href={
-                project.title ===
-                "Finn's Fishbowl - Chapter 3 in Virtual Reality"
-                  ? "/projects/finns-fishbowl#ch3vr"
-                  : project.title ===
-                        "Finn's Fishbowl - Immersive, Interactive Exhibit" &&
-                      tag === "Prototyping"
-                    ? "/projects/finns-fishbowl#esp32" // Scroll to #esp32 if id is 4 and tag is "Prototyping"
-                    : `/projects/${project.slug}`
-              }
-              passHref
-            >
-              <div className="cursor-pointer mb-5 lg:mb-0">
-                <ProjectCard
-                  title={project.title}
-                  description={project.description}
-                  imgUrl={project.image}
-                  techStack={project.techStack}
-                  videoUrl={project.video}
-                />
-              </div>
-            </Link>
-          ))}
+          .map((project) => {
+            // Determine link
+            let href = "";
+            if (
+              project.title === "Finn's Fishbowl - Chapter 3 in Virtual Reality"
+            ) {
+              href = "/projects/finns-fishbowl#ch3vr";
+            } else if (
+              project.title ===
+                "Finn's Fishbowl - Immersive, Interactive Exhibit" &&
+              tag === "Prototyping"
+            ) {
+              href = "/projects/finns-fishbowl#esp32";
+            } else if (!project.slug && project.url) {
+              href = project.url;
+            } else {
+              href = `/projects/${project.slug}`;
+            }
+
+            // Add responsive hidden class if featured
+            const featuredClass = project.featured ? "md:hidden" : "";
+
+            return (
+              <Link key={project.id} href={href} passHref>
+                <div className={`cursor-pointer mb-5 lg:mb-0 ${featuredClass}`}>
+                  <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    imgUrl={project.image}
+                    techStack={project.techStack}
+                    videoUrl={project.video}
+                  />
+                </div>
+              </Link>
+            );
+          })}
       </div>
     </section>
   );

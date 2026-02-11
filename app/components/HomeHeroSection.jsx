@@ -68,7 +68,16 @@ const HomeHeroSection = ({ onLoadComplete }) => {
               showVideo ? "opacity-100" : "opacity-0"
             }`}
           >
-            <video
+            <img
+              src="/media/About-EverydayStrange.jpg" // ← replace with your image path
+              alt="Hero Background"
+              className="w-full h-full object-cover opacity-80 transition-opacity duration-1000"
+              style={{
+                // optional: maintain the same fade-in timing as the video
+                opacity: showVideo ? 0.8 : 0,
+              }}
+            />
+            {/* <video
               autoPlay
               loop
               muted
@@ -77,7 +86,7 @@ const HomeHeroSection = ({ onLoadComplete }) => {
               xmlns="http://www.w3.org/1999/xhtml"
             >
               <source src="/videos/FFCh3VR-Card-slow.mp4" type="video/mp4" />
-            </video>
+            </video> */}
           </foreignObject>
 
           {/* Wave line */}
@@ -95,7 +104,7 @@ const HomeHeroSection = ({ onLoadComplete }) => {
         </svg>
 
         {/* Wave-side grouped text */}
-        <div className="absolute inset-y-0 left-[5vw] z-10 pointer-events-none">
+        <div className="absolute inset-y-0 left-[4vw] z-10 pointer-events-none">
           <div className="flex h-full items-center translate-y-[-9rem] max-w-[50vw] md:max-w-[40vw]">
             <div
               className={`flex flex-col items-start gap-4 transition-opacity duration-1000 ${
@@ -109,11 +118,11 @@ const HomeHeroSection = ({ onLoadComplete }) => {
               <p className="text-sm md:text-xl text-primary/70 leading-relaxed text-left">
                 I work at the intersection of design and engineering to
                 prototype and build interactive products. With experience as a
-                full-stack engineer building UI components in React and as a
-                design technologist teaching advanced prototyping with Figma and
-                AI-driven tools, my practice focuses on helping teams adopt
-                emerging technologies while reducing friction between design
-                intent and implementation.
+                full-stack engineer and as a design technologist teaching
+                advanced prototyping using robotics, immersive, and AI-driven
+                tools, my practice focuses on helping teams adopt emerging
+                technologies while reducing friction between design intent and
+                implementation.
               </p>
             </div>
           </div>

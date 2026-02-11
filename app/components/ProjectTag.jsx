@@ -2,7 +2,7 @@ import React from "react";
 
 const ProjectTag = ({ name, onClick, isSelected }) => {
   const buttonStyles = isSelected
-    ? "text-lg lg:text-2xl border-primary font-medium"
+    ? "text-lg lg:text-2xl border-primary text-primary font-medium"
     : "text-md lg:text-xl text-gray-700 group relative overflow-hidden";
 
   return (

@@ -86,6 +86,18 @@ export const projectsData = [
     tag: ["AR/VR"],
     techStack: "Unity, C#, Git, Blender, Figma, After Effects, Audacity, Gaussian Splats, Volumetric Video",
   },
+  {
+    id: 9,
+    title: "AI Flashcards App",
+    slug: "",
+    url: "https://www.youtube.com/watch?v=enKps2PSPw4",
+    description: "VR documentary about a Ukrainian-born artist living in Berlin, where lifting simple objects opens intimate stories of exile, identity, and belonging.",
+    image: "/media/projects/NowhereToBelong/NowhereToBelong.png",
+    video: "/videos/CC-short.mp4",
+    tag: ["AI"],
+    techStack: "Figma, Design Systems, React, Typescript, CSS, NextJS OpenAI API",
+    featured: true
+  },
 ];
 
 export const projectFilters = [
