@@ -60,33 +60,50 @@ const HomeHeroSection = ({ onLoadComplete }) => {
           </defs>
 
           {/* Video */}
+          {/* Medium screens */}
           <foreignObject
             width="100"
             height="100"
             clipPath="url(#waveMask)"
-            className={`transition-opacity duration-1000 ${
+            preserveAspectRatio="xMaxYMid slice"
+            className={`hidden md:block transition-opacity duration-1000 ${
               showVideo ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img
-              src="/media/About-EverydayStrange.jpg" // ← replace with your image path
-              alt="Hero Background"
-              className="w-full h-full object-cover opacity-80 transition-opacity duration-1000"
-              style={{
-                // optional: maintain the same fade-in timing as the video
-                opacity: showVideo ? 0.8 : 0,
-              }}
-            />
-            {/* <video
+            <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/20 to-transparent" />
+            <video
               autoPlay
               loop
               muted
               playsInline
-              className="w-full h-full object-cover opacity-80"
+              className="w-full h-full object-cover object-center"
               xmlns="http://www.w3.org/1999/xhtml"
             >
-              <source src="/videos/FFCh3VR-Card-slow.mp4" type="video/mp4" />
-            </video> */}
+              <source src="/videos/hero-reel-desktop.mp4" type="video/mp4" />
+            </video>
+          </foreignObject>
+
+          {/* Mobile */}
+          <foreignObject
+            width="100"
+            height="100"
+            clipPath="url(#waveMask)"
+            preserveAspectRatio="xMaxYMid slice"
+            className={`block md:hidden transition-opacity duration-1000 ${
+              showVideo ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/20 to-transparent" />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover object-center opacity-80"
+              xmlns="http://www.w3.org/1999/xhtml"
+            >
+              <source src="/videos/hero-reel-mobile.mp4" type="video/mp4" />
+            </video>
           </foreignObject>
 
           {/* Wave line */}
