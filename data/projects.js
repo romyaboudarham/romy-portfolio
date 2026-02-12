@@ -122,7 +122,7 @@ export const projectsData = [
       </a>
     </>
   ),
-    image: "/media/projects/NowhereToBelong/NowhereToBelong.png",
+    image: "/media/curiosity-cards-img.png",
     video: "/videos/CC-short.mp4",
     tag: ["AI"],
     techStack: "Figma, Design Systems, React, Typescript, CSS, NextJS OpenAI API",
