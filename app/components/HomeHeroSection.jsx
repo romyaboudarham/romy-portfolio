@@ -33,7 +33,7 @@ const HomeHeroSection = ({ onLoadComplete }) => {
   }, []);
 
   return (
-    <section className="relative h-screen flex flex-col items-center text-gray-900 pt-16 md:pt-6 pb-16 md:pb-12 overflow-hidden group">
+    <section className="relative h-dvh flex flex-col items-center text-gray-900 pt-16 md:pt-6 pb-16 md:pb-12 overflow-hidden group">
       {/* Background Video with Mask */}
       <div className="absolute inset-0 pointer-events-none">
         <svg

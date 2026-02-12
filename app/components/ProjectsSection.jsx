@@ -24,16 +24,16 @@ export default function ProjectsSection() {
 
   useEffect(() => {
     if (tagRef.current) {
-      setOriginalOffset(tagRef.current.offsetTop); // Store original position on mount
+      setOriginalOffset(tagRef.current.offsetTop);
     }
 
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
 
       if (currentScrollPos < 50) {
-        setIsSticky(false); // Force unstick when scrolling above 50px
+        setIsSticky(false);
       } else if (tagRef.current && currentScrollPos >= originalOffset) {
-        setIsSticky(true); // Stick when scrolling down past original position
+        setIsSticky(true);
       }
 
       setPrevScrollPos(currentScrollPos);
@@ -68,11 +68,11 @@ export default function ProjectsSection() {
         className={`flex flex-wrap justify-center items-center gap-2 md:gap-3 py-2 md:py-3 bg-white transition-all duration-300 
             ${isSticky ? "fixed top-0 left-0 w-full shadow-md z-50" : ""}`}
         style={{
-          width: "100%", // Ensure it doesn’t shrink
-          maxWidth: "100vw", // Prevents overflow issues
+          width: "100%",
+          maxWidth: "100vw",
           display: "flex",
-          flexWrap: "wrap", // Ensures wrapping stays the same
-          justifyContent: "center", // Keeps items centered
+          flexWrap: "wrap",
+          justifyContent: "center",
         }}
       >
         {projectFilters.map((category) => (
@@ -84,11 +84,6 @@ export default function ProjectsSection() {
           />
         ))}
       </div>
-
-      {/* Tag Description */}
-      {/* <div className="flex flex-wrap justify-center items-center">
-        <p className="text-gray-600 text-center mt-2">{tagDescriptions[tag]}</p>
-      </div> */}
 
       {(tag === "All" || tag === "AI") && (
         <div className="mt-3 hidden md:block">
@@ -134,16 +129,33 @@ function ProjectLink({ project }) {
   }
 
   return (
-    <Link href={href}>
-      <div className="cursor-pointer mb-5 lg:mb-0">
+    // Remove Link wrapper for mobile, keep for desktop
+    <>
+      {/* Desktop: Link wrapper (hover overlay will show) */}
+      <Link href={href} className="hidden md:block">
+        <div className="cursor-pointer mb-5 lg:mb-0">
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            imgUrl={project.image}
+            techStack={project.techStack}
+            videoUrl={project.video}
+            url={href}
+          />
+        </div>
+      </Link>
+
+      {/* Mobile: No Link wrapper (image click will handle navigation) */}
+      <div className="md:hidden mb-5">
         <ProjectCard
           title={project.title}
           description={project.description}
           imgUrl={project.image}
           techStack={project.techStack}
           videoUrl={project.video}
+          url={href}
         />
       </div>
-    </Link>
+    </>
   );
 }

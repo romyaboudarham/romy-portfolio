@@ -1,8 +1,17 @@
+"use client";
+
 import React, { useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-import Divider from "./Divider";
-
-const ProjectCard = ({ imgUrl, videoUrl, title, description, techStack }) => {
+const ProjectCard = ({
+  imgUrl,
+  videoUrl,
+  title,
+  description,
+  techStack,
+  url,
+}) => {
+  const router = useRouter();
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -28,13 +37,28 @@ const ProjectCard = ({ imgUrl, videoUrl, title, description, techStack }) => {
     }
   };
 
+  const handleImageClick = () => {
+    if (!url) return;
+
+    // Check if it's an external URL
+    if (url.startsWith("http")) {
+      window.open(url, "_blank");
+    } else {
+      // Internal route - use Next.js router
+      router.push(url);
+    }
+  };
+
   return (
     <div
       className="overflow-hidden relative group w-full rounded-md"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="relative h-[300px] md:h-[400px]">
+      <div
+        className="relative h-[300px] md:h-[400px] cursor-pointer"
+        onClick={handleImageClick}
+      >
         {videoUrl ? (
           <video
             ref={videoRef}
@@ -67,7 +91,9 @@ const ProjectCard = ({ imgUrl, videoUrl, title, description, techStack }) => {
 
       <div className="md:hidden mt-3 text-black">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-md">{description}</p>
+        <p className="text-md [&_a]:underline [&_a]:hover:opacity-70">
+          {description}
+        </p>
         <div className="block md:hidden mt-2 text-sm text-gray-600 border-t border-gray-300 pt-2">
           <strong>Tech Stack:</strong> {techStack}
         </div>
