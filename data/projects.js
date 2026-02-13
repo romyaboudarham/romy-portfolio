@@ -1,10 +1,10 @@
 export const projectsData = [
   {
     id: 6,
-    title: "Phone a Friend - Gemini AI Lab Assistant",
+    title: "Phone a Friend",
     slug: "lab-ai-assistant",
     description:
-      "A demo for CCA's Hybrid Lab on integrating AI models and databases into physical prototypes.",
+      "Gemini AI Lab Assistant demo for CCA's Prototyping Lab",
     image: "",
     video: "/videos/GeminiPhone.mp4",
     tag: ["AI", "Prototyping"],
@@ -12,10 +12,10 @@ export const projectsData = [
   },
   {
     id: 7,
-    title: "With Shadows - Interactive VR Story About Grief",
+    title: "With Shadows",
     slug: "with-shadows",
     description:
-      "Utilizing VR to immerse users in the moment to moment reality of someone grieving the loss of a loved one. Designed as a therapeutic tool for learning how to move through grief.",
+      "An interactive, immersive story using virtual reality to bring users into the perspective of someone grieving a tramatic loss.",
     image: "/media/projects/VR-GriefsShadow/VR-GriefsShadow.jpg",
     video: "/videos/WithShadows-Card.mp4",
     tag: ["AR/VR", "Exhibitions"],
@@ -23,10 +23,10 @@ export const projectsData = [
   },
   {
     id: 5,
-    title: "Ghosts of Irish Hill - Augmented Reality Walking Tour",
+    title: "Ghosts of Irish Hill",
     slug: "ar-irish-hill",
     description:
-      "Using AR and elements of narrative journalism to tell the forgotten history of Irish Hill, a working class community destroyed for other's growth and capital.",
+      "An augmented reality walking tour of the forgotten history of Irish Hill",
     image: "/media/projects/ARIrishHill/IrishHill-Card.png",
     video:
       "/videos/IrishHill-Card-Reverse.mp4",
@@ -35,9 +35,9 @@ export const projectsData = [
   },
   {
     id: 4,
-    title: "Mixed Emotions Card Deck - Augmented Reality Feature",
+    title: "Mixed Emotions Card Deck",
     slug: "ar-mixed-emotions",
-    description: "Using AR to deepen the way you engage with your emotions.",
+    description: "An augmented reality card deck feature to deepen your engagement with your emotions.",
     image:
       "/media/projects/ARMixedEmotions/MEgif-2-ezgif.com-video-to-gif-converter.gif",
     video: "/videos/MixedEmotions-Card.mp4",
@@ -46,10 +46,10 @@ export const projectsData = [
   },
   {
     id: 3,
-    title: "Redlined Neighborhoods in Alameda County - Metaverse",
+    title: "Redlined Neighborhoods in Alameda County",
     slug: "metaverse-redlining",
     description:
-      "Leveraging the metaverse as an immersive educational tool to illustrate the present-day effects of historical redlining in Alameda County.",
+      "An immersive, educational tool to explore the present-day effects of historical redlining in neighborhoods.",
     image: "/media/projects/Metaverse-Redlining/Metaverse-Census.png",
     tag: ["Unreal 5"],
     techStack:
@@ -57,10 +57,10 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "Finn's Fishbowl - Immersive, Interactive Exhibit",
+    title: "Finn's Fishbowl",
     slug: "finns-fishbowl",
     description:
-      "An immersive, interactive story told using various technological mediums an emotionally compelling story about visiting our inner child and healing childhood trauma.",
+      "An immersive, interactive journey guiding gallery visitors through emotional connection and self-reflection.",
     image: "/media/projects/FinnsFishbowl/FinnsFishbowl.jpg",
     tag: ["Prototyping", "Exhibitions"],
     techStack:
@@ -68,9 +68,9 @@ export const projectsData = [
   },
   {
     id: 1,
-    title: "Finn's Fishbowl - Chapter 3 in Virtual Reality",
+    title: "Finn's Fishbowl - Chapter 3",
     slug: "finns-fishbowl",
-    description: "VR immersive story made with AFrame designed for a public exhibit",
+    description: "An immerive story made with AFrame Virtual Reality designed for a public exhibit",
     image: "/media/projects/FinnsFishbowl/VR-Aframe.png",
     video: "/videos/FFCh3VR-Card-slow.mp4",
     tag: ["AR/VR"],
@@ -78,9 +78,9 @@ export const projectsData = [
   },
   {
     id: 8,
-    title: "XRCC Hackathon Winner - Interactive VR Documentary",
+    title: "Nowhere To Belong",
     slug: "nowhere-to-belong",
-    description: "VR documentary about a Ukrainian-born artist living in Berlin, where lifting simple objects opens intimate stories of exile, identity, and belonging.",
+    description: "XRCC's Winner for Immersive Film & Storytelling, A virtual reality documentary tracing a Ukrainian refugee's relocation to Berlin",
     image: "/media/projects/NowhereToBelong/NowhereToBelong.png",
     video: "/videos/NowhereToBelongTrailer.mp4",
     tag: ["AR/VR"],

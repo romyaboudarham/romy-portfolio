@@ -79,13 +79,17 @@ const ProjectCard = ({
         )}
       </div>
 
-      <div className="hidden md:block absolute bottom-0 left-0 w-full bg-[#181818] bg-opacity-80 text-white px-4 py-3 text-sm translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-        <h5 className="text-lg font-semibold uppercase mb-1">{title}</h5>
-        <p className="text-sm [&_a]:underline [&_a]:hover:opacity-70">
-          {description}
-        </p>
-        <div className="mt-2 text-sm border-t border-gray-400 pt-2">
-          <strong>Tech Stack:</strong> {techStack}
+      <div className="hidden md:flex absolute inset-0 bg-[#181818] bg-opacity-90 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 items-center justify-center px-6">
+        <div className="items-start max-w-md">
+          <h5 className="text-xl font-serif font-bold uppercase mb-1">
+            {title}
+          </h5>
+          <p className="text-md [&_a]:underline [&_a]:hover:opacity-70">
+            {description}
+          </p>
+          <div className="mt-2 text-md border-t border-gray-400 pt-2">
+            <strong>Tech Stack:</strong> {techStack}
+          </div>
         </div>
       </div>
 
