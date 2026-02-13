@@ -31,12 +31,13 @@ export default function HeroSection() {
       theme={{
         overlayClassName:
           "p-3 lg:p-5 text-white bg-[white]/20 backdrop-blur-lg shadow-xl text-center rounded-md",
-        titleClassName: "mt-3 lg:mt-5 text-5xl lg:text-6xl text-white",
+        titleClassName:
+          "mt-3 lg:mt-5 font-serif font-bold uppercase text-5xl lg:text-6xl text-white",
         subtitleClassName: "text-white mt-3 lg:mt-5 text-lg lg:text-2xl",
         descriptionClassName:
           "text-white mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-80",
         buttonClassName:
-          "px-6 py-3 w-full mt-3 rounded-md transition-colors duration-200",
+          "px-6 py-3 w-full mt-3 uppercase rounded-md transition-colors duration-200",
         videoBorderClassName: "border-[#cd5cc4]",
         downArrowClassName: "text-[#cd5cc4]",
       }}

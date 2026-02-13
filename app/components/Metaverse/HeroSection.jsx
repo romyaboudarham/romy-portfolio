@@ -17,7 +17,7 @@ export default function HeroSection() {
       ]}
       theme={{
         buttonClassName:
-          "px-6 py-3 w-full bg-[black]/70 backdrop-blur-lg text-white hover:bg-[white]/40 hover:text-black border border-black mt-10 rounded-md transition-colors duration-200",
+          "px-6 py-3 w-full uppercase bg-[black]/70 backdrop-blur-lg text-white hover:bg-[white]/40 hover:text-black border border-black mt-10 rounded-md transition-colors duration-200",
         videoBorderClassName: "border-[#cd5cc4]",
       }}
     />

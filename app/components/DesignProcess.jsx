@@ -1,7 +1,7 @@
 export default function DesignProcess() {
   return (
     <section className="mx-3 my-6 lg:my-10 lg:mx-[180px]">
-      <h2 className="text-center mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold opacity-90">
+      <h2 className="text-center font-serif font-bold uppercase mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold opacity-90">
         Design & Development
       </h2>
       <p className="mt-2 lg:text-xl text-gray-800">

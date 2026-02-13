@@ -18,7 +18,7 @@ export default function GriefsShadow() {
 
       {/* Project Overview */}
       <section className="mx-3 my-6 lg:my-8 lg:mx-[180px]">
-        <h2 className="text-center mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold opacity-90">
+        <h2 className="text-center mb-7 font-serif font-bold uppercase lg:mb-14 text-3xl lg:text-4xl font-semibold opacity-90">
           Project Overview
         </h2>
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -66,7 +66,7 @@ export default function GriefsShadow() {
       {/* Conceptualization */}
       {/* We all enter this world with the capacity to carry grief. To love is to lose. Through grieving and processing a personal loss, I created this immersive VR experience for everyone—whether you have yet to face a significant loss or are seeking a mindful space for healing. */}
       <section className="mx-3 my-6 lg:my-10 lg:mx-[180px]">
-        <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">
+        <h2 className="mb-7 lg:mb-14 font-serif font-bold uppercase text-3xl lg:text-4xl text-center opacity-90">
           Conceptualization
         </h2>
         <Concept />
@@ -80,7 +80,7 @@ export default function GriefsShadow() {
 
       {/* Design & Developement */}
       <section className="mx-3 my-6 lg:my-10 lg:mx-[180px]">
-        <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">
+        <h2 className="mb-7 lg:mb-14 font-serif font-bold uppercase text-3xl lg:text-4xl text-center opacity-90">
           Design & Development Process
         </h2>
         <Storyboard />
@@ -96,7 +96,7 @@ export default function GriefsShadow() {
 
       {/* Final Experience */}
       <section className="mx-3 my-6 lg:mx-[180px]">
-        <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center">
+        <h2 className="mb-7 lg:mb-14 font-serif font-bold uppercase text-3xl lg:text-4xl text-center">
           Final Experience
         </h2>
         <div className="w-full max-w-xl mx-auto   border border-gray-300 overflow-hidden">
@@ -118,14 +118,14 @@ export default function GriefsShadow() {
 
       {/* Impact */}
       <section className="mx-3 my-6 lg:my-10 lg:mx-[180px]">
-        <h2 className="mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold text-center opacity-90">
+        <h2 className="mb-7 lg:mb-14 text-3xl font-serif font-bold uppercase lg:text-4xl text-center opacity-90">
           Impact
         </h2>
         <Breathe />
       </section>
 
       {/* Footer - Let's Connect */}
-      <section className="relative flex items-center justify-center py-3 text-center px-6 md:px-20 rounded-t-2xl shadow-inner">
+      {/* <section className="relative flex items-center justify-center py-3 text-center px-6 md:px-20 rounded-t-2xl shadow-inner">
         <img
           src="/media/projects/VR-GriefsShadow/WithShadow-SkyboxBG.gif"
           alt="Skybox"
@@ -147,7 +147,7 @@ export default function GriefsShadow() {
             </button>
           </a>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

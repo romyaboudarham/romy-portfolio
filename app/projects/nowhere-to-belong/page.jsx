@@ -16,7 +16,7 @@ export default function NowhereToBelong() {
 
       {/* Project Overview */}
       <section className="mx-3 my-6 lg:my-8 lg:mx-[180px]">
-        <h2 className="text-center mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold opacity-90">
+        <h2 className="text-center font-serif font-bold uppercase mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold opacity-90">
           Project Overview
         </h2>
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">

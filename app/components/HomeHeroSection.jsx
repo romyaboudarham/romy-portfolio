@@ -135,9 +135,8 @@ const HomeHeroSection = ({ onLoadComplete }) => {
                 prototype and build interactive products. With experience as a
                 full-stack engineer and as a design technologist teaching
                 advanced prototyping using robotics, immersive, and AI-driven
-                tools, my practice focuses on helping teams adopt emerging
-                technologies while reducing friction between design intent and
-                implementation.
+                tools, my practice focuses on reducing the friction between
+                design intent and implementation.
               </p>
             </div>
           </div>

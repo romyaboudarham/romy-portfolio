@@ -8,14 +8,15 @@ const defaultTheme = {
     "h-[100dvh] bg-black relative flex items-center justify-center text-center px-4 lg:px-12 overflow-hidden",
   overlayClassName:
     "p-3 lg:p-5 bg-[black]/70 backdrop-blur-lg shadow-xl text-center rounded-md text-white",
-  titleClassName: "mt-3 lg:mt-5 text-5xl lg:text-6xl text-white",
+  titleClassName:
+    "mt-3 font-serif font-bold uppercase lg:mt-5 text-5xl lg:text-6xl text-white",
   subtitleClassName: "text-white mt-3 lg:mt-5 text-lg lg:text-2xl opacity-80",
   descriptionClassName:
     "text-white mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-80",
   buttonWrapperClassName:
     "mt-3 lg:mt-10 flex flex-col justify-center items-center w-[150px] mx-auto",
   buttonClassName:
-    "px-6 py-3 w-full bg-[black]/70 backdrop-blur-lg text-white hover:bg-[white]/40 hover:text-black border border-black mt-3 rounded-md transition-colors duration-200",
+    "px-6 py-3 w-full bg-[black]/70 backdrop-blur-lg text-white uppercase hover:bg-[white]/40 hover:text-black border border-black mt-3 rounded-md transition-colors duration-200",
   downArrowClassName: "",
   videoBorderClassName: "border-[#6e8e76]",
 };
@@ -88,12 +89,7 @@ export default function ProjectHero({
           />
           <div className="relative z-10 w-full max-w-4xl mx-auto px-4 lg:px-12 lg:max-w-6xl">
             <div className={mergedTheme.overlayClassName}>
-              <div
-                className={mergedTheme.titleClassName}
-                style={{ fontFamily: "Londrina Outline, cursive" }}
-              >
-                {title}
-              </div>
+              <div className={mergedTheme.titleClassName}>{title}</div>
               {subtitle && (
                 <p className={mergedTheme.subtitleClassName}>{subtitle}</p>
               )}
@@ -123,11 +119,8 @@ export default function ProjectHero({
       )}
 
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-        <ChevronDown
-          className={`w-14 h-8 ${mergedTheme.downArrowClassName}`}
-        />
+        <ChevronDown className={`w-14 h-8 ${mergedTheme.downArrowClassName}`} />
       </div>
     </section>
   );
 }
-

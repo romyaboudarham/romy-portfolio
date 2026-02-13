@@ -94,7 +94,7 @@ const ProjectCard = ({
       </div>
 
       <div className="md:hidden mt-3 text-black">
-        <h5 className="text-xl font-semibold mb-2">{title}</h5>
+        <h5 className="text-xl font-serif font-bold uppercase mb-2">{title}</h5>
         <p className="text-md [&_a]:underline [&_a]:hover:opacity-70">
           {description}
         </p>

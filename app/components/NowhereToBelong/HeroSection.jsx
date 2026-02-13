@@ -12,8 +12,7 @@ export default function HeroSection() {
           label: "Watch Trailer",
           action: {
             type: "link",
-            url:
-              "https://www.youtube.com/watch?v=Aukul5M2N_c",
+            url: "https://www.youtube.com/watch?v=Aukul5M2N_c",
           },
         },
         // {
@@ -26,7 +25,7 @@ export default function HeroSection() {
       ]}
       theme={{
         buttonClassName:
-          "px-6 py-3 w-full bg-[red]/60 text-white backdrop-blur-lg shadow-xl hover:bg-transparent hover:text-black border border-black mt-10 rounded-md transition-colors duration-200",
+          "px-6 py-3 w-full uppercase bg-[red]/60 text-white backdrop-blur-lg shadow-xl hover:bg-transparent hover:text-black border border-black mt-10 rounded-md transition-colors duration-200",
       }}
     />
   );
