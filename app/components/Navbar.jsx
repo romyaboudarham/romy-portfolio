@@ -32,7 +32,7 @@ export default function Navbar({ textColor = "text-black", show = true }) {
 
   return (
     <div
-      className={`transition-opacity duration-1000 ${show ? "opacity-100" : "opacity-0"}`}
+      className={`transition-opacity uppercase duration-1000 ${show ? "opacity-100" : "opacity-0"}`}
     >
       {/* Expanded Navbar - Centered */}
       {isAtTop && (

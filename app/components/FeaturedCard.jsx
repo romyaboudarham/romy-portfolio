@@ -8,7 +8,7 @@ const FeaturedCard = ({ href, tag, imageSrc, imageAlt, className = "" }) => {
       className={`group relative aspect-[5/3] rounded-lg overflow-hidden border border-primary/10 shadow-md hover:shadow-xl transition ${className}`}
     >
       {/* Tag */}
-      <div className="absolute top-3 left-3 z-10 bg-primary text-white px-2 py-1 text-xs sm:text-sm rounded-md font-semibold shadow-lg">
+      <div className="uppercase  absolute top-3 left-3 z-10 bg-primary text-white px-2 py-1 text-xs sm:text-sm rounded-md font-semibold shadow-lg">
         {tag}
       </div>
 

@@ -36,6 +36,51 @@ const HomeHeroSection = ({ onLoadComplete }) => {
     <section className="relative h-dvh flex flex-col items-center text-gray-900 pt-16 md:pt-6 pb-16 md:pb-12 overflow-hidden group">
       {/* Background Video with Mask */}
       <div className="absolute inset-0 pointer-events-none">
+        {/* Desktop Video */}
+        <div
+          className={`absolute inset-0 hidden md:block transition-opacity duration-1000 ${
+            showVideo ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/20 to-transparent pointer-events-none z-10"
+            style={{ clipPath: "url(#waveMask)" }}
+          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            style={{ clipPath: "url(#waveMask)" }}
+          >
+            <source src="/videos/hero-reel-desktop.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        {/* Mobile Video */}
+        <div
+          className={`absolute inset-0 block md:hidden transition-opacity duration-1000 ${
+            showVideo ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/20 to-transparent pointer-events-none z-10"
+            style={{ clipPath: "url(#waveMask)" }}
+          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            style={{ clipPath: "url(#waveMask)" }}
+          >
+            <source src="/videos/hero-reel-mobile.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        {/* SVG for clipPath definition and wave line */}
         <svg
           className="absolute w-full h-full"
           viewBox="0 0 100 100"
@@ -54,57 +99,10 @@ const HomeHeroSection = ({ onLoadComplete }) => {
               <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
             </linearGradient>
 
-            <clipPath id="waveMask">
-              <path d="M 0 100 Q 20 70, 40 60 T 80 20 T 100 0 L 100 100 Z" />
+            <clipPath id="waveMask" clipPathUnits="objectBoundingBox">
+              <path d="M 0 1 Q 0.2 0.7, 0.4 0.6 T 0.8 0.2 T 1 0 L 1 1 Z" />
             </clipPath>
           </defs>
-
-          {/* Video */}
-          {/* Medium screens */}
-          <foreignObject
-            width="100"
-            height="100"
-            clipPath="url(#waveMask)"
-            preserveAspectRatio="xMaxYMid slice"
-            className={`hidden md:block transition-opacity duration-1000 ${
-              showVideo ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/20 to-transparent" />
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover object-center"
-              xmlns="http://www.w3.org/1999/xhtml"
-            >
-              <source src="/videos/hero-reel-desktop.mp4" type="video/mp4" />
-            </video>
-          </foreignObject>
-
-          {/* Mobile */}
-          <foreignObject
-            width="100"
-            height="100"
-            clipPath="url(#waveMask)"
-            preserveAspectRatio="xMaxYMid slice"
-            className={`block md:hidden transition-opacity duration-1000 ${
-              showVideo ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/20 to-transparent" />
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover object-center opacity-80"
-              xmlns="http://www.w3.org/1999/xhtml"
-            >
-              <source src="/videos/hero-reel-mobile.mp4" type="video/mp4" />
-            </video>
-          </foreignObject>
 
           {/* Wave line */}
           <path
@@ -128,7 +126,7 @@ const HomeHeroSection = ({ onLoadComplete }) => {
                 showText ? "opacity-100" : "opacity-0"
               }`}
             >
-              <h1 className="text-3xl md:text-4xl text-primary text-left">
+              <h1 className="text-3xl font-serif font-bold uppercase md:text-4xl text-primary text-left">
                 Romy Aboudarham
               </h1>
 

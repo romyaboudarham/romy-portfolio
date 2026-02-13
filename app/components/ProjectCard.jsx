@@ -80,7 +80,7 @@ const ProjectCard = ({
       </div>
 
       <div className="hidden md:block absolute bottom-0 left-0 w-full bg-[#181818] bg-opacity-80 text-white px-4 py-3 text-sm translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-        <h5 className="text-lg font-semibold mb-1">{title}</h5>
+        <h5 className="text-lg font-semibold uppercase mb-1">{title}</h5>
         <p className="text-sm [&_a]:underline [&_a]:hover:opacity-70">
           {description}
         </p>
