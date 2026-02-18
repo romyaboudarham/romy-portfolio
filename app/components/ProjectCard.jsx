@@ -51,7 +51,7 @@ const ProjectCard = ({
 
   return (
     <div
-      className="overflow-hidden relative group w-full rounded-md"
+      className="overflow-hidden relative group w-full"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

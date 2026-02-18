@@ -7,7 +7,7 @@ const ProjectTag = ({ name, onClick, isSelected }) => {
 
   return (
     <button
-      className={`${buttonStyles} uppercase px-2 py-1 md:px-3 md:py-1 md:text-lg cursor-pointer rounded-md font-light border hover:text-white hover:bg-primary/80 transition-all duration-500 ease-out`}
+      className={`${buttonStyles} uppercase px-2 py-1 md:px-3 md:py-1 md:text-lg cursor-pointer font-light border hover:text-white hover:bg-primary/80 transition-all duration-500 ease-out`}
       onClick={() => onClick(name)}
     >
       <span className="relative z-10">{name}</span>

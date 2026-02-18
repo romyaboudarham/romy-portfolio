@@ -43,8 +43,8 @@ export default function FeaturedSection() {
 
       <div className="grid grid-cols-1 lg:grid-cols-[3.3fr_1fr] gap-6">
         {/* Left Column: YouTube Video */}
-        <div className="featured-video w-full shadow-xl border border-primary/10 rounded-md overflow-hidden relative h-[350px] md:h-[450px]">
-          <div className="absolute top-4 left-4 z-10 text-white bg-primary border border-primary px-2 py-1 text-sm md:text-lg rounded-md font-semibold shadow-lg">
+        <div className="featured-video w-full shadow-xl border border-primary/10 overflow-hidden relative h-[350px] md:h-[450px]">
+          <div className="absolute top-4 left-4 z-10 text-white bg-primary border border-primary px-2 py-1 text-sm md:text-lg font-semibold shadow-lg">
             Featured
           </div>
 
