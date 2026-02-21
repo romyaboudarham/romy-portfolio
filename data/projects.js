@@ -33,7 +33,7 @@ export const projectsData = [
     techStack: "Arduino, C++, Github",
   },
   {
-    id: 5,
+    id: 4,
     title: "Ghosts of Irish Hill",
     slug: "ar-irish-hill",
     description:
@@ -45,7 +45,7 @@ export const projectsData = [
     techStack: "Unity, Vuforia AR Plugin, Blender",
   },
   {
-    id: 4,
+    id: 3,
     title: "Mixed Emotions Card Deck",
     slug: "ar-mixed-emotions",
     description: "An augmented reality card deck feature to deepen your engagement with your emotions.",
@@ -56,7 +56,7 @@ export const projectsData = [
     techStack: "Unity, QuillVR, Vuforia AR Plugin",
   },
   {
-    id: 3,
+    id: 2,
     title: "Redlined Neighborhoods in Alameda County",
     slug: "metaverse-redlining",
     description:
@@ -67,7 +67,7 @@ export const projectsData = [
       "Unreal Engine 5, Blueprint, GIS Data, Cesium Plugin, R Studio",
   },
   {
-    id: 2,
+    id: 1,
     title: "Finn's Fishbowl",
     slug: "finns-fishbowl",
     description:
