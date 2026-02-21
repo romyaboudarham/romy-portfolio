@@ -1,126 +1,60 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
-import ProjectTag from "./ProjectTag";
 import Link from "next/link";
-import { projectsData, projectFilters } from "@/data/projects";
+import { projectsData } from "@/data/projects";
 import FeaturedSection from "./FeaturedSection";
-
-const tagDescriptions = {
-  All: "A selection my projects designed and built end-to-end",
-  AI: "Projects that integrate large language models via API calls to enable intelligent application features.",
-  "AR/VR":
-    "Augmented and virtual reality experiences for mobile, Oculus headset, and web",
-  Prototyping: "Hardware prototypes and interactive installations",
-  Exhibitions: "Projects designed for public exhibition spaces.",
-};
+import FadeIn from "./FadeIn";
+import ProjectTagNavBar from "./ProjectTagNavBar";
 
 export default function ProjectsSection() {
   const [tag, setTag] = useState("All");
-  const [isSticky, setIsSticky] = useState(false);
-  const tagRef = useRef(null);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [originalOffset, setOriginalOffset] = useState(0);
-
-  useEffect(() => {
-    if (tagRef.current) {
-      setOriginalOffset(tagRef.current.offsetTop);
-    }
-
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-
-      if (currentScrollPos < 50) {
-        setIsSticky(false);
-      } else if (tagRef.current && currentScrollPos >= originalOffset) {
-        setIsSticky(true);
-      }
-
-      setPrevScrollPos(currentScrollPos);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos, originalOffset]);
-
-  const handleTagChange = (newTag) => {
-    setTag(newTag);
-  };
 
   return (
-    <section id="projects">
-      <div
-        style={{
-          height: isSticky ? `${tagRef.current?.offsetHeight}px` : "auto",
-        }}
-      ></div>
-
-      <div className="flex items-center gap-3 mb-3">
-        <div className="h-px flex-1 bg-gradient-to-r from-transparent via-brand to-transparent opacity-30" />
-        <h1 className="text-3xl font-serif font-bold uppercase text-brand md:text-4xl text-center">
-          Projects
-        </h1>
-        <div className="h-px flex-1 bg-gradient-to-r from-transparent via-brand to-transparent opacity-30" />
-      </div>
-
-      <div
-        ref={tagRef}
-        className={`flex flex-wrap justify-center items-center gap-2 md:gap-3 py-2 md:py-3 bg-white transition-all duration-300 
-            ${isSticky ? "fixed top-0 left-0 w-full shadow-md z-50" : ""}`}
-        style={{
-          width: "100%",
-          maxWidth: "100vw",
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}
-      >
-        {projectFilters.map((category) => (
-          <ProjectTag
-            key={category}
-            onClick={handleTagChange}
-            name={category}
-            isSelected={tag === category}
-          />
-        ))}
-      </div>
-
-      {(tag === "All" || tag === "AI") && (
-        <div className="mt-3 hidden md:block">
-          <FeaturedSection />
+    <FadeIn>
+      <section id="projects">
+        <div className="flex items-center gap-3 mb-3 md:mb-5">
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-brand to-transparent opacity-30" />
+          <h1 className="text-3xl font-serif font-bold uppercase text-brand md:text-4xl text-center">
+            Projects
+          </h1>
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-brand to-transparent opacity-30" />
         </div>
-      )}
 
-      <div className="mx-auto grid md:grid-cols-2 gap-2 mt-6">
-        {(tag === "All"
-          ? projectsData
-          : projectsData.filter((project) => project.tag.includes(tag))
-        )
-          .slice()
-          .sort((a, b) => b.id - a.id)
-          .map((project) => {
-            if (project.featured) {
-              return (
-                <div key={project.id} className="md:hidden">
-                  <ProjectLink project={project} />
-                </div>
-              );
-            }
+        <ProjectTagNavBar tag={tag} onTagChange={setTag} />
 
-            return <ProjectLink key={project.id} project={project} />;
-          })}
-      </div>
-    </section>
+        {(tag === "All" || tag === "AI") && (
+          <div className="mt-3 hidden md:block">
+            <FeaturedSection />
+          </div>
+        )}
+
+        <div className="mx-auto grid md:grid-cols-2 gap-2 mt-6">
+          {(tag === "All"
+            ? projectsData
+            : projectsData.filter((project) => project.tag.includes(tag))
+          )
+            .slice()
+            .sort((a, b) => b.id - a.id)
+            .map((project) => {
+              if (project.featured) {
+                return (
+                  <div key={project.id} className="md:hidden">
+                    <ProjectLink project={project} />
+                  </div>
+                );
+              }
+              return <ProjectLink key={project.id} project={project} />;
+            })}
+        </div>
+      </section>
+    </FadeIn>
   );
 }
 
 function ProjectLink({ project }) {
   let href = "";
-  if (project.title === "Finn's Fishbowl - Chapter 3 in Virtual Reality") {
-    href = "/projects/finns-fishbowl#ch3vr";
-  } else if (
-    project.title === "Finn's Fishbowl - Immersive, Interactive Exhibit"
-  ) {
+  if (project.title === "Finn's Fishbowl - Immersive, Interactive Exhibit") {
     href = "/projects/finns-fishbowl#esp32";
   } else if (!project.slug && project.url) {
     href = project.url;
@@ -129,9 +63,7 @@ function ProjectLink({ project }) {
   }
 
   return (
-    // Remove Link wrapper for mobile, keep for desktop
     <>
-      {/* Desktop: Link wrapper (hover overlay will show) */}
       <Link href={href} className="hidden md:block">
         <div className="cursor-pointer mb-5 lg:mb-0">
           <ProjectCard
@@ -145,7 +77,6 @@ function ProjectLink({ project }) {
         </div>
       </Link>
 
-      {/* Mobile: No Link wrapper (image click will handle navigation) */}
       <div className="md:hidden mb-5">
         <ProjectCard
           title={project.title}

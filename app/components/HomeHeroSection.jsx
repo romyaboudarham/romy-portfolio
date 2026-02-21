@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
+import BottomFade from "./BottomFade";
 
 const HomeHeroSection = ({ onLoadComplete }) => {
   const [isMounted, setIsMounted] = useState(false);
@@ -143,8 +144,10 @@ const HomeHeroSection = ({ onLoadComplete }) => {
         </div>
       </div>
 
+      <BottomFade />
+
       {/* Down Arrow Icon */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30">
         <ChevronDown className="w-14 h-8 text-brand" />
       </div>
     </section>

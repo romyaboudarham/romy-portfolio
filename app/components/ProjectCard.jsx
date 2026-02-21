@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const ProjectCard = ({
   imgUrl,
@@ -71,10 +72,12 @@ const ProjectCard = ({
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-500"
           />
         ) : (
-          <img
+          <Image
             src={imgUrl}
             alt={title}
-            className="absolute inset-0 w-full h-full object-cover"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         )}
       </div>

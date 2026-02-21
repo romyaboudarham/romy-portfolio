@@ -1,6 +1,6 @@
 export default function VideoDemo({ videoUrl }) {
   return (
-    <section className="mx-3 my-6 lg:my-8 lg:mx-[180px]">
+    <section className="my-6 lg:my-8">
       <div className="relative w-full aspect-video">
         <iframe
           src={videoUrl}

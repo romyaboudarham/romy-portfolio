@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
   { href: "/", text: "Home" },
@@ -31,36 +32,40 @@ export default function Navbar({ textColor = "text-black", show = true }) {
   }, [isOpen]);
 
   return (
-    <div
-      className={`transition-opacity uppercase duration-1000 ${show ? "opacity-100" : "opacity-0"}`}
-    >
-      {/* Expanded Navbar - Centered */}
-      {isAtTop && (
-        <nav className="flex fixed top-4 md:text-lg left-1/2 -translate-x-1/2 z-[60] gap-x-6 pointer-events-none text-center [&>*]:pointer-events-auto">
+    <AnimatePresence mode="wait">
+      {isAtTop ? (
+        <motion.nav
+          key="expanded"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: show ? 1 : 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="uppercase flex fixed top-4 md:text-lg left-1/2 -translate-x-1/2 z-[60] gap-x-6 pointer-events-none text-center [&>*]:pointer-events-auto"
+        >
           {navItems.map((item) => (
             <NavItem key={item.href} {...item} textColor={textColor} />
           ))}
-        </nav>
-      )}
-
-      {/* Collapsed Floating Navbar */}
-      {!isAtTop && (
-        <nav className="fixed bottom-4 md:top-2 left-4 z-[60]">
+        </motion.nav>
+      ) : (
+        <motion.nav
+          key="collapsed"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="uppercase fixed bottom-4 md:top-2 left-4 z-[60]"
+        >
           <MenuButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
-
           {isOpen && (
-            <div
-              className="text-black absolute left-0 bg-white shadow-lg rounded-lg p-2 space-y-3 
-            md:top-12 md:bottom-auto bottom-12 flex flex-col items-start text-left min-w-max px-4"
-            >
+            <div className="text-black absolute left-0 bg-white shadow-lg rounded-lg p-2 space-y-3 md:top-12 md:bottom-auto bottom-12 flex flex-col items-start text-left min-w-max px-4">
               {navItems.map((item) => (
                 <NavItem key={item.href} {...item} />
               ))}
             </div>
           )}
-        </nav>
+        </motion.nav>
       )}
-    </div>
+    </AnimatePresence>
   );
 }
 

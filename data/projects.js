@@ -21,6 +21,17 @@ export const projectsData = [
     tag: ["AR/VR", "Exhibitions"],
     techStack: "Unity, C#, Oculus, Blender",
   },
+   {
+    id: 5,
+    title: "Interactive Wearables Workshop ",
+    slug: "",
+    url: "https://github.com/romyaboudarham/M5StickCPlus2-Workshop",
+    description:
+      "Led a hands-on workshop teaching interaction design and human-centered prototyping during SF Design Week.",
+    image: "/media/SFDW_Design workshop event_SU25-001 (1).jpg",
+    tag: ["Prototyping"],
+    techStack: "Arduino, C++, Github",
+  },
   {
     id: 5,
     title: "Ghosts of Irish Hill",
@@ -65,16 +76,6 @@ export const projectsData = [
     tag: ["Prototyping", "Exhibitions"],
     techStack:
       "A-Frame VR, P5.js, Node.js HTML/CSS/JS, Physical Programming ESP32, Projection Mapping, Blender",
-  },
-  {
-    id: 1,
-    title: "Finn's Fishbowl - Chapter 3",
-    slug: "finns-fishbowl",
-    description: "An immerive story made with AFrame Virtual Reality designed for a public exhibit",
-    image: "/media/projects/FinnsFishbowl/VR-Aframe.png",
-    video: "/videos/FFCh3VR-Card-slow.mp4",
-    tag: ["AR/VR"],
-    techStack: "A-Frame VR, HTML/CSS/JS, Blender",
   },
   {
     id: 8,
