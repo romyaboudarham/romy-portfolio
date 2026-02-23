@@ -80,6 +80,14 @@ const ProjectCard = ({
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         )}
+        <div className="absolute inset-0 pointer-events-none bg-white/10" />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.45) 100%)",
+          }}
+        />
       </div>
 
       <div className="hidden md:flex absolute inset-0 bg-[#181818] bg-opacity-90 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 items-center justify-center px-6">

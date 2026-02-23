@@ -16,7 +16,7 @@ export default function Home() {
       <HomeHeroSection onLoadComplete={() => setHeroLoaded(true)} />
       
       <div className="px-2">
-        <div className="w-full max-w-[90rem] mx-auto md:px-6 lg:px-8 mt-10 lg:mt-20">
+        <div className="w-full max-w-[85rem] mx-auto md:px-6 lg:px-8 mt-10 lg:mt-20">
           <ProjectsSection />
           <Divider />
         </div>

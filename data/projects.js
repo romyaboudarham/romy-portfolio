@@ -16,8 +16,8 @@ export const projectsData = [
     slug: "with-shadows",
     description:
       "An interactive, immersive story using virtual reality to bring users into the perspective of someone grieving a tramatic loss.",
-    image: "/media/projects/VR-GriefsShadow/VR-GriefsShadow.jpg",
-    video: "/videos/WithShadows-Card.mp4",
+    image: "/media/everyday-strange.png",
+    // video: "/videos/WithShadows-Card.mp4",
     tag: ["AR/VR", "Exhibitions"],
     techStack: "Unity, C#, Oculus, Blender",
   },

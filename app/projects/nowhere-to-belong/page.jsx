@@ -4,7 +4,7 @@ import React from "react";
 import HeroSectionNEW from "@/app/components/NowhereToBelong/HeroSectionNEW";
 import Navbar from "@/app/components/Navbar.jsx";
 import VideoDemo from "@/app/components/VideoDemo";
-import DesignProcess from "@/app/components/DesignProcess";
+import DesignProcess from "@/app/components/NowhereToBelong/DesignProcess";
 import PageContent from "@/app/components/PageContent";
 
 export default function NowhereToBelong() {
@@ -27,10 +27,12 @@ export default function NowhereToBelong() {
                   Designer & Developer
                 </p>
                 <p>
-                  <strong className="text-black opacity-90">Collaborators: </strong>{" "}
-                  Lorenzo Carley (Director & Project Lead), Kinjal Kanzariya (Game
-                  Designer & Developer), Magnus Reichel (Sound Designer), Bernard
-                  Masika (3D Artist)
+                  <strong className="text-black opacity-90">
+                    Collaborators:{" "}
+                  </strong>{" "}
+                  Lorenzo Carley (Director & Project Lead), Kinjal Kanzariya
+                  (Game Designer & Developer), Magnus Reichel (Sound Designer),
+                  Bernard Masika (3D Artist)
                 </p>
                 <p>
                   <strong className="text-black opacity-90">Context: </strong>{" "}
@@ -46,9 +48,9 @@ export default function NowhereToBelong() {
                   </a>
                 </p>
                 <p>
-                  <strong className="text-black opacity-90">Tools:</strong> Unity,
-                  C#, Git, Blender, Figma, After Effects, Audacity, Scaniverse,
-                  ITHACA, Premiere Pro, Meta Quest 3
+                  <strong className="text-black opacity-90">Tools:</strong>{" "}
+                  Unity, C#, Git, Blender, Figma, After Effects, Audacity,
+                  Scaniverse, ITHACA, Premiere Pro, Meta Quest 3
                 </p>
               </div>
             </div>
