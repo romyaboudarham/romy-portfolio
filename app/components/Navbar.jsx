@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const navItems = [
   { href: "/", text: "Home" },
@@ -13,74 +12,53 @@ const navItems = [
   { href: "mailto:romyaboudarham@gmail.com", text: "Contact" },
 ];
 
-export default function Navbar({ textColor = "text-black", show = true }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isAtTop, setIsAtTop] = useState(true);
+export default function Navbar({
+  textColor = "text-black",
+  show = true,
+  onlyAtTop = false,
+}) {
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const atTop = window.scrollY < 50;
-      setIsAtTop(atTop);
+      const currentY = window.scrollY;
 
-      if (!atTop && isOpen) {
-        setIsOpen(false);
+      if (onlyAtTop) {
+        setVisible(currentY < window.innerHeight);
+      } else {
+        const goingDown = currentY > lastScrollY.current;
+        if (currentY < 10) {
+          setVisible(true);
+        } else if (goingDown) {
+          setVisible(false);
+        } else {
+          setVisible(true);
+        }
       }
+
+      lastScrollY.current = currentY;
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isOpen]);
+  }, [onlyAtTop]);
 
   return (
-    <AnimatePresence mode="wait">
-      {isAtTop ? (
-        <motion.nav
-          key="expanded"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: show ? 1 : 0 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          className="uppercase flex fixed top-4 md:text-lg left-1/2 -translate-x-1/2 z-[60] gap-x-6 pointer-events-none text-center [&>*]:pointer-events-auto"
-        >
-          {navItems.map((item) => (
-            <NavItem key={item.href} {...item} textColor={textColor} />
-          ))}
-        </motion.nav>
-      ) : (
-        <motion.nav
-          key="collapsed"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          className="uppercase fixed bottom-4 md:top-2 left-4 z-[60]"
-        >
-          <MenuButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
-          {isOpen && (
-            <div className="text-black absolute left-0 bg-white shadow-lg rounded-lg p-2 space-y-3 md:top-12 md:bottom-auto bottom-12 flex flex-col items-start text-left min-w-max px-4">
-              {navItems.map((item) => (
-                <NavItem key={item.href} {...item} />
-              ))}
-            </div>
-          )}
-        </motion.nav>
-      )}
-    </AnimatePresence>
-  );
-}
-
-function MenuButton({ isOpen, onClick }) {
-  return (
-    <button
-      onClick={onClick}
-      className="p-3 rounded-full border border-gray-800 bg-white shadow-lg hover:shadow-xl transition-shadow"
+    <motion.nav
+      animate={{
+        y: visible && show ? 0 : -80,
+        opacity: visible && show ? 1 : 0,
+      }}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      className="fixed top-0 inset-x-0 z-[60] flex justify-center pointer-events-none"
     >
-      {isOpen ? (
-        <X size={28} className="text-black" />
-      ) : (
-        <Menu size={28} className="text-black" />
-      )}
-    </button>
+      <div className="flex gap-x-6 uppercase md:text-lg px-6 py-2 backdrop-blur-md bg-white/30 border-b border-white/40 pointer-events-auto w-full justify-center">
+        {navItems.map((item) => (
+          <NavItem key={item.href} {...item} textColor={textColor} />
+        ))}
+      </div>
+    </motion.nav>
   );
 }
 

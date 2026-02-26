@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col bg-[#FFFFFF]">
-      <Navbar show={heroLoaded} />
+      <Navbar show={heroLoaded} onlyAtTop />
       <HomeHeroSection onLoadComplete={() => setHeroLoaded(true)} />
       
       <div className="px-2">
