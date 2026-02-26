@@ -24,10 +24,16 @@ export default function Navbar({
     const handleScroll = () => {
       const currentY = window.scrollY;
 
+      const goingDown = currentY > lastScrollY.current;
       if (onlyAtTop) {
-        setVisible(currentY < window.innerHeight);
+        if (currentY >= window.innerHeight) {
+          setVisible(false);
+        } else if (goingDown) {
+          setVisible(false);
+        } else {
+          setVisible(true);
+        }
       } else {
-        const goingDown = currentY > lastScrollY.current;
         if (currentY < 10) {
           setVisible(true);
         } else if (goingDown) {
