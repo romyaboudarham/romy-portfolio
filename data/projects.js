@@ -1,6 +1,6 @@
 export const projectsData = [
   {
-    id: 6,
+    id: 7,
     title: "Phone a Friend",
     slug: "lab-ai-assistant",
     description:
@@ -11,7 +11,7 @@ export const projectsData = [
     techStack: "Gemini AI, Python, Raspberry Pi",
   },
   {
-    id: 7,
+    id: 8,
     title: "With Shadows",
     slug: "with-shadows",
     description:
@@ -40,7 +40,7 @@ export const projectsData = [
       "An augmented reality walking tour of the forgotten history of Irish Hill",
     image: "/media/projects/ARIrishHill/IrishHill-Card.png",
     video:
-      "/videos/IrishHill-Card-Reverse.mp4",
+      "/videos/IrishHill-Card-Reverse-h264.mp4",
     tag: ["AR/VR"],
     techStack: "Unity, Vuforia AR Plugin, Blender",
   },
@@ -62,6 +62,7 @@ export const projectsData = [
     description:
       "An immersive, educational tool to explore the present-day effects of historical redlining in neighborhoods.",
     image: "/media/projects/Metaverse-Redlining/Metaverse-Census.png",
+    video: "/videos/Redlining.mov",
     tag: ["Unreal 5"],
     techStack:
       "Unreal Engine 5, Blueprint, GIS Data, Cesium Plugin, R Studio",
@@ -78,7 +79,7 @@ export const projectsData = [
       "A-Frame VR, P5.js, Node.js HTML/CSS/JS, Physical Programming ESP32, Projection Mapping, Blender",
   },
   {
-    id: 8,
+    id: 6,
     title: "Nowhere To Belong",
     slug: "nowhere-to-belong",
     description: "XRCC's Winner for Immersive Film & Storytelling, A virtual reality documentary tracing a Ukrainian refugee's relocation to Berlin",
