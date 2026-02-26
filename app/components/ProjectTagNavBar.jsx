@@ -5,31 +5,29 @@ import { projectFilters } from "@/data/projects";
 
 export default function ProjectTagNavBar({ tag, onTagChange }) {
   const [isSticky, setIsSticky] = useState(false);
-  const navRef = useRef(null);
-  const originalOffset = useRef(null);
+  const sentinelRef = useRef(null);
 
   useEffect(() => {
-    if (navRef.current && originalOffset.current === null) {
-      originalOffset.current =
-        navRef.current.getBoundingClientRect().top + window.scrollY;
-    }
+    const sentinel = sentinelRef.current;
+    if (!sentinel) return;
 
-    const handleScroll = () => {
-      if (originalOffset.current === null) return;
-      setIsSticky(window.scrollY >= originalOffset.current);
-    };
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsSticky(!entry.isIntersecting),
+      { threshold: 0 }
+    );
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    observer.observe(sentinel);
+    return () => observer.disconnect();
   }, []);
 
   return (
     <>
-      <div style={{ height: isSticky ? `${navRef.current?.offsetHeight}px` : 0 }} />
+      <div ref={sentinelRef} className="h-px" />
       <div
-        ref={navRef}
-        className={`flex flex-wrap justify-center items-center gap-2 md:mb-5 md:gap-3 py-3 bg-white transition-all duration-300 ${
-          isSticky ? "fixed top-0 left-0 w-full shadow-md z-50" : ""
+        className={`sticky top-0 z-50 flex flex-wrap justify-center items-center gap-2 md:gap-3 py-2 backdrop-blur-md border-b transition-colors duration-300 ${
+          isSticky
+            ? "bg-white/30 border-white/40"
+            : "bg-transparent border-transparent"
         }`}
       >
         {projectFilters.map((category) => (
