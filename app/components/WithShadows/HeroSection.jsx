@@ -32,7 +32,7 @@ export default function HeroSection() {
         overlayClassName:
           "p-3 lg:p-5 text-white bg-[white]/20 backdrop-blur-lg shadow-xl text-center rounded-md",
         titleClassName:
-          "mt-3 lg:mt-5 font-serif font-bold uppercase text-5xl lg:text-6xl text-white",
+          "mt-3 lg:mt-5 font-header font-light uppercase text-6xl lg:text-7xl text-white",
         subtitleClassName: "text-white mt-3 lg:mt-5 text-lg lg:text-2xl",
         descriptionClassName:
           "text-white mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-80",

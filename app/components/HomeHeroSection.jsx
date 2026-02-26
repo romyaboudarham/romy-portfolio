@@ -127,7 +127,7 @@ const HomeHeroSection = ({ onLoadComplete }) => {
                 showText ? "opacity-100" : "opacity-0"
               }`}
             >
-              <h1 className="text-3xl font-serif font-bold uppercase md:text-4xl text-primary text-left">
+              <h1 className="text-4xl font-header font-light uppercase md:text-5xl text-primary text-left">
                 Romy Aboudarham
               </h1>
 

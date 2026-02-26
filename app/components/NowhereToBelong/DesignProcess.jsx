@@ -1,7 +1,7 @@
 export default function DesignProcess() {
   return (
     <section className="my-6 lg:my-10">
-      <h2 className="text-center font-serif font-bold uppercase mb-7 lg:mb-14 text-3xl lg:text-4xl font-semibold opacity-90">
+      <h2 className="text-center font-header font-light uppercase mb-7 lg:mb-14 text-4xl lg:text-5xl opacity-90">
         Design & Development
       </h2>
       <h2 className="text-2xl font-semibold opacity-90">Github</h2>

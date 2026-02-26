@@ -9,7 +9,7 @@ const defaultTheme = {
   overlayClassName:
     "p-3 lg:p-5 bg-[black]/70 backdrop-blur-lg shadow-xl text-center rounded-md text-white",
   titleClassName:
-    "mt-3 lg:mt-5 font-serif font-bold uppercase text-5xl lg:text-6xl text-white",
+    "mt-3 lg:mt-5 font-header font-light uppercase text-6xl lg:text-7xl text-white",
   subtitleClassName: "text-white mt-3 lg:mt-5 text-lg lg:text-2xl opacity-80",
   descriptionClassName:
     "text-white mt-3 mb-3 lg:mb-5 lg:mt-5 text-base lg:text-xl opacity-80",

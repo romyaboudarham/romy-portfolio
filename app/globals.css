@@ -3,6 +3,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+@font-face {
+  font-family: "Sugo Pro Display";
+  src: url("/fonts/sugo_pro_display/Sugo-Pro-Display-Regular-trial.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sugo Pro Display";
+  src: url("/fonts/sugo_pro_display/Sugo-Pro-Display-Italic-trial.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Sugo Pro Display";
+  src: url("/fonts/sugo_pro_display/Sugo-Pro-Display-Bold-trial.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sugo Pro Display";
+  src: url("/fonts/sugo_pro_display/Sugo-Pro-Display-Bold-Italic-trial.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Sugo Pro Display";
+  src: url("/fonts/sugo_pro_display/Sugo-Pro-Display-Light-trial.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sugo Pro Display";
+  src: url("/fonts/sugo_pro_display/Sugo-Pro-Display-Thin-trial.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sugo Pro Display";
+  src: url("/fonts/sugo_pro_display/Sugo-Pro-Display-ExtraLight-trial.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
 
 @tailwind base;
 @tailwind components;
@@ -29,6 +72,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-header: "Sugo Pro Display", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

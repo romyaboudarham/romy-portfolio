@@ -92,7 +92,7 @@ const ProjectCard = ({
 
       <div className="hidden md:flex absolute inset-0 bg-[#181818] bg-opacity-90 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 items-center justify-center px-6">
         <div className="items-start max-w-md">
-          <h5 className="text-xl font-serif font-bold uppercase mb-1">
+          <h5 className="text-2xl font-header font-light uppercase mb-1">
             {title}
           </h5>
           <p className="text-md [&_a]:underline [&_a]:hover:opacity-70">
@@ -105,7 +105,7 @@ const ProjectCard = ({
       </div>
 
       <div className="md:hidden mt-3 text-black">
-        <h5 className="text-xl font-serif font-bold uppercase mb-2">{title}</h5>
+        <h5 className="text-2xl font-header font-light uppercase mb-2">{title}</h5>
         <p className="text-md [&_a]:underline [&_a]:hover:opacity-70">
           {description}
         </p>

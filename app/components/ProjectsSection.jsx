@@ -15,7 +15,7 @@ export default function ProjectsSection() {
       <section id="projects">
         <div className="flex items-center gap-3 mb-3 md:mb-5">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-brand to-transparent opacity-30" />
-          <h1 className="text-3xl font-serif font-bold uppercase text-brand md:text-4xl text-center">
+          <h1 className="text-4xl font-header font-light uppercase text-brand md:text-5xl text-center">
             Projects
           </h1>
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-brand to-transparent opacity-30" />

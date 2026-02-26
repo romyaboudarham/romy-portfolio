@@ -45,7 +45,7 @@ export default function FeaturedSection() {
         {/* Left Column: YouTube Video */}
         <div className="featured-video w-full shadow-xl border border-primary/10 overflow-hidden relative h-[350px] md:h-[450px]">
           <div className="absolute top-4 left-4 z-10 text-white bg-primary border border-primary px-2 py-1 text-sm md:text-lg font-semibold shadow-lg">
-            Featured
+            FEATURED
           </div>
 
           <iframe

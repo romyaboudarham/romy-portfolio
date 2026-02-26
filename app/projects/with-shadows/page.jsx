@@ -21,7 +21,7 @@ export default function GriefsShadow() {
         {/* Project Overview */}
         <section className="my-6 lg:my-8">
           <FadeIn>
-            <h2 className="text-center mb-7 font-serif font-bold uppercase lg:mb-14 text-3xl lg:text-4xl font-semibold opacity-90">
+            <h2 className="text-center mb-7 font-header font-light uppercase lg:mb-14 text-4xl lg:text-5xl opacity-90">
               Project Overview
             </h2>
           </FadeIn>
@@ -34,8 +34,8 @@ export default function GriefsShadow() {
                     Creative Technologist, Designer, Developer
                   </p>
                   <p>
-                    <strong className="text-black opacity-90">Tools:</strong> Unity,
-                    C#, Oculus VR, Storyboarding
+                    <strong className="text-black opacity-90">Tools:</strong>{" "}
+                    Unity, C#, Oculus VR, Storyboarding
                   </p>
                   <p>
                     <strong className="text-black opacity-90">Focus:</strong>{" "}
@@ -44,8 +44,8 @@ export default function GriefsShadow() {
                   </p>
                   <p>
                     <strong className="text-black opacity-90">Context:</strong>{" "}
-                    Audited CCA Grad class "XR: Immersive Experiences and Scripted
-                    Spaces"
+                    Audited CCA Grad class "XR: Immersive Experiences and
+                    Scripted Spaces"
                   </p>
                 </div>
               </div>
@@ -65,7 +65,7 @@ export default function GriefsShadow() {
         {/* Conceptualization */}
         <section className="my-6 lg:my-10">
           <FadeIn>
-            <h2 className="mb-7 lg:mb-14 font-serif font-bold uppercase text-3xl lg:text-4xl text-center opacity-90">
+            <h2 className="mb-7 lg:mb-14 font-header font-light uppercase text-4xl lg:text-5xl text-center opacity-90">
               Conceptualization
             </h2>
           </FadeIn>
@@ -79,7 +79,7 @@ export default function GriefsShadow() {
         {/* Design & Development */}
         <section className="my-6 lg:my-10">
           <FadeIn>
-            <h2 className="mb-7 lg:mb-14 font-serif font-bold uppercase text-3xl lg:text-4xl text-center opacity-90">
+            <h2 className="mb-7 lg:mb-14 font-header font-light uppercase text-4xl lg:text-5xl text-center opacity-90">
               Design & Development Process
             </h2>
           </FadeIn>
@@ -95,7 +95,7 @@ export default function GriefsShadow() {
         {/* Final Experience */}
         <section className="my-6">
           <FadeIn>
-            <h2 className="mb-7 lg:mb-14 font-serif font-bold uppercase text-3xl lg:text-4xl text-center">
+            <h2 className="mb-7 lg:mb-14 font-header font-light uppercase text-4xl lg:text-5xl text-center">
               Final Experience
             </h2>
           </FadeIn>
@@ -117,7 +117,7 @@ export default function GriefsShadow() {
         {/* Impact */}
         <section className="my-6 lg:my-10">
           <FadeIn>
-            <h2 className="mb-7 lg:mb-14 text-3xl font-serif font-bold uppercase lg:text-4xl text-center opacity-90">
+            <h2 className="mb-7 lg:mb-14 text-4xl font-header font-light uppercase lg:text-5xl text-center opacity-90">
               Impact
             </h2>
           </FadeIn>
