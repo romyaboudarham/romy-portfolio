@@ -5,7 +5,10 @@ export default function PortfolioGrid() {
   const [allLoaded, setAllLoaded] = useState(false);
 
   useEffect(() => {
-    const gifs = [...Array(9)].map((_, index) => `/media/projects/VR-GriefsShadow/Breathe/gif${index + 1}.gif`);
+    const gifs = [...Array(9)].map(
+      (_, index) =>
+        `/media/projects/VR-GriefsShadow/Breathe/gif${index + 1}.gif`,
+    );
     let loaded = {};
     let count = 0;
 
@@ -29,10 +32,14 @@ export default function PortfolioGrid() {
       {/* Text Content */}
       <div>
         <p className="mt-2 lg:text-xl text-gray-800">
-          This grid captures my favorite moment—users, immersed in the VR world, responding to a simple yet powerful prompt: to take a breath.
-          In that pause, technology goes beyond simple simulation, guiding real human emotions and bodily awareness.
-          This moment reflects my approach to creative technology: crafting empathy-driven experiences that resonate deeply, inviting users not just to engage but to feel, reflect, and heal.
-          Through VR, I design spaces where digital and emotional realities intertwine, fostering genuine connection and presence.
+          This grid captures my favorite moment—users, immersed in the VR world,
+          responding to a simple yet powerful prompt: to take a breath. In that
+          pause, technology goes beyond simple simulation, guiding real human
+          emotions and bodily awareness. This moment reflects my approach to
+          creative technology: crafting empathy-driven experiences that resonate
+          deeply, inviting users not just to engage but to feel, reflect, and
+          heal. Through VR, I design spaces where digital and emotional
+          realities intertwine, fostering genuine connection and presence.
         </p>
       </div>
 
@@ -41,17 +48,21 @@ export default function PortfolioGrid() {
         {!allLoaded ? (
           <p>Loading GIFs...</p> // Temporary loading indicator
         ) : (
-          <div className="grid grid-cols-3 gap-1 lg:gap-3 lg:w-[90vw] lg:max-w-[900px]">
+          <div className="grid grid-cols-3 gap-1 lg:gap-2 lg:w-[90vw] lg:max-w-[900px]">
             {Object.keys(loadedGifs).map((index) => (
-              <div key={index} className="bg-gray-100 overflow-hidden aspect-[9/10]">
+              <div
+                key={index}
+                className="bg-gray-100 overflow-hidden aspect-[9/10]"
+              >
                 {/* Appends a timestamp to force GIFs to restart and stay in sync */}
                 <img
                   src={`${loadedGifs[index]}?t=${Date.now()}`}
                   alt={`Project ${index + 1}`}
                   className={`w-full h-full object-cover ${
-                    index == 2 || index == 3 || index == 5 || index == 6  ? "object-[50%_20%]" 
-                    : "object-top"
-                  } rounded-md`}
+                    index == 2 || index == 3 || index == 5 || index == 6
+                      ? "object-[50%_20%]"
+                      : "object-top"
+                  } `}
                 />
               </div>
             ))}

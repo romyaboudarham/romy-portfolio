@@ -10,11 +10,12 @@ import InteractionDesign from "@/app/components/WithShadows/InteractionDesign";
 import Navbar from "@/app/components/Navbar.jsx";
 import PageContent from "@/app/components/PageContent";
 import FadeIn from "@/app/components/FadeIn";
+import VideoDemo from "@/app/components/VideoDemo";
 
 export default function GriefsShadow() {
   return (
     <div className="bg-[#f9f9f9] text-black font-sans">
-      <Navbar textColor="text-white" />
+      <Navbar />
       <HeroSection />
 
       <PageContent as="div">
@@ -80,35 +81,13 @@ export default function GriefsShadow() {
         <section className="my-6 lg:my-10">
           <FadeIn>
             <h2 className="mb-7 lg:mb-14 font-header font-light uppercase text-4xl lg:text-5xl text-center opacity-90">
-              Design & Development Process
+              Design + Development Process
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>
             <Storyboard />
             <EnvironmentDesign />
             <InteractionDesign />
-          </FadeIn>
-        </section>
-
-        <div className="border-t-2 border-gray-300 my-6" />
-
-        {/* Final Experience */}
-        <section className="my-6">
-          <FadeIn>
-            <h2 className="mb-7 lg:mb-14 font-header font-light uppercase text-4xl lg:text-5xl text-center">
-              Final Experience
-            </h2>
-          </FadeIn>
-          <FadeIn delay={0.15}>
-            <div className="w-full max-w-xl mx-auto border border-gray-300 overflow-hidden">
-              <iframe
-                className="w-full h-96 lg:h-[600px] rounded-md"
-                src="https://www.youtube.com/embed/iVC51VEGku4"
-                title="YouTube Video"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
           </FadeIn>
         </section>
 
@@ -123,6 +102,29 @@ export default function GriefsShadow() {
           </FadeIn>
           <FadeIn delay={0.15}>
             <Breathe />
+          </FadeIn>
+        </section>
+
+        <div className="border-t-2 border-gray-300 my-6" />
+
+        {/* Final Experience */}
+        <section className="my-6">
+          <FadeIn>
+            <h2 className="mb-7 lg:mb-14 font-header font-light uppercase text-4xl lg:text-5xl text-center">
+              Final Experience
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.15}>
+            <VideoDemo videoUrl="https://www.youtube.com/embed/iVC51VEGku4" />
+            {/* <div className="w-full max-w-xl mx-auto border border-gray-300 overflow-hidden">
+              <iframe
+                className="w-full h-96 lg:h-[600px]"
+                src="https://www.youtube.com/embed/iVC51VEGku4"
+                title="YouTube Video"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div> */}
           </FadeIn>
         </section>
       </PageContent>

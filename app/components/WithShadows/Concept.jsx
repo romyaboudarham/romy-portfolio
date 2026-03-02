@@ -29,7 +29,7 @@ export default function Concept() {
         <img
           src="/media/projects/VR-GriefsShadow/Process/research-inspiration.png"
           alt="Research"
-          className="mt-5 mx-auto w-full"
+          className="mt-5 mx-auto w-full md:max-w-[70vw]"
         />
       </div>
     </section>

@@ -59,7 +59,7 @@ export default function Navbar({
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className="fixed top-0 inset-x-0 z-[60] flex justify-center pointer-events-none"
     >
-      <div className="flex gap-x-6 uppercase md:text-lg px-6 py-2 backdrop-blur-md bg-white/30 border-b border-white/40 pointer-events-auto w-full justify-center">
+      <div className="flex gap-x-6 uppercase md:text-lg px-6 py-2 backdrop-blur-md bg-white/30 pointer-events-auto w-full justify-center">
         {navItems.map((item) => (
           <NavItem key={item.href} {...item} textColor={textColor} />
         ))}

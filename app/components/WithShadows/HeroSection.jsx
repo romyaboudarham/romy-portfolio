@@ -13,18 +13,17 @@ export default function HeroSection() {
           buttonClassName:
             "bg-transparent text-white hover:bg-[#cd5cc4] hover:text-white border border-[#cd5cc4]",
           action: {
-            type: "modal",
-            videoSrc:
-              "https://oaxvcculx5bxujie.public.blob.vercel-storage.com/griefs-shadow-demo-7R4Uz1Nd8rrLCsUHE5EtXxshGSJSHf.mp4",
+            type: "link",
+            url: "https://www.youtube.com/watch?v=iVC51VEGku4",
           },
         },
         {
-          label: "Watch Full",
+          label: "Download for Quest",
           buttonClassName:
             "bg-transparent text-white hover:bg-[#cd5cc4] hover:text-white border border-[#cd5cc4]",
           action: {
             type: "link",
-            url: "https://www.youtube.com/watch?v=iVC51VEGku4",
+            url: "https://romyaboudarham.itch.io/with-shadows",
           },
         },
       ]}
