@@ -8,42 +8,49 @@
   src: url("/fonts/sugo_pro_display/Sugo-Pro-Display-Regular-trial.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Sugo Pro Display";
   src: url("/fonts/sugo_pro_display/Sugo-Pro-Display-Italic-trial.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: "Sugo Pro Display";
   src: url("/fonts/sugo_pro_display/Sugo-Pro-Display-Bold-trial.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Sugo Pro Display";
   src: url("/fonts/sugo_pro_display/Sugo-Pro-Display-Bold-Italic-trial.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: "Sugo Pro Display";
   src: url("/fonts/sugo_pro_display/Sugo-Pro-Display-Light-trial.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Sugo Pro Display";
   src: url("/fonts/sugo_pro_display/Sugo-Pro-Display-Thin-trial.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Sugo Pro Display";
   src: url("/fonts/sugo_pro_display/Sugo-Pro-Display-ExtraLight-trial.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
+  font-display: swap;
 }
 
 

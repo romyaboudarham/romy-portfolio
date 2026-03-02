@@ -121,23 +121,24 @@ const HomeHeroSection = ({ onLoadComplete }) => {
 
         {/* Wave-side grouped text */}
         <div className="absolute inset-y-0 left-[4vw] z-10 pointer-events-none">
-          <div className="flex h-full items-center translate-y-[-9rem] max-w-[50vw] md:max-w-[40vw]">
+          <div className="flex h-full items-center translate-y-[-9rem] max-w-[53vw] md:max-w-[40vw]">
             <div
-              className={`flex flex-col items-start gap-4 transition-opacity duration-1000 ${
+              className={`flex flex-col items-start gap-2 md:gap-4 transition-opacity duration-1000 ${
                 showText ? "opacity-100" : "opacity-0"
               }`}
             >
-              <h1 className="text-4xl font-header font-light uppercase md:text-5xl text-primary text-left">
+              <h1 className="text-fluid-4xl font-header font-light uppercase text-primary text-left">
                 Romy Aboudarham
               </h1>
 
-              <p className="text-sm md:text-xl text-primary/70 leading-relaxed text-left">
+              <p className="text-fluid-base text-primary/70 leading-relaxed text-left">
                 I work at the intersection of design and engineering to
                 prototype and build interactive products. With experience as a
                 full-stack engineer and as a design technologist teaching
                 advanced prototyping using robotics, immersive, and AI-driven
-                tools, my practice focuses on being creative with emerging technologies and reducing the friction between
-                design intent and implementation.
+                tools, my practice focuses on being creative with emerging
+                technologies and reducing the friction between design intent and
+                implementation.
               </p>
             </div>
           </div>
